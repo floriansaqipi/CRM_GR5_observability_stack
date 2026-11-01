@@ -54,7 +54,7 @@ MongoDB is the application's database. Prometheus is the measurement store. Temp
 
 The Controller dispatches CPU work to Compute and Data work to Data. Data downloads payloads from Compute and accesses MongoDB. The Controller also uses MongoDB to save summaries. The [editable diagram source](assets/application-architecture.mmd) uses Mermaid.
 
-Only Controller, Grafana and Prometheus have published ports, bound to local IPv4 loopback. Compute, Data and MongoDB communicate on the internal Compose network. Application containers do not receive the Docker socket.
+Controller, Grafana, Prometheus and MongoDB have published ports, bound to local IPv4 loopback. For MongoDB Compass, use `mongodb://127.0.0.1:27017/lab`; `runs` contains saved experiment history. Compute, Data and MongoDB communicate on the Compose network. Application containers do not receive the Docker socket.
 
 ## Three different observation paths
 

@@ -9,4 +9,6 @@ __pycache__/
 *.tmp
 Thumbs.db
 .DS_Store
+.idea/
+~$*
 

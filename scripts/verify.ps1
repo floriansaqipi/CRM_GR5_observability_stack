@@ -6,7 +6,7 @@ $readinessDeadline = [DateTime]::UtcNow.AddSeconds(90)
 do {
     try {
         $null = Invoke-RestMethod http://127.0.0.1:3000/api/health -TimeoutSec 3
-        $null = Invoke-WebRequest http://127.0.0.1:9090/-/ready -TimeoutSec 3
+        $null = Invoke-WebRequest http://127.0.0.1:9090/-/ready -TimeoutSec 3 -UseBasicParsing
         break
     } catch {
         if ([DateTime]::UtcNow -gt $readinessDeadline) { throw 'Grafana or Prometheus readiness timed out.' }
@@ -18,7 +18,8 @@ $health = Invoke-RestMethod http://127.0.0.1:5000/health -TimeoutSec 5
 if ($health.status -ne 'ok') { throw 'Flask health check failed.' }
 $grafanaHeaders = Get-GrafanaHeaders
 $dashboard = Invoke-RestMethod http://127.0.0.1:3000/api/dashboards/uid/cloud-lab1-resources -Headers $grafanaHeaders -TimeoutSec 10
-if ($dashboard.dashboard.title -ne 'Cloud Lab 1 — Container Resources') { throw 'Provisioned dashboard not found.' }
+# Stable ASCII identifiers avoid Windows PowerShell's legacy HTTP text decoding.
+if ($dashboard.dashboard.uid -ne 'cloud-lab1-resources') { throw 'Provisioned dashboard not found.' }
 $dataSource = Invoke-RestMethod http://127.0.0.1:3000/api/datasources/uid/prometheus/health -Headers $grafanaHeaders -TimeoutSec 10
 if ($dataSource.status -ne 'OK') { throw 'Grafana cannot query Prometheus.' }
 
@@ -54,7 +55,7 @@ if ((-not $DuringDeployment -and -not $catalog.ready) -or -not $catalog.coordina
 if (-not $deployment.verified) { throw 'Effective deployment limits are not verified.' }
 Write-Host "PASS: workload coordinator ready. MongoDB available: $($catalog.storage_available)."
 $appDashboard = Invoke-RestMethod http://127.0.0.1:3000/api/dashboards/uid/cloud-lab1-application -Headers $grafanaHeaders -TimeoutSec 10
-if ($appDashboard.dashboard.title -ne 'Cloud Lab 1 — Application Performance') { throw 'Application dashboard not provisioned.' }
+if ($appDashboard.dashboard.uid -ne 'cloud-lab1-application') { throw 'Application dashboard not provisioned.' }
 $appDeadline = [DateTime]::UtcNow.AddSeconds(45)
 do {
     $targets = @(Invoke-PromQuery '(up{job="applications",project="cloud-lab1"} == 1) and (timestamp(up{job="applications",project="cloud-lab1"}) > time()-15)')

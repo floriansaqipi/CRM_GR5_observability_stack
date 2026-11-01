@@ -13,15 +13,41 @@ function Invoke-Compose {
     if ($LASTEXITCODE -ne 0) { throw "Docker Compose failed (exit $LASTEXITCODE)." }
 }
 
+function ConvertTo-LabValue($Value) {
+    if ($null -eq $Value) { return $null }
+    if ($Value -is [PSCustomObject]) {
+        $result = @{}
+        foreach ($property in $Value.PSObject.Properties) {
+            $result[$property.Name] = ConvertTo-LabValue $property.Value
+        }
+        return $result
+    }
+    if ($Value -is [Array]) {
+        $items = @(foreach ($item in $Value) { ConvertTo-LabValue $item })
+        return ,$items
+    }
+    return $Value
+}
+
+function Read-LabJson([string]$Path) {
+    $json = Get-Content -Raw -LiteralPath $Path -Encoding utf8
+    if ((Get-Command ConvertFrom-Json).Parameters.ContainsKey('AsHashtable')) {
+        return $json | ConvertFrom-Json -AsHashtable
+    }
+    # Windows PowerShell 5.1 needs nested JSON objects converted explicitly.
+    return ConvertTo-LabValue ($json | ConvertFrom-Json)
+}
+
 function Get-DeploymentState {
     $path = Join-Path $ProjectRoot '.runtime/deployment.json'
-    if (Test-Path -LiteralPath $path) { return Get-Content -Raw -LiteralPath $path | ConvertFrom-Json -AsHashtable }
+    if (Test-Path -LiteralPath $path) { return Read-LabJson $path }
     return $null
 }
 
 function Write-AtomicJson($Path, $Value) {
     $tempPath = "$Path.tmp"
-    $Value | ConvertTo-Json -Depth 30 | Set-Content -LiteralPath $tempPath -Encoding utf8
+    # JSON consumers in Linux containers expect UTF-8 without a byte-order mark.
+    [IO.File]::WriteAllText($tempPath, (ConvertTo-Json -InputObject $Value -Depth 30), [Text.UTF8Encoding]::new($false))
     Move-Item -LiteralPath $tempPath -Destination $Path -Force
 }
 

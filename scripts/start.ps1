@@ -15,14 +15,16 @@ $prepared = $false
 $old = Get-DeploymentState
 try {
     $successPath = Join-Path $runtimeDir 'last-success.json'
-    $previous = if (Test-Path -LiteralPath $successPath) { Get-Content -Raw -LiteralPath $successPath | ConvertFrom-Json -AsHashtable } else { $old }
+    $previous = if (Test-Path -LiteralPath $successPath) { Read-LabJson $successPath } else { $old }
     $script:LabPreset = if ($Preset) { $Preset } elseif ($previous) { $previous.preset } else { 'baseline' }
     $script:LabTracing = if ($Tracing) { $true } elseif ($NoTracing) { $false } elseif ($previous) { [bool]$previous.tracing } else { $false }
     $env:LAB_TRACING_ENABLED = "$script:LabTracing".ToLowerInvariant()
     $envPath = Join-Path $ProjectRoot '.env'
     if (-not (Test-Path -LiteralPath $envPath)) {
-        $bytes = [Security.Cryptography.RandomNumberGenerator]::GetBytes(24)
-        $password = [Convert]::ToHexString($bytes).ToLowerInvariant()
+        $bytes = New-Object byte[] 24
+        $random = [Security.Cryptography.RandomNumberGenerator]::Create()
+        try { $random.GetBytes($bytes) } finally { $random.Dispose() }
+        $password = [BitConverter]::ToString($bytes).Replace('-', '').ToLowerInvariant()
         @('GRAFANA_ADMIN_USER=admin', "GRAFANA_ADMIN_PASSWORD=$password") | Set-Content -LiteralPath $envPath -Encoding ascii
         Write-Host 'Created .env with a random Grafana password.'
     }
@@ -61,15 +63,14 @@ try {
     if ($script:LabPreset -eq 'replica-2') { $targets += 'compute-2' }
     $scrapes = @($targets | ForEach-Object { @{targets=@("${_}:5000");labels=@{project='cloud-lab1';service=$_}} })
     # Preserve an array even in small generated configurations.
-    $json = ConvertTo-Json -InputObject $scrapes -Depth 8
-    $json | Set-Content -LiteralPath (Join-Path $runtimeDir 'application-targets.json') -Encoding utf8
+    Write-AtomicJson (Join-Path $runtimeDir 'application-targets.json') $scrapes
     if (-not $script:LabTracing) { Invoke-Compose --profile tracing stop otel-collector tempo }
     if ($script:LabPreset -ne 'replica-2') { Invoke-Compose --profile replica stop compute-2 }
     if ($NoBuild) { Invoke-Compose up --detach --no-build --pull never --wait --wait-timeout 180 }
     else { Invoke-Compose up --detach --build --wait --wait-timeout 180 }
     if (-not $NoBuild) { Invoke-Compose restart prometheus grafana }
     # Independently check Docker's applied limits; application checks use cgroup files.
-    $presets = Get-Content -Raw "$ProjectRoot/services/shared/presets.json" | ConvertFrom-Json -AsHashtable
+    $presets = Read-LabJson "$ProjectRoot/services/shared/presets.json"
     $settings = $presets[$script:LabPreset]
     $expected = @{ compute=@($settings.compute_cpus,512); data=@(1,$settings.data_memory_mib) }
     if ($settings.replicas -eq 2) { $expected['compute-2'] = @(1,512) }

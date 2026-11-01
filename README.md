@@ -9,12 +9,14 @@ A university lab using **Flask, Prometheus, Grafana, and Docker Compose**. The w
 | [Repository guide](docs/repository-guide.md) | Understand the services, execution flow, source structure and implemented work |
 | [Classroom demo guide](docs/classroom-demo.md) | Prepare and operate the approximately ten-minute live walkthrough, with optional comparisons and recovery steps |
 | [Four example results](docs/experiment-results.md) | Inspect actual measurements, annotated plots, run IDs, CSV exports and the connected trace |
+| [Albanian project report — Word](docs/Raporti_Projektit_Monitorimi_i_Burimeve_Plote.docx) | Read the 25-page report with the abstract, chapters I–V, references and editable image placeholders |
+| [Report sources and verification](docs/raporti/README.md) | Review chapter sources, citation mappings, document checks and the remaining cover/image fields |
 
-Revised Stage 5 focuses on visual improvements, example results and practical guides. The formal repeated study, official university Word report and PowerPoint presentation remain future work.
+Revised Stage 5 focuses on visual improvements, example results and practical guides. The Albanian Word report was subsequently completed; its cover details and images remain to be filled in. The formal repeated study and PowerPoint presentation remain future work.
 
 ## Start the application
 
-Prerequisites: Docker Desktop with its Linux engine running, Docker Compose, and PowerShell 7. Baseline configured memory ceilings total 3.5 GiB without tracing and 4.5 GiB with tracing. The largest supported preset uses 5 GiB with tracing, plus Docker overhead. These are ceilings, not predicted consumption. The first image download/build needs internet.
+Prerequisites: Docker Desktop with its Linux engine running, Docker Compose, and PowerShell. PowerShell 7 is recommended; startup, verification and shutdown also support Windows PowerShell 5.1. Baseline configured memory ceilings total 3.5 GiB without tracing and 4.5 GiB with tracing. The largest supported preset uses 5 GiB with tracing, plus Docker overhead. These are ceilings, not predicted consumption. The first image download/build needs internet.
 
 ```powershell
 ./scripts/start.ps1
@@ -34,6 +36,10 @@ Prerequisites: Docker Desktop with its Linux engine running, Docker Compose, and
 The startup script generates `.env` with a random Grafana password if it does not exist. Existing credentials and volumes are preserved. Sign in using the local `.env`; do not share or commit that file. Changing `.env` after Grafana's first initialization does not reset its stored password.
 
 Startup now restores the last successfully applied preset and tracing mode. Use `-Tracing` or `-NoTracing` to choose explicitly; supplying both is invalid. First startup without saved state uses baseline without tracing. `-NoBuild` starts existing images without downloads/builds.
+
+### Inspect history with MongoDB Compass
+
+MongoDB is published only on local IPv4 loopback, port 27017. In Compass, add a connection using `mongodb://127.0.0.1:27017/lab`. This local instance has no authentication configured. Open the `lab` database: `runs` contains experiment history, and `workload_documents` contains temporary documents that are removed after workload cleanup.
 
 ## Run an experiment
 

@@ -1,0 +1,20 @@
+{
+  "accessed": "2026-11-01",
+  "entries": [
+    {"id": 1, "author": "Grupi i projektit", "title": "CRM_GR5_observability_stack", "description": "Kodi burimor, konfigurimet dhe udhëzuesit e laboratorit. GitHub, 2026.", "url": "https://github.com/floriansaqipi/CRM_GR5_observability_stack"},
+    {"id": 2, "author": "Docker Inc.", "title": "Docker Compose", "description": "Dokumentacioni zyrtar për shërbimet, rrjetet dhe volumet.", "url": "https://docs.docker.com/compose/"},
+    {"id": 3, "author": "Pallets Projects", "title": "Gunicorn — Flask Documentation", "description": "Ekzekutimi i aplikacioneve Flask me serverin WSGI Gunicorn.", "url": "https://flask.palletsprojects.com/en/stable/deploying/gunicorn/"},
+    {"id": 4, "author": "MongoDB Inc.", "title": "WiredTiger Storage Engine", "description": "Motori i ruajtjes dhe përdorimi i cache-it në MongoDB.", "url": "https://www.mongodb.com/docs/manual/core/wiredtiger/"},
+    {"id": 5, "author": "Prometheus Authors", "title": "Monitoring Docker container metrics using cAdvisor", "description": "Mbledhja e metrikave të kontejnerëve me cAdvisor dhe Prometheus.", "url": "https://prometheus.io/docs/guides/cadvisor/"},
+    {"id": 6, "author": "Prometheus Authors", "title": "Overview", "description": "Modeli i monitorimit dhe i serive kohore në Prometheus.", "url": "https://prometheus.io/docs/introduction/overview/"},
+    {"id": 7, "author": "Grafana Labs", "title": "Provision Grafana", "description": "Konfigurimi i burimeve të të dhënave dhe dashboard-eve nga skedarët.", "url": "https://grafana.com/docs/grafana/latest/administration/provisioning/"},
+    {"id": 8, "author": "Prometheus Authors", "title": "Metric and label naming", "description": "Emërtimi i metrikave dhe kufizimi i kardinalitetit të etiketave.", "url": "https://prometheus.io/docs/practices/naming/"},
+    {"id": 9, "author": "Prometheus Python Client Authors", "title": "Custom Collectors", "description": "Familjet e metrikave dhe mbledhësit e përshtatur në klientin Python.", "url": "https://prometheus.github.io/client_python/collector/custom/"},
+    {"id": 10, "author": "OpenTelemetry Authors", "title": "OpenTelemetry Flask Instrumentation", "description": "Instrumentimi i kërkesave Flask dhe përjashtimi i URL-ve.", "url": "https://opentelemetry-python-contrib.readthedocs.io/en/latest/instrumentation/flask/flask.html"},
+    {"id": 11, "author": "OpenTelemetry Authors", "title": "Propagation", "description": "Përhapja e kontekstit të gjurmimit në Python.", "url": "https://opentelemetry.io/docs/languages/python/propagation/"},
+    {"id": 12, "author": "OpenTelemetry Python Authors", "title": "Working With Fork Process Models", "description": "Inicializimi i gjurmimit me modelet e proceseve Gunicorn dhe uWSGI.", "url": "https://opentelemetry-python.readthedocs.io/en/latest/examples/fork-process-model/README.html"},
+    {"id": 13, "author": "OpenTelemetry Authors", "title": "Collector", "description": "Pranimi, përpunimi dhe eksportimi i të dhënave të telemetrisë.", "url": "https://opentelemetry.io/docs/collector/"},
+    {"id": 14, "author": "Grafana Labs", "title": "Grafana Tempo", "description": "Ruajtja, kërkimi dhe vizualizimi i gjurmëve të shpërndara.", "url": "https://grafana.com/docs/tempo/latest/"},
+    {"id": 15, "author": "Grupi i projektit", "title": "Evidenca e verifikimit dhe e eksperimenteve të fazave 4–5", "description": "Burimi i rezultateve dhe i kontrolleve: acceptance.json; experiments.json; verification.json; unit-tests.txt; combined/trace.json. Dosjet docs/evidence/stage4/ dhe docs/evidence/stage5/ në repository [1], 2026.", "url": "https://github.com/floriansaqipi/CRM_GR5_observability_stack/tree/main/docs/evidence"}
+  ]
+}

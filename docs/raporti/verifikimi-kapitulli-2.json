@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-01",
+  "pages": 8,
+  "chapter_ii_pages": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "base_sha256": "751929f1eacfc5663dbbebe2f48d967d94bd861dcac02ce5e1c37743a4072db4",
+  "candidate_sha256": "7a319958f264f6b16c21e94bdd0654f95052be8067a9b7225dd9f7ba9d79e5bf",
+  "checks": {
+    "base_chapter_and_cover_preserved": true,
+    "one_automatic_toc": true,
+    "nine_page_references": true,
+    "bookmarks_resolve": true,
+    "three_table_captions": true,
+    "four_figure_captions": true,
+    "no_embedded_images": true,
+    "no_update_dialog_on_open": true,
+    "chapter_ii_once": true,
+    "chapter_iii_not_added": true,
+    "letter_and_one_inch_margins": true,
+    "eight_pages": true,
+    "old_pages_unchanged": true,
+    "headings_match_toc": true,
+    "no_visible_field_codes": true,
+    "four_figure_boxes": true,
+    "all_text_inside_pages": true,
+    "expected_technology_versions": true,
+    "correct_local_commands": true,
+    "captions_on_expected_pages": true,
+    "recognized_toc": true,
+    "existing_figure_paths_valid": true,
+    "same_checked_base_hash": true
+  },
+  "renderer": "LibreOffice Writer 7.4.7.2 in an isolated, network-disabled container with local Palatino/Arial/Consolas fonts",
+  "visual_review": "All four new pages and the updated contents inspected; old cover and chapter text unchanged. Final wording corrections retained the eight-page layout.",
+  "delivered_document": "docs\\Raporti_Projektit_Monitorimi_i_Burimeve_Kapitulli_II.docx",
+  "delivered_sha256": "7a319958f264f6b16c21e94bdd0654f95052be8067a9b7225dd9f7ba9d79e5bf"
+}
