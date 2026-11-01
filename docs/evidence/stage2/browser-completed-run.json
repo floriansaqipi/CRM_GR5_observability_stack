@@ -1,0 +1,36 @@
+{
+  "counters": {
+    "allocated_mib": 96,
+    "cpu_batches": 0,
+    "database_cycles": 0,
+    "database_reads": 0,
+    "database_writes": 0,
+    "errors": 0,
+    "network_bytes": 0,
+    "network_requests": 0,
+    "touched_pages": 24576
+  },
+  "created_at": "2026-11-01T10:14:16.178+00:00",
+  "elapsed_seconds": 15.0,
+  "error": null,
+  "finished_at": "2026-11-01T10:14:32.220+00:00",
+  "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793528046178&to=1793528082220&var-service=data",
+  "id": "1418268b-5165-479c-b004-e4b1d06b8af8",
+  "name": "Memory experiment \u00b7 96 MiB",
+  "notes": "Bounded allocation configured through the advanced controls.",
+  "persistence": "saved",
+  "profile": "medium",
+  "rates": {
+    "cpu_batches_per_second": 0.0,
+    "database_cycles_per_second": 0.0,
+    "network_requests_per_second": 0.0
+  },
+  "settings": {
+    "duration_seconds": 15,
+    "memory_mib": 96
+  },
+  "started_at": "2026-11-01T10:14:16.207+00:00",
+  "state": "completed",
+  "target_service": "data",
+  "workload": "memory"
+}

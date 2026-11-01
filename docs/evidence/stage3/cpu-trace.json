@@ -1,0 +1,662 @@
+{
+  "batches": [
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "deployment.environment.name",
+            "value": {
+              "stringValue": "local"
+            }
+          },
+          {
+            "key": "service.instance.id",
+            "value": {
+              "stringValue": "dd2654e4-6d3b-4867-9d24-63a1176c8e5d"
+            }
+          },
+          {
+            "key": "service.namespace",
+            "value": {
+              "stringValue": "cloud-lab1"
+            }
+          },
+          {
+            "key": "telemetry.sdk.language",
+            "value": {
+              "stringValue": "python"
+            }
+          },
+          {
+            "key": "telemetry.sdk.name",
+            "value": {
+              "stringValue": "opentelemetry"
+            }
+          },
+          {
+            "key": "telemetry.sdk.version",
+            "value": {
+              "stringValue": "1.45.2"
+            }
+          },
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "controller"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "opentelemetry.instrumentation.flask",
+            "version": "0.66b2"
+          },
+          "spans": [
+            {
+              "traceId": "FXc7wXFF9mAbS86pN9BrZg==",
+              "spanId": "GS6hwW7NEOE=",
+              "name": "POST /api/runs",
+              "kind": "SPAN_KIND_SERVER",
+              "startTimeUnixNano": "1793531685116686835",
+              "endTimeUnixNano": "1793531685118176157",
+              "attributes": [
+                {
+                  "key": "http.server_name",
+                  "value": {
+                    "stringValue": "0.0.0.0"
+                  }
+                },
+                {
+                  "key": "http.scheme",
+                  "value": {
+                    "stringValue": "http"
+                  }
+                },
+                {
+                  "key": "net.host.name",
+                  "value": {
+                    "stringValue": "127.0.0.1:5000"
+                  }
+                },
+                {
+                  "key": "http.host",
+                  "value": {
+                    "stringValue": "127.0.0.1:5000"
+                  }
+                },
+                {
+                  "key": "net.host.port",
+                  "value": {
+                    "intValue": "5000"
+                  }
+                },
+                {
+                  "key": "http.target",
+                  "value": {
+                    "stringValue": "/api/runs"
+                  }
+                },
+                {
+                  "key": "net.peer.ip",
+                  "value": {
+                    "stringValue": "172.18.0.1"
+                  }
+                },
+                {
+                  "key": "net.peer.port",
+                  "value": {
+                    "intValue": "39418"
+                  }
+                },
+                {
+                  "key": "http.user_agent",
+                  "value": {
+                    "stringValue": "Python-urllib/3.15"
+                  }
+                },
+                {
+                  "key": "http.flavor",
+                  "value": {
+                    "stringValue": "1.1"
+                  }
+                },
+                {
+                  "key": "http.method",
+                  "value": {
+                    "stringValue": "POST"
+                  }
+                },
+                {
+                  "key": "http.route",
+                  "value": {
+                    "stringValue": "/api/runs"
+                  }
+                },
+                {
+                  "key": "http.status_code",
+                  "value": {
+                    "intValue": "202"
+                  }
+                }
+              ],
+              "status": {}
+            }
+          ]
+        },
+        {
+          "scope": {
+            "name": "opentelemetry.instrumentation.requests",
+            "version": "0.66b2"
+          },
+          "spans": [
+            {
+              "traceId": "FXc7wXFF9mAbS86pN9BrZg==",
+              "spanId": "Llc0I5VF0L8=",
+              "parentSpanId": "qTQ2qNbErgA=",
+              "name": "POST",
+              "kind": "SPAN_KIND_CLIENT",
+              "startTimeUnixNano": "1793531685479546205",
+              "endTimeUnixNano": "1793531685484742162",
+              "attributes": [
+                {
+                  "key": "user_agent.original",
+                  "value": {
+                    "stringValue": "python-requests/2.34.2"
+                  }
+                },
+                {
+                  "key": "http.method",
+                  "value": {
+                    "stringValue": "POST"
+                  }
+                },
+                {
+                  "key": "http.url",
+                  "value": {
+                    "stringValue": "http://compute:5000/internal/runs"
+                  }
+                },
+                {
+                  "key": "http.status_code",
+                  "value": {
+                    "intValue": "202"
+                  }
+                }
+              ],
+              "status": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "telemetry.sdk.language",
+            "value": {
+              "stringValue": "python"
+            }
+          },
+          {
+            "key": "telemetry.sdk.name",
+            "value": {
+              "stringValue": "opentelemetry"
+            }
+          },
+          {
+            "key": "telemetry.sdk.version",
+            "value": {
+              "stringValue": "1.45.2"
+            }
+          },
+          {
+            "key": "service.instance.id",
+            "value": {
+              "stringValue": "dd2654e4-6d3b-4867-9d24-63a1176c8e5d"
+            }
+          },
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "controller"
+            }
+          },
+          {
+            "key": "service.namespace",
+            "value": {
+              "stringValue": "cloud-lab1"
+            }
+          },
+          {
+            "key": "deployment.environment.name",
+            "value": {
+              "stringValue": "local"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "cloud-lab1"
+          },
+          "spans": [
+            {
+              "traceId": "FXc7wXFF9mAbS86pN9BrZg==",
+              "spanId": "qTQ2qNbErgA=",
+              "parentSpanId": "GS6hwW7NEOE=",
+              "flags": 256,
+              "name": "experiment.run",
+              "kind": "SPAN_KIND_INTERNAL",
+              "startTimeUnixNano": "1793531685117720318",
+              "endTimeUnixNano": "1793531702283211631",
+              "attributes": [
+                {
+                  "key": "lab.run.id",
+                  "value": {
+                    "stringValue": "f741498e-bbc3-46fe-84ab-deebc130c8c4"
+                  }
+                },
+                {
+                  "key": "lab.workload",
+                  "value": {
+                    "stringValue": "cpu"
+                  }
+                },
+                {
+                  "key": "lab.setting.cpu_percent",
+                  "value": {
+                    "intValue": "90"
+                  }
+                },
+                {
+                  "key": "lab.setting.duration_seconds",
+                  "value": {
+                    "intValue": "15"
+                  }
+                },
+                {
+                  "key": "lab.outcome",
+                  "value": {
+                    "stringValue": "completed"
+                  }
+                }
+              ],
+              "status": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "deployment.environment.name",
+            "value": {
+              "stringValue": "local"
+            }
+          },
+          {
+            "key": "service.instance.id",
+            "value": {
+              "stringValue": "90f17f12-0f90-485a-b31f-87116198b75b"
+            }
+          },
+          {
+            "key": "service.namespace",
+            "value": {
+              "stringValue": "cloud-lab1"
+            }
+          },
+          {
+            "key": "telemetry.sdk.language",
+            "value": {
+              "stringValue": "python"
+            }
+          },
+          {
+            "key": "telemetry.sdk.name",
+            "value": {
+              "stringValue": "opentelemetry"
+            }
+          },
+          {
+            "key": "telemetry.sdk.version",
+            "value": {
+              "stringValue": "1.45.2"
+            }
+          },
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "compute"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "opentelemetry.instrumentation.flask",
+            "version": "0.66b2"
+          },
+          "spans": [
+            {
+              "traceId": "FXc7wXFF9mAbS86pN9BrZg==",
+              "spanId": "qToT3C+RviQ=",
+              "parentSpanId": "Llc0I5VF0L8=",
+              "name": "POST /internal/runs",
+              "kind": "SPAN_KIND_SERVER",
+              "startTimeUnixNano": "1793531685480564929",
+              "endTimeUnixNano": "1793531685483675606",
+              "attributes": [
+                {
+                  "key": "http.server_name",
+                  "value": {
+                    "stringValue": "0.0.0.0"
+                  }
+                },
+                {
+                  "key": "http.scheme",
+                  "value": {
+                    "stringValue": "http"
+                  }
+                },
+                {
+                  "key": "net.host.name",
+                  "value": {
+                    "stringValue": "compute:5000"
+                  }
+                },
+                {
+                  "key": "http.host",
+                  "value": {
+                    "stringValue": "compute:5000"
+                  }
+                },
+                {
+                  "key": "net.host.port",
+                  "value": {
+                    "intValue": "5000"
+                  }
+                },
+                {
+                  "key": "http.target",
+                  "value": {
+                    "stringValue": "/internal/runs"
+                  }
+                },
+                {
+                  "key": "net.peer.ip",
+                  "value": {
+                    "stringValue": "172.18.0.7"
+                  }
+                },
+                {
+                  "key": "net.peer.port",
+                  "value": {
+                    "intValue": "56148"
+                  }
+                },
+                {
+                  "key": "http.user_agent",
+                  "value": {
+                    "stringValue": "python-requests/2.34.2"
+                  }
+                },
+                {
+                  "key": "http.flavor",
+                  "value": {
+                    "stringValue": "1.1"
+                  }
+                },
+                {
+                  "key": "http.method",
+                  "value": {
+                    "stringValue": "POST"
+                  }
+                },
+                {
+                  "key": "http.route",
+                  "value": {
+                    "stringValue": "/internal/runs"
+                  }
+                },
+                {
+                  "key": "http.status_code",
+                  "value": {
+                    "intValue": "202"
+                  }
+                }
+              ],
+              "status": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "telemetry.sdk.language",
+            "value": {
+              "stringValue": "python"
+            }
+          },
+          {
+            "key": "telemetry.sdk.name",
+            "value": {
+              "stringValue": "opentelemetry"
+            }
+          },
+          {
+            "key": "telemetry.sdk.version",
+            "value": {
+              "stringValue": "1.45.2"
+            }
+          },
+          {
+            "key": "service.instance.id",
+            "value": {
+              "stringValue": "90f17f12-0f90-485a-b31f-87116198b75b"
+            }
+          },
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "compute"
+            }
+          },
+          {
+            "key": "service.namespace",
+            "value": {
+              "stringValue": "cloud-lab1"
+            }
+          },
+          {
+            "key": "deployment.environment.name",
+            "value": {
+              "stringValue": "local"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "cloud-lab1"
+          },
+          "spans": [
+            {
+              "traceId": "FXc7wXFF9mAbS86pN9BrZg==",
+              "spanId": "nZui5h3XZ1A=",
+              "parentSpanId": "qToT3C+RviQ=",
+              "flags": 768,
+              "name": "worker.execute",
+              "kind": "SPAN_KIND_INTERNAL",
+              "startTimeUnixNano": "1793531685482867268",
+              "endTimeUnixNano": "1793531701848314274",
+              "attributes": [
+                {
+                  "key": "lab.run.id",
+                  "value": {
+                    "stringValue": "f741498e-bbc3-46fe-84ab-deebc130c8c4"
+                  }
+                },
+                {
+                  "key": "lab.workload",
+                  "value": {
+                    "stringValue": "cpu"
+                  }
+                },
+                {
+                  "key": "lab.setting.cpu_percent",
+                  "value": {
+                    "intValue": "90"
+                  }
+                },
+                {
+                  "key": "lab.setting.duration_seconds",
+                  "value": {
+                    "intValue": "15"
+                  }
+                },
+                {
+                  "key": "lab.outcome",
+                  "value": {
+                    "stringValue": "completed"
+                  }
+                }
+              ],
+              "status": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "attributes": [
+          {
+            "key": "telemetry.sdk.language",
+            "value": {
+              "stringValue": "python"
+            }
+          },
+          {
+            "key": "telemetry.sdk.name",
+            "value": {
+              "stringValue": "opentelemetry"
+            }
+          },
+          {
+            "key": "telemetry.sdk.version",
+            "value": {
+              "stringValue": "1.45.2"
+            }
+          },
+          {
+            "key": "service.instance.id",
+            "value": {
+              "stringValue": "4dfa5e70-fa8f-4101-bc06-a4beb067bb77"
+            }
+          },
+          {
+            "key": "service.name",
+            "value": {
+              "stringValue": "compute"
+            }
+          },
+          {
+            "key": "service.namespace",
+            "value": {
+              "stringValue": "cloud-lab1"
+            }
+          },
+          {
+            "key": "deployment.environment.name",
+            "value": {
+              "stringValue": "local"
+            }
+          }
+        ]
+      },
+      "scopeSpans": [
+        {
+          "scope": {
+            "name": "cloud-lab1"
+          },
+          "spans": [
+            {
+              "traceId": "FXc7wXFF9mAbS86pN9BrZg==",
+              "spanId": "TXXv1Sy26Zg=",
+              "parentSpanId": "nZui5h3XZ1A=",
+              "flags": 768,
+              "name": "workload.run",
+              "kind": "SPAN_KIND_INTERNAL",
+              "startTimeUnixNano": "1793531686650608055",
+              "endTimeUnixNano": "1793531701650969278",
+              "attributes": [
+                {
+                  "key": "lab.run.id",
+                  "value": {
+                    "stringValue": "f741498e-bbc3-46fe-84ab-deebc130c8c4"
+                  }
+                },
+                {
+                  "key": "lab.workload",
+                  "value": {
+                    "stringValue": "cpu"
+                  }
+                },
+                {
+                  "key": "lab.setting.cpu_percent",
+                  "value": {
+                    "intValue": "90"
+                  }
+                },
+                {
+                  "key": "lab.setting.duration_seconds",
+                  "value": {
+                    "intValue": "15"
+                  }
+                },
+                {
+                  "key": "lab.outcome",
+                  "value": {
+                    "stringValue": "completed"
+                  }
+                }
+              ],
+              "status": {}
+            },
+            {
+              "traceId": "FXc7wXFF9mAbS86pN9BrZg==",
+              "spanId": "a8cr9DD38W0=",
+              "parentSpanId": "TXXv1Sy26Zg=",
+              "flags": 256,
+              "name": "cpu.calculate",
+              "kind": "SPAN_KIND_INTERNAL",
+              "startTimeUnixNano": "1793531686650807570",
+              "endTimeUnixNano": "1793531701649739096",
+              "attributes": [
+                {
+                  "key": "lab.cpu.batches",
+                  "value": {
+                    "intValue": "38736"
+                  }
+                }
+              ],
+              "status": {}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

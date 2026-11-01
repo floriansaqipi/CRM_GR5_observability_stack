@@ -1,0 +1,15 @@
+test_concurrent_start_has_exactly_one_global_winner (test_stage2.CoordinatorTests.test_concurrent_start_has_exactly_one_global_winner) ... ok
+test_csv_quotes_notes_and_exports_actual_values (test_stage2.CoordinatorTests.test_csv_quotes_notes_and_exports_actual_values) ... ok
+test_database_outage_keeps_independent_workloads_available (test_stage2.CoordinatorTests.test_database_outage_keeps_independent_workloads_available) ... ok
+test_failed_save_remains_pending_then_recovers (test_stage2.CoordinatorTests.test_failed_save_remains_pending_then_recovers) ... ok
+test_unsaved_cap_refuses_more_work_without_losing_records (test_stage2.CoordinatorTests.test_unsaved_cap_refuses_more_work_without_losing_records) ... ok
+test_presets_and_overrides_are_resolved_and_bounded (test_stage2.ValidationTests.test_presets_and_overrides_are_resolved_and_bounded) ... ok
+test_duplicate_start_overlap_and_cancellation_reap_one_child (test_stage2.WorkerTests.test_duplicate_start_overlap_and_cancellation_reap_one_child) ... ok
+test_immediate_stop_races_do_not_leave_active_processes (test_stage2.WorkerTests.test_immediate_stop_races_do_not_leave_active_processes) ... ok
+test_parent_deadline_kills_a_child_that_ignores_term (test_stage2.WorkerTests.test_parent_deadline_kills_a_child_that_ignores_term) ... ok
+test_service_shutdown_records_interrupted_and_reaps_child (test_stage2.WorkerTests.test_service_shutdown_records_interrupted_and_reaps_child) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 23.308s
+
+OK

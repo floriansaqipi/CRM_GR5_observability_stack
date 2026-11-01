@@ -1,0 +1,196 @@
+ Container cloud-lab1-compute-2-1 Stopping 
+ Container cloud-lab1-compute-2-1 Stopped 
+ Image cloud-lab1-controller:stage4 Building 
+ Image cloud-lab1-data:stage4 Building 
+ Image cloud-lab1-compute:stage4 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.71kB done
+#1 DONE 0.0s
+
+#2 [controller internal] load build definition from Dockerfile
+#2 transferring dockerfile: 504B done
+#2 DONE 0.0s
+
+#3 [controller internal] load metadata for docker.io/library/python:3.13-slim-bookworm@sha256:281d39ff02e3b389401586134ff9e6572954687822a58055ec07a60ded4e0b7f
+#3 DONE 0.1s
+
+#4 [data internal] load .dockerignore
+#4 transferring context: 73B done
+#4 DONE 0.0s
+
+#5 [controller internal] load build context
+#5 transferring context: 78.40kB 0.0s done
+#5 DONE 0.1s
+
+#6 [data internal] load build context
+#6 transferring context: 14.32kB 0.0s done
+#6 DONE 0.1s
+
+#7 [data 1/8] FROM docker.io/library/python:3.13-slim-bookworm@sha256:281d39ff02e3b389401586134ff9e6572954687822a58055ec07a60ded4e0b7f
+#7 resolve docker.io/library/python:3.13-slim-bookworm@sha256:281d39ff02e3b389401586134ff9e6572954687822a58055ec07a60ded4e0b7f 0.1s done
+#7 resolve docker.io/library/python:3.13-slim-bookworm@sha256:281d39ff02e3b389401586134ff9e6572954687822a58055ec07a60ded4e0b7f 0.1s done
+#7 DONE 0.1s
+
+#8 [compute internal] load build context
+#8 transferring context: 14.40kB 0.0s done
+#8 DONE 0.1s
+
+#9 [data 3/8] COPY requirements.txt .
+#9 CACHED
+
+#10 [data 4/8] RUN pip install --no-cache-dir -r requirements.txt && useradd --uid 10001 --create-home appuser
+#10 CACHED
+
+#11 [compute 3/8] COPY requirements.txt .
+#11 CACHED
+
+#12 [compute 5/8] COPY shared ./shared
+#12 CACHED
+
+#13 [compute 4/8] RUN pip install --no-cache-dir -r requirements.txt && useradd --uid 10001 --create-home appuser
+#13 CACHED
+
+#14 [compute 2/8] WORKDIR /app
+#14 CACHED
+
+#15 [data 6/8] COPY data ./
+#15 CACHED
+
+#16 [compute 5/8] COPY shared ./shared
+#16 CACHED
+
+#17 [controller 5/8] COPY shared ./shared
+#17 CACHED
+
+#14 [controller 2/8] WORKDIR /app
+#14 CACHED
+
+#18 [controller 4/8] RUN pip install --no-cache-dir -r requirements.txt && useradd --uid 10001 --create-home appuser
+#18 CACHED
+
+#19 [controller 3/8] COPY requirements.txt .
+#19 CACHED
+
+#20 [compute 6/8] COPY compute ./
+#20 CACHED
+
+#21 [data 7/8] COPY tests ./tests
+#21 DONE 0.1s
+
+#22 [controller 6/8] COPY controller ./
+#22 DONE 0.1s
+
+#23 [compute 7/8] COPY tests ./tests
+#23 DONE 0.1s
+
+#24 [data 8/8] COPY gunicorn_conf.py .
+#24 DONE 0.1s
+
+#25 [compute 8/8] COPY gunicorn_conf.py .
+#25 DONE 0.1s
+
+#26 [controller 7/8] COPY tests ./tests
+#26 DONE 0.1s
+
+#27 [controller 8/8] COPY gunicorn_conf.py .
+#27 DONE 0.1s
+
+#28 [compute] exporting to image
+#28 exporting layers
+#28 exporting layers 0.3s done
+#28 exporting manifest sha256:b9edae3e7fbdd1e9a1d1e33988bb97a87c1233820de92a2cea7159c9084f285e
+#28 exporting manifest sha256:b9edae3e7fbdd1e9a1d1e33988bb97a87c1233820de92a2cea7159c9084f285e 0.1s done
+#28 exporting config sha256:b623af144c930e107175817d41f7fa8676be02433bd76acf009c1c576a18b0bf
+#28 exporting config sha256:b623af144c930e107175817d41f7fa8676be02433bd76acf009c1c576a18b0bf 0.0s done
+#28 exporting attestation manifest sha256:07d01dfa2218af2e84c21f3429d457c6433a72b455b6f7b55cfe7a82c141ad3b
+#28 exporting attestation manifest sha256:07d01dfa2218af2e84c21f3429d457c6433a72b455b6f7b55cfe7a82c141ad3b 0.1s done
+#28 exporting manifest list sha256:8592a8f8d0196dfd308204a81676896f4b45d0386dd9f36c3d5a0baf534ea3f7 0.0s done
+#28 naming to docker.io/library/cloud-lab1-compute:stage4 0.0s done
+#28 unpacking to docker.io/library/cloud-lab1-compute:stage4
+#28 ...
+
+#29 [data] exporting to image
+#29 exporting layers 0.3s done
+#29 exporting manifest sha256:eb5d15b65013aa3e90b912ee4a8ab81c0c94fc9968ae88170da441d699988b2e 0.1s done
+#29 exporting config sha256:e3a903203e35b7489a8216fefb8babdb3966632e22f77fab2b21cd13c65b5654 0.1s done
+#29 exporting attestation manifest sha256:da0ec10ea916f1a4cdbf4a9f07dd1389a87de10c2ca6c51f0a16e1e1552e6af2 0.1s done
+#29 exporting manifest list sha256:1af9cce54365052752fbb931b8961e613bc416b694417ed5968ce4c1fbb9e1a4 0.0s done
+#29 naming to docker.io/library/cloud-lab1-data:stage4 0.0s done
+#29 unpacking to docker.io/library/cloud-lab1-data:stage4 0.1s done
+#29 DONE 0.9s
+
+#28 [compute] exporting to image
+#28 unpacking to docker.io/library/cloud-lab1-compute:stage4 0.1s done
+#28 DONE 0.9s
+
+#30 [controller] exporting to image
+#30 exporting layers 0.5s done
+#30 exporting manifest sha256:c4595b9818a3787f1e946cf81c17ef37282c2c129aa3a1debcbdcd6f805e3fb2 0.1s done
+#30 exporting config sha256:74fdb50a6830a6afe079e7166b9d98a734dcbcb6597752f75a92e981e4062a50 0.0s done
+#30 exporting attestation manifest sha256:5f60391dd22a3f47e00e0edf3665309d0e33aabfcbf0716391bd1d29edae9809 0.1s done
+#30 exporting manifest list sha256:6559ad5aafb83453b1424b979992c501303dcad6d09bb567a563bb2a6847d160 0.0s done
+#30 naming to docker.io/library/cloud-lab1-controller:stage4 done
+#30 unpacking to docker.io/library/cloud-lab1-controller:stage4 0.2s done
+#30 DONE 0.9s
+
+#31 [data] resolving provenance for metadata file
+#31 DONE 0.0s
+
+#32 [compute] resolving provenance for metadata file
+#32 DONE 0.0s
+
+#33 [controller] resolving provenance for metadata file
+#33 DONE 0.0s
+ Image cloud-lab1-compute:stage4 Built 
+ Image cloud-lab1-controller:stage4 Built 
+ Image cloud-lab1-data:stage4 Built 
+ Container cloud-lab1-prometheus-1 Running 
+ Container cloud-lab1-mongodb-1 Running 
+ Container cloud-lab1-otel-collector-1 Running 
+ Container cloud-lab1-grafana-1 Running 
+ Container cloud-lab1-cadvisor-1 Running 
+ Container cloud-lab1-tempo-1 Running 
+ Container cloud-lab1-compute-1 Recreate 
+ Container cloud-lab1-controller-1 Recreate 
+ Container cloud-lab1-data-1 Recreate 
+ Container cloud-lab1-data-1 Recreated 
+ Container cloud-lab1-controller-1 Recreated 
+ Container cloud-lab1-compute-1 Recreated 
+ Container cloud-lab1-controller-1 Starting 
+ Container cloud-lab1-data-1 Starting 
+ Container cloud-lab1-compute-1 Starting 
+ Container cloud-lab1-data-1 Started 
+ Container cloud-lab1-compute-1 Started 
+ Container cloud-lab1-controller-1 Started 
+ Container cloud-lab1-mongodb-1 Waiting 
+ Container cloud-lab1-compute-1 Waiting 
+ Container cloud-lab1-grafana-1 Waiting 
+ Container cloud-lab1-otel-collector-1 Waiting 
+ Container cloud-lab1-prometheus-1 Waiting 
+ Container cloud-lab1-cadvisor-1 Waiting 
+ Container cloud-lab1-tempo-1 Waiting 
+ Container cloud-lab1-controller-1 Waiting 
+ Container cloud-lab1-data-1 Waiting 
+ Container cloud-lab1-tempo-1 Healthy 
+ Container cloud-lab1-cadvisor-1 Healthy 
+ Container cloud-lab1-grafana-1 Healthy 
+ Container cloud-lab1-otel-collector-1 Healthy 
+ Container cloud-lab1-mongodb-1 Healthy 
+ Container cloud-lab1-prometheus-1 Healthy 
+ Container cloud-lab1-data-1 Healthy 
+ Container cloud-lab1-compute-1 Healthy 
+ Container cloud-lab1-controller-1 Healthy 
+ Container cloud-lab1-prometheus-1 Restarting 
+ Container cloud-lab1-grafana-1 Restarting 
+ Container cloud-lab1-prometheus-1 Started 
+ Container cloud-lab1-grafana-1 Started 
+PASS: controller, provisioned dashboards, Prometheus, and 7 core/replica services.
+PASS: actual CPU, RAM, network receive and transmit series exist for compute.
+PASS: all four resource panel queries return a real numeric value.
+PASS: workload coordinator ready. MongoDB available: True.
+PASS: 9-service mode, Collector and Tempo ready.
+PASS: application dashboard and 3 healthy application scrapes.
+Deployment ready: baseline; tracing: True.
+Application: http://localhost:5000
+Resources:   http://localhost:3000/d/cloud-lab1-resources
+Application graphs: http://localhost:3000/d/cloud-lab1-application

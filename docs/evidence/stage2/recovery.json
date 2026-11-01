@@ -1,0 +1,92 @@
+{
+  "recorded_utc": "2026-11-01T10:06:14.235683+00:00",
+  "checks": {
+    "abrupt_controller_loss_reconciled": true,
+    "database_cap_exercised": true,
+    "database_cap_never_exceeded": true,
+    "document_cap_run_completed": true,
+    "temporary_documents_released": true
+  },
+  "interrupted_run": {
+    "counters": {
+      "allocated_mib": 64,
+      "cpu_batches": 0,
+      "database_cycles": 0,
+      "database_reads": 0,
+      "database_writes": 0,
+      "errors": 0,
+      "network_bytes": 0,
+      "network_requests": 0,
+      "touched_pages": 16384
+    },
+    "created_at": "2026-11-01T10:05:45.487+00:00",
+    "elapsed_seconds": 4.656,
+    "error": "Controller restarted during this experiment.",
+    "finished_at": "2026-11-01T10:05:51.110+00:00",
+    "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527535487&to=1793527561110&var-service=data",
+    "id": "29d7ed6d-f5d8-456c-aaa8-ca3382fe621a",
+    "interruption_reason": "Controller restarted during this experiment.",
+    "name": "Verification: abrupt controller loss",
+    "notes": "",
+    "persistence": "saved",
+    "profile": "medium",
+    "rates": {
+      "cpu_batches_per_second": 0.0,
+      "database_cycles_per_second": 0.0,
+      "network_requests_per_second": 0.0
+    },
+    "settings": {
+      "duration_seconds": 60,
+      "memory_mib": 64
+    },
+    "started_at": "2026-11-01T10:05:45.739+00:00",
+    "state": "interrupted",
+    "target_service": "data",
+    "workload": "memory"
+  },
+  "database_run": {
+    "counters": {
+      "cpu_batches": 0,
+      "database_cycles": 300,
+      "database_reads": 300,
+      "database_writes": 300,
+      "errors": 0,
+      "network_bytes": 0,
+      "network_requests": 0
+    },
+    "created_at": "2026-11-01T10:05:55.243+00:00",
+    "elapsed_seconds": 15.004,
+    "error": null,
+    "finished_at": "2026-11-01T10:06:11.582+00:00",
+    "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527545243&to=1793527581582&var-service=data&var-service=mongodb",
+    "id": "61c9d776-f162-4313-a73c-ebceebdb3558",
+    "name": "Verification: bounded document slots",
+    "notes": "",
+    "persistence": "saved",
+    "profile": "high",
+    "rates": {
+      "cpu_batches_per_second": 0.0,
+      "database_cycles_per_second": 19.994,
+      "network_requests_per_second": 0.0
+    },
+    "settings": {
+      "document_kib": 64,
+      "duration_seconds": 15,
+      "rate_per_second": 20
+    },
+    "started_at": "2026-11-01T10:05:55.622+00:00",
+    "state": "completed",
+    "target_service": "data",
+    "workload": "database"
+  },
+  "document_counts": [
+    20,
+    63,
+    108,
+    128,
+    128,
+    128,
+    128,
+    0
+  ]
+}

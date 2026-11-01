@@ -1,0 +1,779 @@
+{
+  "recorded_utc": "2026-11-01T13:44:46.328737+00:00",
+  "mode": "browser",
+  "images": {
+    "cadvisor": "sha256:b8e7d1093144fd088f425ff003d75a4aa405de075db78dae3bc563730b1bd07a",
+    "compute": "sha256:008d490a8506a58c318e27dde8f4dfc9b5929e1bb1aafd79798b9e71cfafe620",
+    "controller": "sha256:d268fd4e5e0d0bcda36e6dc9576bf19f09826098695c7ef7d51a313d8b12132d",
+    "data": "sha256:f3ac8fc52d5c284bd26362927e79d14ed1f8f01d179693e4f27c162170cb6ee4",
+    "grafana": "sha256:488984b716c0862639f91a698adbe2862677a5a07bad42da5f03f3030883b205",
+    "mongodb": "sha256:b9924c330a8bbc5800fe9c69f04a84e221eca7b28fd049a0354147d9908fa142",
+    "otel-collector": "sha256:340c9ca6a36617084c6661bdc4f0fe92b7cda5a805d61673ec8db375fddc522b",
+    "prometheus": "sha256:fa3302279710be2f21a8301ec17a8b4f2301fd829bd113839b3b6b02b6f191a2",
+    "tempo": "sha256:64e2fbd56d9c2b3412a4b430a58ea59e91a670b1e75f920a0c702213ad145044"
+  },
+  "deployment": {
+    "compute_instances": [
+      "compute"
+    ],
+    "effective": {
+      "compute": {
+        "boot_id": "740c54b5-fbc0-4c41-818c-bd0ef6dc42e9",
+        "instance": "compute",
+        "limits": {
+          "cgroup_version": 1,
+          "cpus": 1.0,
+          "memory_bytes": 536870912
+        },
+        "role": "compute",
+        "tracing_enabled": true
+      },
+      "data": {
+        "boot_id": "57d6977a-ca1a-435d-9302-983f0ec12d8f",
+        "instance": "data",
+        "limits": {
+          "cgroup_version": 1,
+          "cpus": 1.0,
+          "memory_bytes": 536870912
+        },
+        "role": "data",
+        "tracing_enabled": true
+      }
+    },
+    "error": null,
+    "errors": [],
+    "expected": {
+      "compute": {
+        "cpus": 1,
+        "memory_bytes": 536870912
+      },
+      "data": {
+        "cpus": 1,
+        "memory_bytes": 536870912
+      }
+    },
+    "generation": "cc6248dc-7d75-42da-8638-d8df8d290e2d",
+    "images": {
+      "compute": "sha256:008d490a8506a58c318e27dde8f4dfc9b5929e1bb1aafd79798b9e71cfafe620",
+      "data": "sha256:f3ac8fc52d5c284bd26362927e79d14ed1f8f01d179693e4f27c162170cb6ee4"
+    },
+    "instances": [
+      "compute",
+      "data"
+    ],
+    "memory_allocation_max_mib": 128,
+    "pending": false,
+    "prepared": true,
+    "preset": "baseline",
+    "tracing": true,
+    "updated_utc": "2026-11-01T13:39:41.8916894Z",
+    "verified": true
+  },
+  "runs": {
+    "cpu": {
+      "run": {
+        "application_grafana_url": "http://localhost:3000/d/cloud-lab1-application?from=1793540724632&to=1793540776026&var-service=controller&var-service=compute",
+        "batch_results": [],
+        "counters": {
+          "cpu_batches": 44953,
+          "database_cycles": 0,
+          "database_reads": 0,
+          "database_writes": 0,
+          "errors": 0,
+          "network_bytes": 0,
+          "network_requests": 0
+        },
+        "created_at": "2026-11-01T13:45:34.632+00:00",
+        "deployment": {
+          "compute_instances": [
+            "compute"
+          ],
+          "effective": {
+            "compute": {
+              "boot_id": "740c54b5-fbc0-4c41-818c-bd0ef6dc42e9",
+              "instance": "compute",
+              "limits": {
+                "cgroup_version": 1,
+                "cpus": 1.0,
+                "memory_bytes": 536870912
+              },
+              "role": "compute",
+              "tracing_enabled": true
+            },
+            "data": {
+              "boot_id": "57d6977a-ca1a-435d-9302-983f0ec12d8f",
+              "instance": "data",
+              "limits": {
+                "cgroup_version": 1,
+                "cpus": 1.0,
+                "memory_bytes": 536870912
+              },
+              "role": "data",
+              "tracing_enabled": true
+            }
+          },
+          "error": null,
+          "errors": [],
+          "expected": {
+            "compute": {
+              "cpus": 1,
+              "memory_bytes": 536870912
+            },
+            "data": {
+              "cpus": 1,
+              "memory_bytes": 536870912
+            }
+          },
+          "generation": "cc6248dc-7d75-42da-8638-d8df8d290e2d",
+          "images": {
+            "compute": "sha256:008d490a8506a58c318e27dde8f4dfc9b5929e1bb1aafd79798b9e71cfafe620",
+            "data": "sha256:f3ac8fc52d5c284bd26362927e79d14ed1f8f01d179693e4f27c162170cb6ee4"
+          },
+          "instances": [
+            "compute",
+            "data"
+          ],
+          "memory_allocation_max_mib": 128,
+          "pending": false,
+          "prepared": true,
+          "preset": "baseline",
+          "tracing": true,
+          "updated_utc": "2026-11-01T13:39:41.8916894Z",
+          "verified": true
+        },
+        "elapsed_seconds": 30.0,
+        "error": null,
+        "finished_at": "2026-11-01T13:46:06.026+00:00",
+        "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793540724632&to=1793540776026&var-service=compute",
+        "id": "8636fafc-6533-44c2-a330-1cce68f0841a",
+        "name": "Stage 5 example: cpu",
+        "notes": "",
+        "persistence": "saved",
+        "profile": "medium",
+        "rates": {
+          "cpu_batches_per_second": 1498.415,
+          "database_cycles_per_second": 0.0,
+          "network_requests_per_second": 0.0
+        },
+        "settings": {
+          "cpu_percent": 50,
+          "duration_seconds": 30
+        },
+        "started_at": "2026-11-01T13:45:34.700+00:00",
+        "state": "completed",
+        "target_service": "compute",
+        "target_services": [
+          "compute"
+        ],
+        "trace_id": "46b8fcbb76a1d6088084cadee5f87626",
+        "trace_url": "http://localhost:3000/explore?schemaVersion=1&panes=%7B%22trace%22%3A+%7B%22datasource%22%3A+%22tempo%22%2C+%22queries%22%3A+%5B%7B%22refId%22%3A+%22A%22%2C+%22queryType%22%3A+%22traceql%22%2C+%22query%22%3A+%2246b8fcbb76a1d6088084cadee5f87626%22%7D%5D%2C+%22range%22%3A+%7B%22from%22%3A+%221793540724632%22%2C+%22to%22%3A+%221793540776026%22%7D%7D%7D",
+        "workload": "cpu"
+      },
+      "window": {
+        "start": 1793540686.5021906,
+        "end": 1793540796.3632643,
+        "baseline_seconds": 48.12980937957764,
+        "cooldown_seconds": 30.3372642993927,
+        "query_step_seconds": 5
+      },
+      "resources": {
+        "compute": {
+          "peak_cpu_30s": 0.5578579541336647,
+          "peak_cpu_recent": 0.5832862332695978,
+          "peak_memory_mib": 116.21875,
+          "baseline_memory_mib": 64.86328125,
+          "cooldown_memory_mib": 67.1171875,
+          "peak_receive_30s": 971.6990533134029,
+          "peak_transmit_30s": 10457.886835429932
+        },
+        "controller": {
+          "peak_cpu_30s": 0.10750738981762938,
+          "peak_cpu_recent": 0.12624287805592124,
+          "peak_memory_mib": 74.7578125,
+          "baseline_memory_mib": 63.94921875,
+          "cooldown_memory_mib": 64.0,
+          "peak_receive_30s": 64353.09372156506,
+          "peak_transmit_30s": 50146.382526250505
+        },
+        "data": {
+          "peak_cpu_30s": 0.09776435390177511,
+          "peak_cpu_recent": 0.10629458003169621,
+          "peak_memory_mib": 70.44140625,
+          "baseline_memory_mib": 61.3046875,
+          "cooldown_memory_mib": 64.1875,
+          "peak_receive_30s": 878.6700125470514,
+          "peak_transmit_30s": 9045.293902587642
+        },
+        "mongodb": {
+          "peak_cpu_30s": 0.1138009045797589,
+          "peak_cpu_recent": 0.15657396304675844,
+          "peak_memory_mib": 423.25,
+          "baseline_memory_mib": 257.470703125,
+          "cooldown_memory_mib": 259.453125,
+          "peak_receive_30s": 1508.5201245953706,
+          "peak_transmit_30s": 51187.53020782988
+        }
+      },
+      "checks": {
+        "completed": true,
+        "zero_errors": true,
+        "saved": true,
+        "images_frozen": true,
+        "workers_reaped": true,
+        "temporary_documents_cleaned": true,
+        "no_active_run": true,
+        "resource_series_available": true
+      }
+    },
+    "memory": {
+      "run": {
+        "application_grafana_url": "http://localhost:3000/d/cloud-lab1-application?from=1793540886572&to=1793540938186&var-service=controller&var-service=data",
+        "batch_results": [],
+        "counters": {
+          "allocated_mib": 64,
+          "cpu_batches": 0,
+          "database_cycles": 0,
+          "database_reads": 0,
+          "database_writes": 0,
+          "errors": 0,
+          "network_bytes": 0,
+          "network_requests": 0,
+          "touched_pages": 16384
+        },
+        "created_at": "2026-11-01T13:48:16.572+00:00",
+        "deployment": {
+          "compute_instances": [
+            "compute"
+          ],
+          "effective": {
+            "compute": {
+              "boot_id": "740c54b5-fbc0-4c41-818c-bd0ef6dc42e9",
+              "instance": "compute",
+              "limits": {
+                "cgroup_version": 1,
+                "cpus": 1.0,
+                "memory_bytes": 536870912
+              },
+              "role": "compute",
+              "tracing_enabled": true
+            },
+            "data": {
+              "boot_id": "57d6977a-ca1a-435d-9302-983f0ec12d8f",
+              "instance": "data",
+              "limits": {
+                "cgroup_version": 1,
+                "cpus": 1.0,
+                "memory_bytes": 536870912
+              },
+              "role": "data",
+              "tracing_enabled": true
+            }
+          },
+          "error": null,
+          "errors": [],
+          "expected": {
+            "compute": {
+              "cpus": 1,
+              "memory_bytes": 536870912
+            },
+            "data": {
+              "cpus": 1,
+              "memory_bytes": 536870912
+            }
+          },
+          "generation": "cc6248dc-7d75-42da-8638-d8df8d290e2d",
+          "images": {
+            "compute": "sha256:008d490a8506a58c318e27dde8f4dfc9b5929e1bb1aafd79798b9e71cfafe620",
+            "data": "sha256:f3ac8fc52d5c284bd26362927e79d14ed1f8f01d179693e4f27c162170cb6ee4"
+          },
+          "instances": [
+            "compute",
+            "data"
+          ],
+          "memory_allocation_max_mib": 128,
+          "pending": false,
+          "prepared": true,
+          "preset": "baseline",
+          "tracing": true,
+          "updated_utc": "2026-11-01T13:39:41.8916894Z",
+          "verified": true
+        },
+        "elapsed_seconds": 30.003,
+        "error": null,
+        "finished_at": "2026-11-01T13:48:48.186+00:00",
+        "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793540886572&to=1793540938186&var-service=data",
+        "id": "5a804b0d-a5c2-481a-992b-4e1e96536c92",
+        "name": "Stage 5 example: memory",
+        "notes": "64 MiB for 30 seconds, with idle baseline and cooldown. One illustrative observation.",
+        "persistence": "saved",
+        "profile": "medium",
+        "rates": {
+          "cpu_batches_per_second": 0.0,
+          "database_cycles_per_second": 0.0,
+          "network_requests_per_second": 0.0
+        },
+        "settings": {
+          "duration_seconds": 30,
+          "memory_mib": 64
+        },
+        "started_at": "2026-11-01T13:48:16.942+00:00",
+        "state": "completed",
+        "target_service": "data",
+        "target_services": [
+          "data"
+        ],
+        "trace_id": "426b2b6867902d42289f6c0c0eb54bd7",
+        "trace_url": "http://localhost:3000/explore?schemaVersion=1&panes=%7B%22trace%22%3A+%7B%22datasource%22%3A+%22tempo%22%2C+%22queries%22%3A+%5B%7B%22refId%22%3A+%22A%22%2C+%22queryType%22%3A+%22traceql%22%2C+%22query%22%3A+%22426b2b6867902d42289f6c0c0eb54bd7%22%7D%5D%2C+%22range%22%3A+%7B%22from%22%3A+%221793540886572%22%2C+%22to%22%3A+%221793540938186%22%7D%7D%7D",
+        "workload": "memory"
+      },
+      "window": {
+        "start": 1793540801.6732516,
+        "end": 1793540958.6786728,
+        "baseline_seconds": 94.89874839782715,
+        "cooldown_seconds": 30.49267268180847,
+        "query_step_seconds": 5
+      },
+      "resources": {
+        "compute": {
+          "peak_cpu_30s": 0.09790277299909922,
+          "peak_cpu_recent": 0.13225586610334836,
+          "peak_memory_mib": 77.4296875,
+          "baseline_memory_mib": 69.3203125,
+          "cooldown_memory_mib": 69.28125,
+          "peak_receive_30s": 901.148755514859,
+          "peak_transmit_30s": 7737.77959469719
+        },
+        "controller": {
+          "peak_cpu_30s": 0.12170966765965356,
+          "peak_cpu_recent": 0.19267434767875272,
+          "peak_memory_mib": 75.52734375,
+          "baseline_memory_mib": 64.27734375,
+          "cooldown_memory_mib": 64.10546875,
+          "peak_receive_30s": 62507.5009147457,
+          "peak_transmit_30s": 47254.80241492865
+        },
+        "data": {
+          "peak_cpu_30s": 0.12738056838985265,
+          "peak_cpu_recent": 0.25874366385911196,
+          "peak_memory_mib": 169.0859375,
+          "baseline_memory_mib": 65.84375,
+          "cooldown_memory_mib": 65.96484375,
+          "peak_receive_30s": 954.6869070208728,
+          "peak_transmit_30s": 12236.165959728925
+        },
+        "mongodb": {
+          "peak_cpu_30s": 0.12397691306494264,
+          "peak_cpu_recent": 0.2464602638352622,
+          "peak_memory_mib": 394.76953125,
+          "baseline_memory_mib": 259.41796875,
+          "cooldown_memory_mib": 259.51171875,
+          "peak_receive_30s": 1249.9375281123496,
+          "peak_transmit_30s": 47794.142635813885
+        }
+      },
+      "checks": {
+        "completed": true,
+        "zero_errors": true,
+        "saved": true,
+        "images_frozen": true,
+        "workers_reaped": true,
+        "temporary_documents_cleaned": true,
+        "no_active_run": true,
+        "resource_series_available": true
+      }
+    },
+    "network": {
+      "run": {
+        "application_grafana_url": "http://localhost:3000/d/cloud-lab1-application?from=1793541016144&to=1793541068082&var-service=controller&var-service=data&var-service=compute",
+        "batch_results": [],
+        "counters": {
+          "cpu_batches": 0,
+          "database_cycles": 0,
+          "database_reads": 0,
+          "database_writes": 0,
+          "errors": 0,
+          "network_bytes": 39321600,
+          "network_requests": 150
+        },
+        "created_at": "2026-11-01T13:50:26.144+00:00",
+        "deployment": {
+          "compute_instances": [
+            "compute"
+          ],
+          "effective": {
+            "compute": {
+              "boot_id": "740c54b5-fbc0-4c41-818c-bd0ef6dc42e9",
+              "instance": "compute",
+              "limits": {
+                "cgroup_version": 1,
+                "cpus": 1.0,
+                "memory_bytes": 536870912
+              },
+              "role": "compute",
+              "tracing_enabled": true
+            },
+            "data": {
+              "boot_id": "57d6977a-ca1a-435d-9302-983f0ec12d8f",
+              "instance": "data",
+              "limits": {
+                "cgroup_version": 1,
+                "cpus": 1.0,
+                "memory_bytes": 536870912
+              },
+              "role": "data",
+              "tracing_enabled": true
+            }
+          },
+          "error": null,
+          "errors": [],
+          "expected": {
+            "compute": {
+              "cpus": 1,
+              "memory_bytes": 536870912
+            },
+            "data": {
+              "cpus": 1,
+              "memory_bytes": 536870912
+            }
+          },
+          "generation": "cc6248dc-7d75-42da-8638-d8df8d290e2d",
+          "images": {
+            "compute": "sha256:008d490a8506a58c318e27dde8f4dfc9b5929e1bb1aafd79798b9e71cfafe620",
+            "data": "sha256:f3ac8fc52d5c284bd26362927e79d14ed1f8f01d179693e4f27c162170cb6ee4"
+          },
+          "instances": [
+            "compute",
+            "data"
+          ],
+          "memory_allocation_max_mib": 128,
+          "pending": false,
+          "prepared": true,
+          "preset": "baseline",
+          "tracing": true,
+          "updated_utc": "2026-11-01T13:39:41.8916894Z",
+          "verified": true
+        },
+        "elapsed_seconds": 30.0,
+        "error": null,
+        "finished_at": "2026-11-01T13:50:58.082+00:00",
+        "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793541016144&to=1793541068082&var-service=data",
+        "id": "ead14011-9209-49a2-a061-9cb74ea41375",
+        "name": "Stage 5 example: network",
+        "notes": "256 KiB per response at a requested 5 requests per second for 30 seconds.",
+        "persistence": "saved",
+        "profile": "medium",
+        "rates": {
+          "cpu_batches_per_second": 0.0,
+          "database_cycles_per_second": 0.0,
+          "network_requests_per_second": 5.0
+        },
+        "settings": {
+          "duration_seconds": 30,
+          "payload_kib": 256,
+          "rate_per_second": 5
+        },
+        "started_at": "2026-11-01T13:50:26.450+00:00",
+        "state": "completed",
+        "target_service": "data",
+        "target_services": [
+          "data"
+        ],
+        "trace_id": "89bbf2180a7a5556c4e250a5e7745272",
+        "trace_url": "http://localhost:3000/explore?schemaVersion=1&panes=%7B%22trace%22%3A+%7B%22datasource%22%3A+%22tempo%22%2C+%22queries%22%3A+%5B%7B%22refId%22%3A+%22A%22%2C+%22queryType%22%3A+%22traceql%22%2C+%22query%22%3A+%2289bbf2180a7a5556c4e250a5e7745272%22%7D%5D%2C+%22range%22%3A+%7B%22from%22%3A+%221793541016144%22%2C+%22to%22%3A+%221793541068082%22%7D%7D%7D",
+        "workload": "network"
+      },
+      "window": {
+        "start": 1793540963.887402,
+        "end": 1793541088.9696896,
+        "baseline_seconds": 62.25659799575806,
+        "cooldown_seconds": 30.8876895904541,
+        "query_step_seconds": 5
+      },
+      "resources": {
+        "compute": {
+          "peak_cpu_30s": 0.10204567555456005,
+          "peak_cpu_recent": 0.11911424078500508,
+          "peak_memory_mib": 81.40625,
+          "baseline_memory_mib": 69.2890625,
+          "cooldown_memory_mib": 70.01953125,
+          "peak_receive_30s": 3417.488236612144,
+          "peak_transmit_30s": 1318927.0109791618
+        },
+        "controller": {
+          "peak_cpu_30s": 0.11412823410973315,
+          "peak_cpu_recent": 0.16736858021527343,
+          "peak_memory_mib": 75.7734375,
+          "baseline_memory_mib": 64.11328125,
+          "cooldown_memory_mib": 64.14453125,
+          "peak_receive_30s": 63560.17206477732,
+          "peak_transmit_30s": 48375.91093117408
+        },
+        "data": {
+          "peak_cpu_30s": 0.15738215856340038,
+          "peak_cpu_recent": 0.23964680146624032,
+          "peak_memory_mib": 105.07421875,
+          "baseline_memory_mib": 66.10546875,
+          "cooldown_memory_mib": 66.24609375,
+          "peak_receive_30s": 1260434.489094831,
+          "peak_transmit_30s": 15623.072621235118
+        },
+        "mongodb": {
+          "peak_cpu_30s": 0.14316129891415713,
+          "peak_cpu_recent": 0.2284508477569784,
+          "peak_memory_mib": 412.00390625,
+          "baseline_memory_mib": 259.546875,
+          "cooldown_memory_mib": 259.41796875,
+          "peak_receive_30s": 1311.502938706969,
+          "peak_transmit_30s": 46347.586510910296
+        }
+      },
+      "checks": {
+        "completed": true,
+        "zero_errors": true,
+        "saved": true,
+        "images_frozen": true,
+        "workers_reaped": true,
+        "temporary_documents_cleaned": true,
+        "no_active_run": true,
+        "resource_series_available": true
+      }
+    },
+    "combined": {
+      "run": {
+        "application_grafana_url": "http://localhost:3000/d/cloud-lab1-application?from=1793541187107&to=1793541238401&var-service=controller&var-service=data&var-service=compute",
+        "batch_results": [],
+        "counters": {
+          "allocated_mib": 64,
+          "cpu_batches": 0,
+          "database_cycles": 150,
+          "database_reads": 150,
+          "database_writes": 150,
+          "errors": 0,
+          "network_bytes": 39321600,
+          "network_requests": 150,
+          "touched_pages": 16384
+        },
+        "created_at": "2026-11-01T13:53:17.107+00:00",
+        "deployment": {
+          "compute_instances": [
+            "compute"
+          ],
+          "effective": {
+            "compute": {
+              "boot_id": "740c54b5-fbc0-4c41-818c-bd0ef6dc42e9",
+              "instance": "compute",
+              "limits": {
+                "cgroup_version": 1,
+                "cpus": 1.0,
+                "memory_bytes": 536870912
+              },
+              "role": "compute",
+              "tracing_enabled": true
+            },
+            "data": {
+              "boot_id": "57d6977a-ca1a-435d-9302-983f0ec12d8f",
+              "instance": "data",
+              "limits": {
+                "cgroup_version": 1,
+                "cpus": 1.0,
+                "memory_bytes": 536870912
+              },
+              "role": "data",
+              "tracing_enabled": true
+            }
+          },
+          "error": null,
+          "errors": [],
+          "expected": {
+            "compute": {
+              "cpus": 1,
+              "memory_bytes": 536870912
+            },
+            "data": {
+              "cpus": 1,
+              "memory_bytes": 536870912
+            }
+          },
+          "generation": "cc6248dc-7d75-42da-8638-d8df8d290e2d",
+          "images": {
+            "compute": "sha256:008d490a8506a58c318e27dde8f4dfc9b5929e1bb1aafd79798b9e71cfafe620",
+            "data": "sha256:f3ac8fc52d5c284bd26362927e79d14ed1f8f01d179693e4f27c162170cb6ee4"
+          },
+          "instances": [
+            "compute",
+            "data"
+          ],
+          "memory_allocation_max_mib": 128,
+          "pending": false,
+          "prepared": true,
+          "preset": "baseline",
+          "tracing": true,
+          "updated_utc": "2026-11-01T13:39:41.8916894Z",
+          "verified": true
+        },
+        "elapsed_seconds": 30.005,
+        "error": null,
+        "finished_at": "2026-11-01T13:53:48.401+00:00",
+        "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793541187107&to=1793541238401&var-service=data&var-service=mongodb",
+        "id": "2f24ccd5-bc82-483b-906c-14fe16c1f6a8",
+        "name": "Stage 5 example: combined",
+        "notes": "64 MiB, 256 KiB network payloads, 16 KiB database payloads, 5 cycles per second for 30 seconds.",
+        "persistence": "saved",
+        "profile": "medium",
+        "rates": {
+          "cpu_batches_per_second": 0.0,
+          "database_cycles_per_second": 4.999,
+          "network_requests_per_second": 4.999
+        },
+        "settings": {
+          "document_kib": 16,
+          "duration_seconds": 30,
+          "memory_mib": 64,
+          "payload_kib": 256,
+          "rate_per_second": 5
+        },
+        "started_at": "2026-11-01T13:53:17.337+00:00",
+        "state": "completed",
+        "target_service": "data",
+        "target_services": [
+          "data"
+        ],
+        "trace_id": "1cdbe47bc835d1cd81c501ee55095ca0",
+        "trace_url": "http://localhost:3000/explore?schemaVersion=1&panes=%7B%22trace%22%3A+%7B%22datasource%22%3A+%22tempo%22%2C+%22queries%22%3A+%5B%7B%22refId%22%3A+%22A%22%2C+%22queryType%22%3A+%22traceql%22%2C+%22query%22%3A+%221cdbe47bc835d1cd81c501ee55095ca0%22%7D%5D%2C+%22range%22%3A+%7B%22from%22%3A+%221793541187107%22%2C+%22to%22%3A+%221793541238401%22%7D%7D%7D",
+        "workload": "combined"
+      },
+      "window": {
+        "start": 1793541094.3123786,
+        "end": 1793541258.8396723,
+        "baseline_seconds": 102.79462146759033,
+        "cooldown_seconds": 30.438672304153442,
+        "query_step_seconds": 5
+      },
+      "resources": {
+        "compute": {
+          "peak_cpu_30s": 0.10260067248702216,
+          "peak_cpu_recent": 0.10388626049466651,
+          "peak_memory_mib": 81.8203125,
+          "baseline_memory_mib": 69.890625,
+          "cooldown_memory_mib": 69.91796875,
+          "peak_receive_30s": 3327.4447604462925,
+          "peak_transmit_30s": 1330997.702909648
+        },
+        "controller": {
+          "peak_cpu_30s": 0.1356560733829729,
+          "peak_cpu_recent": 0.1685502770644674,
+          "peak_memory_mib": 74.44140625,
+          "baseline_memory_mib": 64.24609375,
+          "cooldown_memory_mib": 64.5078125,
+          "peak_receive_30s": 67774.78473085602,
+          "peak_transmit_30s": 43678.96118248377
+        },
+        "data": {
+          "peak_cpu_30s": 0.12175987996518084,
+          "peak_cpu_recent": 0.25439715127701423,
+          "peak_memory_mib": 170.0234375,
+          "baseline_memory_mib": 66.2578125,
+          "cooldown_memory_mib": 66.38671875,
+          "peak_receive_30s": 1393002.83286119,
+          "peak_transmit_30s": 103526.1363030852
+        },
+        "mongodb": {
+          "peak_cpu_30s": 0.12603485601900014,
+          "peak_cpu_recent": 0.20090080374105151,
+          "peak_memory_mib": 411.73828125,
+          "baseline_memory_mib": 259.4296875,
+          "cooldown_memory_mib": 411.73828125,
+          "peak_receive_30s": 86850.94624889214,
+          "peak_transmit_30s": 125570.00903342366
+        }
+      },
+      "checks": {
+        "completed": true,
+        "zero_errors": true,
+        "saved": true,
+        "images_frozen": true,
+        "workers_reaped": true,
+        "temporary_documents_cleaned": true,
+        "no_active_run": true,
+        "resource_series_available": true
+      }
+    }
+  },
+  "checks": {
+    "cpu_completed": true,
+    "cpu_zero_errors": true,
+    "cpu_saved": true,
+    "cpu_images_frozen": true,
+    "cpu_workers_reaped": true,
+    "cpu_temporary_documents_cleaned": true,
+    "cpu_no_active_run": true,
+    "cpu_resource_series_available": true,
+    "memory_completed": true,
+    "memory_zero_errors": true,
+    "memory_saved": true,
+    "memory_images_frozen": true,
+    "memory_workers_reaped": true,
+    "memory_temporary_documents_cleaned": true,
+    "memory_no_active_run": true,
+    "memory_resource_series_available": true,
+    "network_completed": true,
+    "network_zero_errors": true,
+    "network_saved": true,
+    "network_images_frozen": true,
+    "network_workers_reaped": true,
+    "network_temporary_documents_cleaned": true,
+    "network_no_active_run": true,
+    "network_resource_series_available": true,
+    "combined_completed": true,
+    "combined_zero_errors": true,
+    "combined_saved": true,
+    "combined_images_frozen": true,
+    "combined_workers_reaped": true,
+    "combined_temporary_documents_cleaned": true,
+    "combined_no_active_run": true,
+    "combined_resource_series_available": true,
+    "connected_combined_trace": true,
+    "credentials_preserved": true,
+    "final_baseline_tracing_verified": true,
+    "no_unsaved_results": true
+  },
+  "source_sha256": {
+    "services\\.dockerignore": "2d7a273d46cbba041f9c051e2cd507339457c1f42eab544e5ad2c8e87b5cd596",
+    "services\\Dockerfile": "94267bef110e59876cc40143a47ba5da8e872661abad957226c8e851d2e127c6",
+    "services\\gunicorn_conf.py": "0e19d91e3980f394d88d00b2e33c3df7f23ee40cf11d004bed69009b2ba3a732",
+    "services\\requirements.txt": "e45e3dd5810fec6f2ade8ff87d9b994230344ced6540c77353e5637e9fc6d1bd",
+    "services\\compute\\app.py": "23dbd4b17e1038f4384a5196032356b110ad61c43c8d9747530c5e11e33d8773",
+    "services\\controller\\app.py": "d42d794bcfc20d5ef9fffd40f334960d9ef7993a4c3cb974f1ab70174d68ad17",
+    "services\\controller\\coordinator.py": "d6e6106e3b3f06433bbeaaf52171b13dfd9ef0dc3648ce5c71933cdf6b0c341a",
+    "services\\controller\\fixed_coordination.py": "a9d6a8e9d43c4d0878d1918aab456578596a70ad94e0f64780fe0e6046206937",
+    "services\\controller\\repository.py": "030fba96a2fff24690462655213113d745d49c079814794ff832d5e450704360",
+    "services\\data\\app.py": "2708485b56c883c4b85a7e65d9729364273c6ea760bb1e8368d595f59ef5b57f",
+    "services\\shared\\deployment.py": "e07e07b58eff656ea8c1259f1e2f6821f8aa81137fdd2573eab30fae0bc77023",
+    "services\\shared\\fixed_child.py": "7077adcd16cf7e5991b3bb45c3fff8ba19066609039daa036f0c5314059921e7",
+    "services\\shared\\fixed_runner.py": "4d139e664f9e99b0028168c37609faa8bf781fd5e1d7060374ad97b81e906bb4",
+    "services\\shared\\fixed_work.py": "05ecca956d46c728526507cba98791678cd37c94f5df86665f5dd4f3f320b267",
+    "services\\shared\\io_stats.py": "63f5e459dabaf43639c32212f0ea148d20e707f7cd5ea289199443f5980091a9",
+    "services\\shared\\metrics.py": "ce50106d6ae4c334e9fd5ea70f079ede0cc59d9c291119de2f2dcc3876e65c1c",
+    "services\\shared\\model.py": "65d2729b2cb05ae95a7281d8512e8ab4be52e044be635b0a2c07fc696e32a710",
+    "services\\shared\\presets.json": "49b00c724890d6b4bc2d1842efe5bf7999ac3edf32c21dbbcb18d684a53c1d4c",
+    "services\\shared\\tracing.py": "e505601303a412350987ae055d445325bcfc79b6c228367ae9a10fa55ec84fe8",
+    "services\\shared\\worker.py": "cc41d2921fe08a06f128507d9d9b80402608f08fff220e9338693b8f8c926c34",
+    "services\\shared\\worker_app.py": "283524a5245afc517053594887c9a16b7a9b3539ae9b7f19162b6a6bfd8b9c3b",
+    "services\\shared\\workload_child.py": "1096c816c52ed24f30f289887750ae05acb4ab46b82ac572cdebf3da57ed9f1b",
+    "services\\shared\\__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "services\\tests\\test_stage2.py": "c203ff2bdcd6e6d2a7190450a451d75a479e5434fb0138d843a84fe76b642df8",
+    "services\\tests\\test_stage3.py": "1e310f09785668070376efb489778cf7fb5e2a23bf596d7ed45e98d99d8eb330",
+    "services\\tests\\test_stage4.py": "d5650cfa3dc8f20d77bd91bd70dd83c617601ece03a4320b315c66c090fc2e48",
+    "services\\controller\\static\\app.js": "62e40dc0adb1d75f2d89c133ccc5075c0d04587b343657ac4da57e47a19443d7",
+    "services\\controller\\static\\style.css": "35b04c52d092f553f06e43c35ab201c14897eafeeb438576df511029bfbf5bf5",
+    "services\\controller\\templates\\index.html": "26296ab9de545b331ee7fcd43752b88e19e8077e57c81ebc841f23503b9bc054",
+    "compose.yaml": "bb203394531342a50c7a1f1011ef526737b641ab8fdf6f0e864fb9bade386567",
+    "monitoring\\grafana\\dashboards\\application-performance.json": "58f8dacf6ebcfb400c34b41744add669b0187465483aad202be7b2dd0197cb3c",
+    "monitoring\\grafana\\dashboards\\container-resources.json": "07f44ed4e31adccf71f77b2bee14ac2f52e964cae5dbf54fa969ef47fcf9aff8"
+  },
+  "final_dashboard_presentation_sha256": {
+    "monitoring\\grafana\\dashboards\\application-performance.json": "4d088a2cdfdb0b9504226c5fe1a64706467fb1e0344aebb2312f13f1f70b9576",
+    "monitoring\\grafana\\dashboards\\container-resources.json": "a4394a2cbe76cf1f596104a4bc7d7d910a2801ea1249d7852b08d3eef3e8bd8a"
+  },
+  "presentation_note": "Service-colour matcher syntax was corrected after data collection. Measurement expressions, sampling windows and all application images stayed unchanged."
+}

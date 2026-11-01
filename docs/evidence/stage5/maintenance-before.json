@@ -1,0 +1,13 @@
+{
+  "updated_utc": "2026-11-01T13:39:41.8916894Z",
+  "images": {
+    "data": "sha256:f3ac8fc52d5c284bd26362927e79d14ed1f8f01d179693e4f27c162170cb6ee4",
+    "compute": "sha256:008d490a8506a58c318e27dde8f4dfc9b5929e1bb1aafd79798b9e71cfafe620"
+  },
+  "generation": "cc6248dc-7d75-42da-8638-d8df8d290e2d",
+  "error": null,
+  "tracing": true,
+  "pending": false,
+  "preset": "baseline",
+  "prepared": true
+}

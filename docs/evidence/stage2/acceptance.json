@@ -1,0 +1,990 @@
+{
+  "recorded_utc": "2026-11-01T10:05:22.244660+00:00",
+  "checks": {
+    "no_other_experiment_active": true,
+    "invalid_inputs_rejected": true,
+    "start_returns_promptly": true,
+    "cpu_low_completes": true,
+    "cpu_high_completes": true,
+    "cpu_intensities_distinct": true,
+    "memory_medium_completes": true,
+    "memory_rises": true,
+    "memory_releases": true,
+    "network_medium_completes": true,
+    "network_real_bytes": true,
+    "network_visible_in_prometheus": true,
+    "database_high_completes": true,
+    "database_real_write_read_pairs": true,
+    "database_documents_cleaned": true,
+    "combined_medium_completes": true,
+    "combined_all_components": true,
+    "combined_documents_cleaned": true,
+    "overlap_rejected": true,
+    "health_during_work": true,
+    "duplicate_internal_start_is_idempotent": true,
+    "stop_within_five_seconds": true,
+    "cancel_preserves_partial_counts": true,
+    "cancel_cleans_documents": true,
+    "controller_restart_interrupts_without_retry": true,
+    "data_restart_interrupts_without_retry": true,
+    "database_workloads_disabled_when_offline": true,
+    "cpu_works_without_database": true,
+    "memory_works_without_database": true,
+    "network_works_without_database": true,
+    "pending_runs_exportable": true,
+    "pending_history_saved_after_reconnect": true,
+    "unknown_worker_state_blocks_new_runs": true,
+    "historical_metrics_survive_full_restart": true,
+    "saved_history_survives_full_restart": true,
+    "csv_matches_actual_result": true,
+    "seven_services_in_prometheus": true,
+    "all_starts_prompt": true
+  },
+  "runs": [
+    {
+      "counters": {
+        "cpu_batches": 27063,
+        "database_cycles": 0,
+        "database_reads": 0,
+        "database_writes": 0,
+        "errors": 0,
+        "network_bytes": 0,
+        "network_requests": 0
+      },
+      "created_at": "2026-11-01T10:01:00.140+00:00",
+      "elapsed_seconds": 35.0,
+      "error": null,
+      "finished_at": "2026-11-01T10:01:36.207+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527250140&to=1793527306207&var-service=compute",
+      "id": "5dc2427c-128f-4120-b1e5-bd824f798887",
+      "name": "Verification: cpu low",
+      "notes": "Stage 2 live acceptance; real measurements.",
+      "persistence": "saved",
+      "profile": "low",
+      "rates": {
+        "cpu_batches_per_second": 773.225,
+        "database_cycles_per_second": 0.0,
+        "network_requests_per_second": 0.0
+      },
+      "settings": {
+        "cpu_percent": 25,
+        "duration_seconds": 35
+      },
+      "started_at": "2026-11-01T10:01:00.519+00:00",
+      "state": "completed",
+      "target_service": "compute",
+      "workload": "cpu"
+    },
+    {
+      "counters": {
+        "cpu_batches": 94564,
+        "database_cycles": 0,
+        "database_reads": 0,
+        "database_writes": 0,
+        "errors": 0,
+        "network_bytes": 0,
+        "network_requests": 0
+      },
+      "created_at": "2026-11-01T10:01:36.636+00:00",
+      "elapsed_seconds": 35.0,
+      "error": null,
+      "finished_at": "2026-11-01T10:02:12.769+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527286636&to=1793527342769&var-service=compute",
+      "id": "5db41a3a-623d-4d43-ac02-5363d19f0776",
+      "name": "Verification: cpu high",
+      "notes": "Stage 2 live acceptance; real measurements.",
+      "persistence": "saved",
+      "profile": "high",
+      "rates": {
+        "cpu_batches_per_second": 2701.801,
+        "database_cycles_per_second": 0.0,
+        "network_requests_per_second": 0.0
+      },
+      "settings": {
+        "cpu_percent": 90,
+        "duration_seconds": 35
+      },
+      "started_at": "2026-11-01T10:01:37.096+00:00",
+      "state": "completed",
+      "target_service": "compute",
+      "workload": "cpu"
+    },
+    {
+      "counters": {
+        "allocated_mib": 64,
+        "cpu_batches": 0,
+        "database_cycles": 0,
+        "database_reads": 0,
+        "database_writes": 0,
+        "errors": 0,
+        "network_bytes": 0,
+        "network_requests": 0,
+        "touched_pages": 16384
+      },
+      "created_at": "2026-11-01T10:02:16.112+00:00",
+      "elapsed_seconds": 15.0,
+      "error": null,
+      "finished_at": "2026-11-01T10:02:31.960+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527326112&to=1793527361960&var-service=data",
+      "id": "b522079f-e9e5-41e4-aa39-2b61f3c7acc0",
+      "name": "Verification: memory medium",
+      "notes": "Stage 2 live acceptance; real measurements.",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 0.0,
+        "database_cycles_per_second": 0.0,
+        "network_requests_per_second": 0.0
+      },
+      "settings": {
+        "duration_seconds": 15,
+        "memory_mib": 64
+      },
+      "started_at": "2026-11-01T10:02:16.296+00:00",
+      "state": "completed",
+      "target_service": "data",
+      "workload": "memory"
+    },
+    {
+      "counters": {
+        "cpu_batches": 0,
+        "database_cycles": 0,
+        "database_reads": 0,
+        "database_writes": 0,
+        "errors": 0,
+        "network_bytes": 19660800,
+        "network_requests": 75
+      },
+      "created_at": "2026-11-01T10:02:43.848+00:00",
+      "elapsed_seconds": 15.0,
+      "error": null,
+      "finished_at": "2026-11-01T10:02:57.961+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527353848&to=1793527387961&var-service=data",
+      "id": "87fe0aae-17e9-4ea8-92a2-c49c4db1f3a1",
+      "name": "Verification: network medium",
+      "notes": "Stage 2 live acceptance; real measurements.",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 0.0,
+        "database_cycles_per_second": 0.0,
+        "network_requests_per_second": 5.0
+      },
+      "settings": {
+        "duration_seconds": 15,
+        "payload_kib": 256,
+        "rate_per_second": 5
+      },
+      "started_at": "2026-11-01T10:02:44.204+00:00",
+      "state": "completed",
+      "target_service": "data",
+      "workload": "network"
+    },
+    {
+      "counters": {
+        "cpu_batches": 0,
+        "database_cycles": 300,
+        "database_reads": 300,
+        "database_writes": 300,
+        "errors": 0,
+        "network_bytes": 0,
+        "network_requests": 0
+      },
+      "created_at": "2026-11-01T10:02:58.398+00:00",
+      "elapsed_seconds": 15.006,
+      "error": null,
+      "finished_at": "2026-11-01T10:03:14.603+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527368398&to=1793527404603&var-service=data&var-service=mongodb",
+      "id": "dd244e78-5459-48df-a3b1-261f1fdf11d0",
+      "name": "Verification: database high",
+      "notes": "Stage 2 live acceptance; real measurements.",
+      "persistence": "saved",
+      "profile": "high",
+      "rates": {
+        "cpu_batches_per_second": 0.0,
+        "database_cycles_per_second": 19.991,
+        "network_requests_per_second": 0.0
+      },
+      "settings": {
+        "document_kib": 64,
+        "duration_seconds": 15,
+        "rate_per_second": 20
+      },
+      "started_at": "2026-11-01T10:02:58.861+00:00",
+      "state": "completed",
+      "target_service": "data",
+      "workload": "database"
+    },
+    {
+      "counters": {
+        "allocated_mib": 64,
+        "cpu_batches": 0,
+        "database_cycles": 75,
+        "database_reads": 75,
+        "database_writes": 75,
+        "errors": 0,
+        "network_bytes": 19660800,
+        "network_requests": 75,
+        "touched_pages": 16384
+      },
+      "created_at": "2026-11-01T10:03:18.902+00:00",
+      "elapsed_seconds": 15.007,
+      "error": null,
+      "finished_at": "2026-11-01T10:03:34.884+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527388902&to=1793527424884&var-service=data&var-service=mongodb",
+      "id": "25f0f7bc-3bf6-4c94-9e90-f7faf5401366",
+      "name": "Verification: combined medium",
+      "notes": "Stage 2 live acceptance; real measurements.",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 0.0,
+        "database_cycles_per_second": 4.998,
+        "network_requests_per_second": 4.998
+      },
+      "settings": {
+        "document_kib": 16,
+        "duration_seconds": 15,
+        "memory_mib": 64,
+        "payload_kib": 256,
+        "rate_per_second": 5
+      },
+      "started_at": "2026-11-01T10:03:19.004+00:00",
+      "state": "completed",
+      "target_service": "data",
+      "workload": "combined"
+    },
+    {
+      "counters": {
+        "allocated_mib": 64,
+        "cpu_batches": 0,
+        "database_cycles": 23,
+        "database_reads": 23,
+        "database_writes": 23,
+        "errors": 0,
+        "network_bytes": 6029312,
+        "network_requests": 23,
+        "touched_pages": 16384
+      },
+      "created_at": "2026-11-01T10:03:38.817+00:00",
+      "elapsed_seconds": 4.521,
+      "error": null,
+      "finished_at": "2026-11-01T10:03:44.194+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527408817&to=1793527434194&var-service=data&var-service=mongodb",
+      "id": "4ca88369-ba1c-4323-9aa0-cd8653d50633",
+      "name": "Verification: cancel combined",
+      "notes": "",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 0.0,
+        "database_cycles_per_second": 5.088,
+        "network_requests_per_second": 5.088
+      },
+      "settings": {
+        "document_kib": 16,
+        "duration_seconds": 60,
+        "memory_mib": 64,
+        "payload_kib": 256,
+        "rate_per_second": 5
+      },
+      "started_at": "2026-11-01T10:03:38.879+00:00",
+      "state": "cancelled",
+      "target_service": "data",
+      "workload": "combined"
+    },
+    {
+      "counters": {
+        "allocated_mib": 64,
+        "cpu_batches": 0,
+        "database_cycles": 0,
+        "database_reads": 0,
+        "database_writes": 0,
+        "errors": 0,
+        "network_bytes": 0,
+        "network_requests": 0,
+        "touched_pages": 16384
+      },
+      "created_at": "2026-11-01T10:03:45.814+00:00",
+      "elapsed_seconds": 1.117,
+      "error": "Controller stopped during this experiment.",
+      "finished_at": "2026-11-01T10:03:47.814+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527415814&to=1793527437814&var-service=data",
+      "id": "c479c02b-8099-4785-8006-6d9fffed046d",
+      "interruption_reason": "Controller stopped during this experiment.",
+      "name": "Verification: controller restart",
+      "notes": "",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 0.0,
+        "database_cycles_per_second": 0.0,
+        "network_requests_per_second": 0.0
+      },
+      "settings": {
+        "duration_seconds": 60,
+        "memory_mib": 64
+      },
+      "started_at": "2026-11-01T10:03:46.007+00:00",
+      "state": "interrupted",
+      "target_service": "data",
+      "workload": "memory"
+    },
+    {
+      "counters": {
+        "allocated_mib": 64,
+        "cpu_batches": 0,
+        "database_cycles": 0,
+        "database_reads": 0,
+        "database_writes": 0,
+        "errors": 0,
+        "network_bytes": 0,
+        "network_requests": 0,
+        "touched_pages": 16384
+      },
+      "created_at": "2026-11-01T10:03:52.610+00:00",
+      "elapsed_seconds": 1.268,
+      "error": "Workload service stopped during this experiment.",
+      "finished_at": "2026-11-01T10:03:54.691+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527422610&to=1793527444691&var-service=data",
+      "id": "fe45385d-b973-49a8-9bb7-3d2c8e6ebc45",
+      "name": "Verification: data restart",
+      "notes": "",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 0.0,
+        "database_cycles_per_second": 0.0,
+        "network_requests_per_second": 0.0
+      },
+      "settings": {
+        "duration_seconds": 60,
+        "memory_mib": 64
+      },
+      "started_at": "2026-11-01T10:03:52.682+00:00",
+      "state": "interrupted",
+      "target_service": "data",
+      "workload": "memory"
+    },
+    {
+      "counters": {
+        "cpu_batches": 6059,
+        "database_cycles": 0,
+        "database_reads": 0,
+        "database_writes": 0,
+        "errors": 0,
+        "network_bytes": 0,
+        "network_requests": 0
+      },
+      "created_at": "2026-11-01T10:03:57.585+00:00",
+      "elapsed_seconds": 4.124,
+      "error": null,
+      "finished_at": "2026-11-01T10:04:04.012+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527427585&to=1793527454012&var-service=compute",
+      "id": "378ae546-4573-45fa-b0c9-c50e0afd4d54",
+      "name": "Verification: MongoDB offline cpu",
+      "notes": "",
+      "persistence": "pending",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 1469.307,
+        "database_cycles_per_second": 0.0,
+        "network_requests_per_second": 0.0
+      },
+      "settings": {
+        "cpu_percent": 50,
+        "duration_seconds": 15
+      },
+      "started_at": "2026-11-01T10:03:59.223+00:00",
+      "state": "cancelled",
+      "target_service": "compute",
+      "workload": "cpu"
+    },
+    {
+      "counters": {
+        "allocated_mib": 64,
+        "cpu_batches": 0,
+        "database_cycles": 0,
+        "database_reads": 0,
+        "database_writes": 0,
+        "errors": 0,
+        "network_bytes": 0,
+        "network_requests": 0,
+        "touched_pages": 16384
+      },
+      "created_at": "2026-11-01T10:04:05.901+00:00",
+      "elapsed_seconds": 2.414,
+      "error": null,
+      "finished_at": "2026-11-01T10:04:10.167+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527435901&to=1793527460167&var-service=data",
+      "id": "42451770-74e7-4dd2-a160-990183a1d75a",
+      "name": "Verification: MongoDB offline memory",
+      "notes": "",
+      "persistence": "pending",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 0.0,
+        "database_cycles_per_second": 0.0,
+        "network_requests_per_second": 0.0
+      },
+      "settings": {
+        "duration_seconds": 15,
+        "memory_mib": 64
+      },
+      "started_at": "2026-11-01T10:04:07.042+00:00",
+      "state": "cancelled",
+      "target_service": "data",
+      "workload": "memory"
+    },
+    {
+      "counters": {
+        "cpu_batches": 0,
+        "database_cycles": 0,
+        "database_reads": 0,
+        "database_writes": 0,
+        "errors": 0,
+        "network_bytes": 5505024,
+        "network_requests": 21
+      },
+      "created_at": "2026-11-01T10:04:11.623+00:00",
+      "elapsed_seconds": 4.103,
+      "error": null,
+      "finished_at": "2026-11-01T10:04:18.097+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793527441623&to=1793527468097&var-service=data",
+      "id": "e4cc0b4d-f8a2-42c8-9471-271e160e25f6",
+      "name": "Verification: MongoDB offline network",
+      "notes": "",
+      "persistence": "pending",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 0.0,
+        "database_cycles_per_second": 0.0,
+        "network_requests_per_second": 5.119
+      },
+      "settings": {
+        "duration_seconds": 15,
+        "payload_kib": 256,
+        "rate_per_second": 5
+      },
+      "started_at": "2026-11-01T10:04:13.327+00:00",
+      "state": "cancelled",
+      "target_service": "data",
+      "workload": "network"
+    }
+  ],
+  "samples": [
+    {
+      "timestamp_utc": "2026-11-01T10:01:00.145442+00:00",
+      "phase": "Verification: cpu low",
+      "service": "compute",
+      "cpu_cores": 0.05732918766743858,
+      "memory_mib": 43.88671875,
+      "receive_bps": 693.1389910548064,
+      "transmit_bps": 749.7616128592834
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:03.198637+00:00",
+      "phase": "Verification: cpu low",
+      "service": "compute",
+      "cpu_cores": 0.06321441808933881,
+      "memory_mib": 43.76171875,
+      "receive_bps": 697.2352319081433,
+      "transmit_bps": 754.1924762048648
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:06.229063+00:00",
+      "phase": "Verification: cpu low",
+      "service": "compute",
+      "cpu_cores": 0.06321441808933881,
+      "memory_mib": 43.76171875,
+      "receive_bps": 697.2352319081433,
+      "transmit_bps": 754.1924762048648
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:09.265505+00:00",
+      "phase": "Verification: cpu low",
+      "service": "compute",
+      "cpu_cores": 0.12533035115722269,
+      "memory_mib": 70.15625,
+      "receive_bps": 706.6241021548284,
+      "transmit_bps": 1179.6887470071829
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:12.319490+00:00",
+      "phase": "Verification: cpu low",
+      "service": "compute",
+      "cpu_cores": 0.12864154992737453,
+      "memory_mib": 70.15625,
+      "receive_bps": 612.2356797864928,
+      "transmit_bps": 1135.9282837944756
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:15.362798+00:00",
+      "phase": "Verification: cpu low",
+      "service": "compute",
+      "cpu_cores": 0.11341531938480891,
+      "memory_mib": 70.15625,
+      "receive_bps": 539.7716984919875,
+      "transmit_bps": 1001.5035220415442
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:18.394759+00:00",
+      "phase": "Verification: cpu low",
+      "service": "compute",
+      "cpu_cores": 0.24429004504504498,
+      "memory_mib": 78.90234375,
+      "receive_bps": 689.3893893893893,
+      "transmit_bps": 2538.6386386386384
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:21.472853+00:00",
+      "phase": "Verification: cpu low",
+      "service": "compute",
+      "cpu_cores": 0.2106513058423423,
+      "memory_mib": 78.90234375,
+      "receive_bps": 594.2996129462797,
+      "transmit_bps": 2188.137263930597
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:24.491352+00:00",
+      "phase": "Verification: cpu low",
+      "service": "compute",
+      "cpu_cores": 0.31724975809289235,
+      "memory_mib": 70.1484375,
+      "receive_bps": 699.5073891625616,
+      "transmit_bps": 3312.148135116115
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:27.512618+00:00",
+      "phase": "Verification: cpu low",
+      "service": "compute",
+      "cpu_cores": 0.3172497580928923,
+      "memory_mib": 70.1484375,
+      "receive_bps": 699.5073891625616,
+      "transmit_bps": 3312.148135116116
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:30.564128+00:00",
+      "phase": "Verification: cpu low",
+      "service": "compute",
+      "cpu_cores": 0.3038533394170992,
+      "memory_mib": 70.1484375,
+      "receive_bps": 686.7621057434552,
+      "transmit_bps": 3463.0696401072264
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:33.581911+00:00",
+      "phase": "Verification: cpu low",
+      "service": "compute",
+      "cpu_cores": 0.3067363847400464,
+      "memory_mib": 70.0390625,
+      "receive_bps": 682.8873023520653,
+      "transmit_bps": 3401.7782839122247
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:36.617941+00:00",
+      "phase": "Verification: cpu low",
+      "service": "compute",
+      "cpu_cores": 0.2575843294980798,
+      "memory_mib": 70.0390625,
+      "receive_bps": 571.4493036313256,
+      "transmit_bps": 2727.5393818968455
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:36.641064+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.25734285567230564,
+      "memory_mib": 70.0390625,
+      "receive_bps": 570.9134643430071,
+      "transmit_bps": 2724.8702846239853
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:39.670902+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.31913516004315773,
+      "memory_mib": 44.0625,
+      "receive_bps": 702.2118324042439,
+      "transmit_bps": 3351.915123179285
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:42.707013+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.31913516004315773,
+      "memory_mib": 44.0625,
+      "receive_bps": 702.2118324042439,
+      "transmit_bps": 3351.915123179285
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:45.726151+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.25756832365249244,
+      "memory_mib": 44.0625,
+      "receive_bps": 553.9263089383859,
+      "transmit_bps": 2643.5581356667635
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:48.768399+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.5271194890542716,
+      "memory_mib": 70.08203125,
+      "receive_bps": 685.9903381642512,
+      "transmit_bps": 3278.844061452757
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:51.797404+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.5271194890542716,
+      "memory_mib": 70.08203125,
+      "receive_bps": 685.9903381642512,
+      "transmit_bps": 3278.844061452757
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:54.819743+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.6856784790690158,
+      "memory_mib": 70.578125,
+      "receive_bps": 656.9419751090996,
+      "transmit_bps": 3321.157265233554
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:01:57.857852+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.8749395918115673,
+      "memory_mib": 70.578125,
+      "receive_bps": 630.3489949438895,
+      "transmit_bps": 3291.836231347885
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:00.876037+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.8749395918115673,
+      "memory_mib": 70.578125,
+      "receive_bps": 630.3489949438895,
+      "transmit_bps": 3291.836231347885
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:03.937951+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.8864756323313782,
+      "memory_mib": 70.43359375,
+      "receive_bps": 614.0945747800586,
+      "transmit_bps": 3303.6107038123164
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:06.991652+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.5844929099999999,
+      "memory_mib": 70.43359375,
+      "receive_bps": 361.24999999999994,
+      "transmit_bps": 2125.6499999999996
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:10.019550+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.6525646220824457,
+      "memory_mib": 70.43359375,
+      "receive_bps": 403.2082018408941,
+      "transmit_bps": 2372.2030394477315
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:13.038455+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.5597220927885601,
+      "memory_mib": 70.43359375,
+      "receive_bps": 345.76921433267586,
+      "transmit_bps": 2034.111489151874
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:16.072736+00:00",
+      "phase": "Verification: cpu high",
+      "service": "compute",
+      "cpu_cores": 0.9160744543458608,
+      "memory_mib": 70.08203125,
+      "receive_bps": 559.8605191786129,
+      "transmit_bps": 3293.4263205475913
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:16.093350+00:00",
+      "phase": "Data idle baseline",
+      "service": "data",
+      "cpu_cores": 0.062051064343292925,
+      "memory_mib": 43.8671875,
+      "receive_bps": 696.6259593570497,
+      "transmit_bps": 752.0393879422696
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:16.117420+00:00",
+      "phase": "Verification: memory medium",
+      "service": "data",
+      "cpu_cores": 0.062051064343292925,
+      "memory_mib": 43.8671875,
+      "receive_bps": 696.6259593570497,
+      "transmit_bps": 752.0393879422696
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:19.167476+00:00",
+      "phase": "Verification: memory medium",
+      "service": "data",
+      "cpu_cores": 0.062176160312659726,
+      "memory_mib": 43.89453125,
+      "receive_bps": 602.1221862516803,
+      "transmit_bps": 650.0938073872135
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:19.146111+00:00",
+      "phase": "Verification: memory medium",
+      "service": "data",
+      "cpu_cores": 0.059333270874746775,
+      "memory_mib": 43.89453125,
+      "receive_bps": 574.2732625281611,
+      "transmit_bps": 619.853372711611
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:22.163408+00:00",
+      "phase": "Verification: memory medium",
+      "service": "data",
+      "cpu_cores": 0.05201885364296397,
+      "memory_mib": 43.89453125,
+      "receive_bps": 503.3914541564908,
+      "transmit_bps": 543.3080592945987
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:25.203549+00:00",
+      "phase": "Verification: memory medium",
+      "service": "data",
+      "cpu_cores": 0.09924540150679896,
+      "memory_mib": 136.796875,
+      "receive_bps": 678.6108048511577,
+      "transmit_bps": 1576.5803013597942
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:28.223114+00:00",
+      "phase": "Verification: memory medium",
+      "service": "data",
+      "cpu_cores": 0.09924540150679896,
+      "memory_mib": 136.796875,
+      "receive_bps": 678.6108048511578,
+      "transmit_bps": 1576.5803013597942
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:31.240177+00:00",
+      "phase": "Verification: memory medium",
+      "service": "data",
+      "cpu_cores": 0.08371914382136744,
+      "memory_mib": 136.19140625,
+      "receive_bps": 640.1923165826822,
+      "transmit_bps": 2487.957098608478
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:41.278409+00:00",
+      "phase": "Memory cooldown",
+      "service": "data",
+      "cpu_cores": 0.08372986519337015,
+      "memory_mib": 43.9765625,
+      "receive_bps": 608.1767955801105,
+      "transmit_bps": 2885.0828729281766
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:41.310676+00:00",
+      "phase": "Verification: network medium",
+      "service": "data",
+      "cpu_cores": 0.08372986519337015,
+      "memory_mib": 43.9765625,
+      "receive_bps": 608.1767955801105,
+      "transmit_bps": 2885.0828729281766
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:44.343243+00:00",
+      "phase": "Verification: network medium",
+      "service": "data",
+      "cpu_cores": 0.041444181282323786,
+      "memory_mib": 43.9765625,
+      "receive_bps": 436.08089165528065,
+      "transmit_bps": 2349.9348767774914
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:47.371506+00:00",
+      "phase": "Verification: network medium",
+      "service": "data",
+      "cpu_cores": 0.08968863615518673,
+      "memory_mib": 70.26953125,
+      "receive_bps": 12701.962762542422,
+      "transmit_bps": 2803.219297441072
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:50.414959+00:00",
+      "phase": "Verification: network medium",
+      "service": "data",
+      "cpu_cores": 0.0896886361551867,
+      "memory_mib": 70.26953125,
+      "receive_bps": 12701.962762542418,
+      "transmit_bps": 2803.219297441071
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:53.436561+00:00",
+      "phase": "Verification: network medium",
+      "service": "data",
+      "cpu_cores": 0.0896886361551867,
+      "memory_mib": 70.26953125,
+      "receive_bps": 12701.962762542418,
+      "transmit_bps": 2803.219297441071
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:56.456568+00:00",
+      "phase": "Verification: network medium",
+      "service": "data",
+      "cpu_cores": 0.08470244238619262,
+      "memory_mib": 70.26953125,
+      "receive_bps": 14264.101463318726,
+      "transmit_bps": 1897.0544876980111
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:59.493461+00:00",
+      "phase": "Verification: network medium",
+      "service": "data",
+      "cpu_cores": 0.0934108661767981,
+      "memory_mib": 79.84375,
+      "receive_bps": 551388.3784903141,
+      "transmit_bps": 4159.964373190826
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:02:59.519828+00:00",
+      "phase": "Verification: database high",
+      "service": "data",
+      "cpu_cores": 0.0934108661767981,
+      "memory_mib": 79.84375,
+      "receive_bps": 551837.485985304,
+      "transmit_bps": 4159.964373190825
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:03:02.550659+00:00",
+      "phase": "Verification: database high",
+      "service": "data",
+      "cpu_cores": 0.1062160534088113,
+      "memory_mib": 79.84375,
+      "receive_bps": 668687.3491180573,
+      "transmit_bps": 4808.885060300271
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:03:05.580550+00:00",
+      "phase": "Verification: database high",
+      "service": "data",
+      "cpu_cores": 0.08103930821580939,
+      "memory_mib": 79.84375,
+      "receive_bps": 551628.2666666667,
+      "transmit_bps": 3667.7366354910164
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:03:08.620940+00:00",
+      "phase": "Verification: database high",
+      "service": "data",
+      "cpu_cores": 0.11174798795846892,
+      "memory_mib": 70.6796875,
+      "receive_bps": 990078.680012697,
+      "transmit_bps": 128101.79518133972
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:03:11.639937+00:00",
+      "phase": "Verification: database high",
+      "service": "data",
+      "cpu_cores": 0.11174798795846892,
+      "memory_mib": 70.6796875,
+      "receive_bps": 1115400.8989310071,
+      "transmit_bps": 143720.7278040589
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:03:14.673439+00:00",
+      "phase": "Verification: database high",
+      "service": "data",
+      "cpu_cores": 0.10613144967026023,
+      "memory_mib": 70.69140625,
+      "receive_bps": 1232655.7660032383,
+      "transmit_bps": 535812.7787360635
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:03:17.706847+00:00",
+      "phase": "Verification: database high",
+      "service": "data",
+      "cpu_cores": 0.12487010111280573,
+      "memory_mib": 70.69140625,
+      "receive_bps": 1198619.1605942496,
+      "transmit_bps": 635340.7770999266
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:03:18.907340+00:00",
+      "phase": "Verification: combined medium",
+      "service": "data",
+      "cpu_cores": 0.12487010111280573,
+      "memory_mib": 70.69140625,
+      "receive_bps": 1198619.1605942496,
+      "transmit_bps": 733509.9593571712
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:03:21.926200+00:00",
+      "phase": "Verification: combined medium",
+      "service": "data",
+      "cpu_cores": 0.0956744308884558,
+      "memory_mib": 70.69140625,
+      "receive_bps": 917293.2551097743,
+      "transmit_bps": 622400.0416666666
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:03:24.967384+00:00",
+      "phase": "Verification: combined medium",
+      "service": "data",
+      "cpu_cores": 0.07922762672418689,
+      "memory_mib": 52.8359375,
+      "receive_bps": 977757.7340069251,
+      "transmit_bps": 868976.2149609278
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:03:28.008294+00:00",
+      "phase": "Verification: combined medium",
+      "service": "data",
+      "cpu_cores": 0.07922762672418689,
+      "memory_mib": 52.8359375,
+      "receive_bps": 977757.7340069251,
+      "transmit_bps": 968463.814204083
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:03:31.041876+00:00",
+      "phase": "Verification: combined medium",
+      "service": "data",
+      "cpu_cores": 0.05863438584790261,
+      "memory_mib": 52.8359375,
+      "receive_bps": 723385.9115239069,
+      "transmit_bps": 726713.0305150329
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:03:34.076566+00:00",
+      "phase": "Verification: combined medium",
+      "service": "data",
+      "cpu_cores": 0.11234249375173566,
+      "memory_mib": 134.81640625,
+      "receive_bps": 990285.6984171064,
+      "transmit_bps": 338480.4776450986
+    },
+    {
+      "timestamp_utc": "2026-11-01T10:03:37.121312+00:00",
+      "phase": "Verification: combined medium",
+      "service": "data",
+      "cpu_cores": 0.11234249375173566,
+      "memory_mib": 134.81640625,
+      "receive_bps": 990285.6984171064,
+      "transmit_bps": 338480.4776450986
+    }
+  ]
+}

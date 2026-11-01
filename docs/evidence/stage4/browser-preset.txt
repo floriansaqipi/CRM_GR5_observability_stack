@@ -1,0 +1,43 @@
+ Container cloud-lab1-prometheus-1 Running 
+ Container cloud-lab1-compute-2-1 Recreate 
+ Container cloud-lab1-cadvisor-1 Running 
+ Container cloud-lab1-data-1 Running 
+ Container cloud-lab1-tempo-1 Running 
+ Container cloud-lab1-controller-1 Running 
+ Container cloud-lab1-mongodb-1 Running 
+ Container cloud-lab1-grafana-1 Running 
+ Container cloud-lab1-otel-collector-1 Running 
+ Container cloud-lab1-compute-1 Running 
+ Container cloud-lab1-compute-2-1 Recreated 
+ Container cloud-lab1-compute-2-1 Starting 
+ Container cloud-lab1-compute-2-1 Started 
+ Container cloud-lab1-mongodb-1 Waiting 
+ Container cloud-lab1-data-1 Waiting 
+ Container cloud-lab1-controller-1 Waiting 
+ Container cloud-lab1-prometheus-1 Waiting 
+ Container cloud-lab1-tempo-1 Waiting 
+ Container cloud-lab1-grafana-1 Waiting 
+ Container cloud-lab1-cadvisor-1 Waiting 
+ Container cloud-lab1-compute-1 Waiting 
+ Container cloud-lab1-compute-2-1 Waiting 
+ Container cloud-lab1-otel-collector-1 Waiting 
+ Container cloud-lab1-tempo-1 Healthy 
+ Container cloud-lab1-prometheus-1 Healthy 
+ Container cloud-lab1-cadvisor-1 Healthy 
+ Container cloud-lab1-compute-1 Healthy 
+ Container cloud-lab1-otel-collector-1 Healthy 
+ Container cloud-lab1-mongodb-1 Healthy 
+ Container cloud-lab1-controller-1 Healthy 
+ Container cloud-lab1-data-1 Healthy 
+ Container cloud-lab1-grafana-1 Healthy 
+ Container cloud-lab1-compute-2-1 Healthy 
+PASS: controller, provisioned dashboards, Prometheus, and 8 core/replica services.
+PASS: actual CPU, RAM, network receive and transmit series exist for compute.
+PASS: all four resource panel queries return a real numeric value.
+PASS: workload coordinator ready. MongoDB available: True.
+PASS: 10-service mode, Collector and Tempo ready.
+PASS: application dashboard and 4 healthy application scrapes.
+Deployment ready: replica-2; tracing: True.
+Application: http://localhost:5000
+Resources:   http://localhost:3000/d/cloud-lab1-resources
+Application graphs: http://localhost:3000/d/cloud-lab1-application

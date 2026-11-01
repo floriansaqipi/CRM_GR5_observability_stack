@@ -1,0 +1,2 @@
+ Container cloud-lab1-controller-1 Stopping 
+ Container cloud-lab1-controller-1 Stopped 

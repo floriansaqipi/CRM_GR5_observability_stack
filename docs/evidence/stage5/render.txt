@@ -1,0 +1,1 @@
+Rendered four plots, two guide diagrams, editable SVG/Mermaid sources, and the results report.

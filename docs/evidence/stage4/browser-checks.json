@@ -1,0 +1,11 @@
+{
+  "fixed_duration_hidden": true,
+  "completed_batch_count_visible": true,
+  "actual_checksum_visible": true,
+  "resource_link_selects_both": true,
+  "application_link_selects_both": true,
+  "refresh_preserved_active_run": true,
+  "stop_reached_cancelled": true,
+  "details_show_saved_configuration": true,
+  "browser_export_downloaded": true
+}

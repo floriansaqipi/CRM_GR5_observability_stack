@@ -1,0 +1,21 @@
+{
+  "id": "d65cf2df-e530-4925-bfc4-004553a4e02a",
+  "workload": "network",
+  "state": "completed",
+  "elapsed_seconds": 15.0,
+  "counters": {
+    "cpu_batches": 0,
+    "database_cycles": 0,
+    "database_reads": 0,
+    "database_writes": 0,
+    "errors": 0,
+    "network_bytes": 19660800,
+    "network_requests": 75
+  },
+  "rates": {
+    "cpu_batches_per_second": 0.0,
+    "database_cycles_per_second": 0.0,
+    "network_requests_per_second": 5.0
+  },
+  "persistence": "saved"
+}

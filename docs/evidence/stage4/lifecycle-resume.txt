@@ -1,0 +1,6 @@
+PASS normal_shutdown_stops_all_profiles
+PASS normal_restart_restores_baseline_tracing
+PASS stage4_run_survives_stop_start
+PASS stage4_trace_survives_stop_start
+PASS stage4_metrics_survive_stop_start
+PASS final_no_active_or_unsaved_runs

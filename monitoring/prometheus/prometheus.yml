@@ -1,0 +1,22 @@
+global:
+  scrape_interval: 5s
+  scrape_timeout: 4s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: applications
+    file_sd_configs:
+      - files: [/etc/lab-runtime/application-targets.json]
+        refresh_interval: 5s
+  - job_name: prometheus
+    static_configs:
+      - targets: [prometheus:9090]
+  - job_name: cadvisor
+    static_configs:
+      - targets: [cadvisor:8080]
+    metric_relabel_configs:
+      - source_labels: [container_label_com_docker_compose_project]
+        target_label: project
+      - source_labels: [container_label_com_docker_compose_service]
+        target_label: service
+

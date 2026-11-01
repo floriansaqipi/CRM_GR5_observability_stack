@@ -1,0 +1,17 @@
+cpu: baseline
+cpu: awaiting_start
+cpu: running
+cpu: cooldown
+memory: baseline
+memory: awaiting_start
+memory: running
+memory: cooldown
+network: baseline
+network: awaiting_start
+network: running
+network: cooldown
+combined: baseline
+combined: awaiting_start
+combined: running
+combined: cooldown
+all: complete

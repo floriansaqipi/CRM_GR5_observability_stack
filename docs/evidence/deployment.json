@@ -1,0 +1,45 @@
+{
+  "recorded_utc": "2026-11-01T01:05:44.1490409Z",
+  "services": [
+    {
+      "service": "compute",
+      "image": "cloud-lab1-compute:stage1",
+      "state": "running",
+      "health": "healthy",
+      "cpu_limit": 1,
+      "memory_limit_mib": 512,
+      "oom_killed": false,
+      "restart_count": 0
+    },
+    {
+      "service": "cadvisor",
+      "image": "ghcr.io/google/cadvisor:0.60.6@sha256:b8e7d1093144fd088f425ff003d75a4aa405de075db78dae3bc563730b1bd07a",
+      "state": "running",
+      "health": "healthy",
+      "cpu_limit": 0.5,
+      "memory_limit_mib": 256,
+      "oom_killed": false,
+      "restart_count": 0
+    },
+    {
+      "service": "prometheus",
+      "image": "prom/prometheus:v3.15.1@sha256:fa3302279710be2f21a8301ec17a8b4f2301fd829bd113839b3b6b02b6f191a2",
+      "state": "running",
+      "health": "healthy",
+      "cpu_limit": 1,
+      "memory_limit_mib": 768,
+      "oom_killed": false,
+      "restart_count": 0
+    },
+    {
+      "service": "grafana",
+      "image": "grafana/grafana:13.3.0@sha256:488984b716c0862639f91a698adbe2862677a5a07bad42da5f03f3030883b205",
+      "state": "running",
+      "health": "healthy",
+      "cpu_limit": 0.5,
+      "memory_limit_mib": 384,
+      "oom_killed": false,
+      "restart_count": 0
+    }
+  ]
+}

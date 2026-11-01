@@ -1,0 +1,9 @@
+cloud-lab1-compute-1: 63.11MiB / 512MiB CPU 30.44%
+cloud-lab1-controller-1: 63.45MiB / 256MiB CPU 0.85%
+cloud-lab1-data-1: 62.71MiB / 512MiB CPU 0.30%
+cloud-lab1-grafana-1: 394.3MiB / 512MiB CPU 1.10%
+cloud-lab1-otel-collector-1: 41.8MiB / 256MiB CPU 0.06%
+cloud-lab1-mongodb-1: 240.4MiB / 768MiB CPU 0.61%
+cloud-lab1-tempo-1: 302MiB / 768MiB CPU 0.32%
+cloud-lab1-cadvisor-1: 137.7MiB / 256MiB CPU 24.29%
+cloud-lab1-prometheus-1: 241.8MiB / 768MiB CPU 0.84%

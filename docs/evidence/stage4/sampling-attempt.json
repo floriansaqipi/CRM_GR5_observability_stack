@@ -1,0 +1,2641 @@
+{
+  "recorded_utc": "2026-11-01T12:07:11.514378+00:00",
+  "checks": {
+    "no_active_experiment": true,
+    "cpu-05_limits_verified": true,
+    "cpu-05_expected_scrapes": true,
+    "cpu-05_start_responsive": true,
+    "cpu-05_completed": true,
+    "cpu-05_saved_preset": true,
+    "cpu-05_exact_work": true,
+    "cpu-05_exact_checksum": true,
+    "cpu-05_unique_batch_ownership": true,
+    "cpu-05_two_processes": true,
+    "cpu-05_data_within_memory_limit": true,
+    "cpu-05_compute_within_memory_limit": true,
+    "cpu-1_limits_verified": true,
+    "cpu-1_expected_scrapes": true,
+    "cpu-1_start_responsive": true,
+    "cpu-1_completed": true,
+    "cpu-1_saved_preset": true,
+    "cpu-1_exact_work": true,
+    "cpu-1_exact_checksum": true,
+    "cpu-1_unique_batch_ownership": true,
+    "cpu-1_two_processes": true,
+    "cpu-1_data_within_memory_limit": true,
+    "cpu-1_compute_within_memory_limit": true,
+    "cpu-2_limits_verified": true,
+    "cpu-2_expected_scrapes": true,
+    "cpu-2_start_responsive": true,
+    "cpu-2_completed": true,
+    "cpu-2_saved_preset": true,
+    "cpu-2_exact_work": true,
+    "cpu-2_exact_checksum": true,
+    "cpu-2_unique_batch_ownership": true,
+    "cpu-2_two_processes": true,
+    "cpu-2_data_within_memory_limit": true,
+    "cpu-2_compute_within_memory_limit": true,
+    "two_core_configuration_uses_multiple_cores": false
+  },
+  "runs": {
+    "cpu-05": {
+      "algorithm_version": "sum-squares-v1",
+      "application_grafana_url": "http://localhost:3000/d/cloud-lab1-application?from=1793534673168&to=1793534761461&var-service=controller&var-service=compute",
+      "assignment": {
+        "compute": [
+          [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30
+          ],
+          [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23,
+            25,
+            27,
+            29,
+            31
+          ]
+        ]
+      },
+      "batch_results": [
+        {
+          "batch_id": 0,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:04:51.531+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:04:47.842+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 1,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:04:51.242+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:04:47.841+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 2,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:04:55.639+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:04:51.531+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 3,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:04:55.635+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:04:51.242+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 4,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:04:59.226+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:04:55.639+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 5,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:04:59.428+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:04:55.636+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 6,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:03.047+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:04:59.226+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 7,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:03.628+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:04:59.428+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 8,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:06.726+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:05:03.047+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 9,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:07.839+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:05:03.628+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 10,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:10.830+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:05:06.726+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 11,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:11.133+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:05:07.839+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 12,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:15.130+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:05:10.830+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 13,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:15.327+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:05:11.133+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 14,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:18.731+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:05:15.130+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 15,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:18.829+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:05:15.327+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 16,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:22.939+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:05:18.731+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 17,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:23.042+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:05:18.829+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 18,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:26.626+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:05:22.939+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 19,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:26.548+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:05:23.042+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 20,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:30.834+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:05:26.626+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 21,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:30.746+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:05:26.549+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 22,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:34.430+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:05:30.835+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 23,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:34.538+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:05:30.747+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 24,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:38.430+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:05:34.432+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 25,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:38.449+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:05:34.538+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 26,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:42.343+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:05:38.430+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 27,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:42.338+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:05:38.449+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 28,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:46.053+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:05:42.343+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 29,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:46.334+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:05:42.339+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 30,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:50.338+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:05:46.053+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 31,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:05:50.522+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:05:46.334+00:00",
+          "state": "completed"
+        }
+      ],
+      "calculation_processes": 2,
+      "calculation_units_per_batch": 2500,
+      "counters": {
+        "checksum": 12007132800000,
+        "cpu_batches": 80000,
+        "errors": 0,
+        "fixed_batches": 32
+      },
+      "created_at": "2026-11-01T12:04:43.168+00:00",
+      "deadline_unix": 1793534863.1685734,
+      "deployment": {
+        "compute_instances": [
+          "compute"
+        ],
+        "effective": {
+          "compute": {
+            "boot_id": "f596dccc-df30-4583-afa9-91fc5df3123b",
+            "instance": "compute",
+            "limits": {
+              "cgroup_version": 1,
+              "cpus": 0.5,
+              "memory_bytes": 536870912
+            },
+            "role": "compute",
+            "tracing_enabled": true
+          },
+          "data": {
+            "boot_id": "e10811b6-1cc7-488f-af34-7c4774913634",
+            "instance": "data",
+            "limits": {
+              "cgroup_version": 1,
+              "cpus": 1.0,
+              "memory_bytes": 536870912
+            },
+            "role": "data",
+            "tracing_enabled": true
+          }
+        },
+        "error": null,
+        "errors": [],
+        "expected": {
+          "compute": {
+            "cpus": 0.5,
+            "memory_bytes": 536870912
+          },
+          "data": {
+            "cpus": 1,
+            "memory_bytes": 536870912
+          }
+        },
+        "generation": "a4a4bf30-b205-4756-a604-f70b41a6ad50",
+        "images": {
+          "compute": "sha256:a23585e37e72fba0c2caf65cec3cd4bbe26d663d3b55b8c086b4d5e254536391",
+          "data": "sha256:9111e5779ce8fcc9c39b94d420fbefbf06a3a0380733d78caad57f1db20d1c46"
+        },
+        "instances": [
+          "compute",
+          "data"
+        ],
+        "memory_allocation_max_mib": 128,
+        "pending": false,
+        "prepared": true,
+        "preset": "cpu-05",
+        "tracing": true,
+        "updated_utc": "2026-11-01T12:04:30.7275279Z",
+        "verified": true
+      },
+      "elapsed_seconds": 67.031,
+      "error": null,
+      "finished_at": "2026-11-01T12:05:51.461+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793534673168&to=1793534761461&var-service=compute",
+      "id": "3f9e5d9f-c535-493e-a96a-d2f6a774388f",
+      "instance_results": {
+        "compute": {
+          "batch_results": [
+            {
+              "batch_id": 0,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:04:51.531+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:04:47.842+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 1,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:04:51.242+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:04:47.841+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 2,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:04:55.639+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:04:51.531+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 3,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:04:55.635+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:04:51.242+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 4,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:04:59.226+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:04:55.639+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 5,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:04:59.428+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:04:55.636+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 6,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:03.047+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:04:59.226+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 7,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:03.628+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:04:59.428+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 8,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:06.726+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:05:03.047+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 9,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:07.839+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:05:03.628+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 10,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:10.830+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:05:06.726+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 11,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:11.133+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:05:07.839+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 12,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:15.130+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:05:10.830+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 13,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:15.327+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:05:11.133+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 14,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:18.731+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:05:15.130+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 15,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:18.829+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:05:15.327+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 16,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:22.939+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:05:18.731+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 17,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:23.042+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:05:18.829+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 18,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:26.626+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:05:22.939+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 19,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:26.548+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:05:23.042+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 20,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:30.834+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:05:26.626+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 21,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:30.746+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:05:26.549+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 22,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:34.430+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:05:30.835+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 23,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:34.538+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:05:30.747+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 24,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:38.430+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:05:34.432+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 25,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:38.449+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:05:34.538+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 26,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:42.343+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:05:38.430+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 27,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:42.338+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:05:38.449+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 28,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:46.053+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:05:42.343+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 29,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:46.334+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:05:42.339+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 30,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:50.338+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:05:46.053+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 31,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:05:50.522+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:05:46.334+00:00",
+              "state": "completed"
+            }
+          ],
+          "counters": {
+            "checksum": 12007132800000,
+            "cpu_batches": 80000,
+            "errors": 0,
+            "fixed_batches": 32
+          },
+          "elapsed_seconds": 67.031,
+          "error": null,
+          "finished_at": "2026-11-01T12:05:51.024+00:00",
+          "rates": {
+            "cpu_batches_per_second": 1193.473
+          },
+          "started_at": "2026-11-01T12:04:43.496+00:00",
+          "state": "completed"
+        }
+      },
+      "name": "cpu-05",
+      "notes": "",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 1193.478
+      },
+      "settings": {
+        "batch_count": 32,
+        "duration_seconds": 180
+      },
+      "started_at": "2026-11-01T12:04:43.496+00:00",
+      "state": "completed",
+      "target_service": "compute",
+      "target_services": [
+        "compute"
+      ],
+      "trace_id": "69d306815d3dbd8e0dc658c0288815c3",
+      "trace_url": "http://localhost:3000/explore?schemaVersion=1&panes=%7B%22trace%22%3A+%7B%22datasource%22%3A+%22tempo%22%2C+%22queries%22%3A+%5B%7B%22refId%22%3A+%22A%22%2C+%22queryType%22%3A+%22traceql%22%2C+%22query%22%3A+%2269d306815d3dbd8e0dc658c0288815c3%22%7D%5D%2C+%22range%22%3A+%7B%22from%22%3A+%221793534673168%22%2C+%22to%22%3A+%221793534761461%22%7D%7D%7D",
+      "workload": "cpu_fixed"
+    },
+    "cpu-1": {
+      "algorithm_version": "sum-squares-v1",
+      "application_grafana_url": "http://localhost:3000/d/cloud-lab1-application?from=1793534758931&to=1793534809948&var-service=controller&var-service=compute",
+      "assignment": {
+        "compute": [
+          [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30
+          ],
+          [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23,
+            25,
+            27,
+            29,
+            31
+          ]
+        ]
+      },
+      "batch_results": [
+        {
+          "batch_id": 0,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:12.961+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:11.342+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 1,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:12.939+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:11.237+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 2,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:14.727+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:12.961+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 3,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:14.571+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:12.939+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 4,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:16.330+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:14.727+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 5,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:16.239+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:14.622+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 6,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:18.368+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:16.331+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 7,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:18.267+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:16.240+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 8,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:20.042+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:18.368+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 9,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:19.939+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:18.267+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 10,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:21.732+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:20.042+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 11,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:21.626+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:19.939+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 12,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:23.745+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:21.732+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 13,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:23.645+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:21.627+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 14,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:25.441+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:23.746+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 15,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:25.359+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:23.646+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 16,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:27.064+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:25.442+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 17,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:27.057+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:25.359+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 18,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:28.845+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:27.064+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 19,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:28.922+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:27.057+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 20,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:30.748+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:28.845+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 21,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:30.758+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:28.923+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 22,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:32.435+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:30.748+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 23,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:32.367+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:30.759+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 24,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:34.128+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:32.436+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 25,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:34.065+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:32.368+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 26,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:36.139+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:34.129+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 27,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:36.143+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:34.065+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 28,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:37.749+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:36.140+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 29,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:37.828+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:36.143+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 30,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:39.525+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:37.749+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 31,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:39.465+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:37.829+00:00",
+          "state": "completed"
+        }
+      ],
+      "calculation_processes": 2,
+      "calculation_units_per_batch": 2500,
+      "counters": {
+        "checksum": 12007132800000,
+        "cpu_batches": 80000,
+        "errors": 0,
+        "fixed_batches": 32
+      },
+      "created_at": "2026-11-01T12:06:08.931+00:00",
+      "deadline_unix": 1793534948.931465,
+      "deployment": {
+        "compute_instances": [
+          "compute"
+        ],
+        "effective": {
+          "compute": {
+            "boot_id": "b2d2b1fc-cbd8-4c62-8929-ec61d9894ce0",
+            "instance": "compute",
+            "limits": {
+              "cgroup_version": 1,
+              "cpus": 1.0,
+              "memory_bytes": 536870912
+            },
+            "role": "compute",
+            "tracing_enabled": true
+          },
+          "data": {
+            "boot_id": "e10811b6-1cc7-488f-af34-7c4774913634",
+            "instance": "data",
+            "limits": {
+              "cgroup_version": 1,
+              "cpus": 1.0,
+              "memory_bytes": 536870912
+            },
+            "role": "data",
+            "tracing_enabled": true
+          }
+        },
+        "error": null,
+        "errors": [],
+        "expected": {
+          "compute": {
+            "cpus": 1,
+            "memory_bytes": 536870912
+          },
+          "data": {
+            "cpus": 1,
+            "memory_bytes": 536870912
+          }
+        },
+        "generation": "a1b62376-157b-4a4d-9c20-24b69586bf38",
+        "images": {
+          "compute": "sha256:a23585e37e72fba0c2caf65cec3cd4bbe26d663d3b55b8c086b4d5e254536391",
+          "data": "sha256:9111e5779ce8fcc9c39b94d420fbefbf06a3a0380733d78caad57f1db20d1c46"
+        },
+        "instances": [
+          "compute",
+          "data"
+        ],
+        "memory_allocation_max_mib": 128,
+        "pending": false,
+        "prepared": true,
+        "preset": "cpu-1",
+        "tracing": true,
+        "updated_utc": "2026-11-01T12:05:52.6660116Z",
+        "verified": true
+      },
+      "elapsed_seconds": 30.392,
+      "error": null,
+      "finished_at": "2026-11-01T12:06:39.948+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793534758931&to=1793534809948&var-service=compute",
+      "id": "cae680fc-30e7-4d0a-8996-c82e5dc7bab8",
+      "instance_results": {
+        "compute": {
+          "batch_results": [
+            {
+              "batch_id": 0,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:12.961+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:11.342+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 1,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:12.939+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:11.237+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 2,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:14.727+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:12.961+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 3,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:14.571+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:12.939+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 4,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:16.330+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:14.727+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 5,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:16.239+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:14.622+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 6,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:18.368+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:16.331+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 7,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:18.267+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:16.240+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 8,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:20.042+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:18.368+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 9,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:19.939+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:18.267+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 10,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:21.732+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:20.042+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 11,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:21.626+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:19.939+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 12,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:23.745+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:21.732+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 13,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:23.645+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:21.627+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 14,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:25.441+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:23.746+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 15,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:25.359+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:23.646+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 16,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:27.064+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:25.442+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 17,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:27.057+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:25.359+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 18,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:28.845+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:27.064+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 19,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:28.922+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:27.057+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 20,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:30.748+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:28.845+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 21,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:30.758+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:28.923+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 22,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:32.435+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:30.748+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 23,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:32.367+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:30.759+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 24,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:34.128+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:32.436+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 25,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:34.065+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:32.368+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 26,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:36.139+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:34.129+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 27,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:36.143+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:34.065+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 28,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:37.749+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:36.140+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 29,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:37.828+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:36.143+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 30,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:39.525+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:37.749+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 31,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:39.465+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:37.829+00:00",
+              "state": "completed"
+            }
+          ],
+          "counters": {
+            "checksum": 12007132800000,
+            "cpu_batches": 80000,
+            "errors": 0,
+            "fixed_batches": 32
+          },
+          "elapsed_seconds": 30.392,
+          "error": null,
+          "finished_at": "2026-11-01T12:06:39.768+00:00",
+          "rates": {
+            "cpu_batches_per_second": 2632.258
+          },
+          "started_at": "2026-11-01T12:06:09.135+00:00",
+          "state": "completed"
+        }
+      },
+      "name": "cpu-1",
+      "notes": "",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 2632.272
+      },
+      "settings": {
+        "batch_count": 32,
+        "duration_seconds": 180
+      },
+      "started_at": "2026-11-01T12:06:09.135+00:00",
+      "state": "completed",
+      "target_service": "compute",
+      "target_services": [
+        "compute"
+      ],
+      "trace_id": "a25edc928ab570ecba0a8784c45faab4",
+      "trace_url": "http://localhost:3000/explore?schemaVersion=1&panes=%7B%22trace%22%3A+%7B%22datasource%22%3A+%22tempo%22%2C+%22queries%22%3A+%5B%7B%22refId%22%3A+%22A%22%2C+%22queryType%22%3A+%22traceql%22%2C+%22query%22%3A+%22a25edc928ab570ecba0a8784c45faab4%22%7D%5D%2C+%22range%22%3A+%7B%22from%22%3A+%221793534758931%22%2C+%22to%22%3A+%221793534809948%22%7D%7D%7D",
+      "workload": "cpu_fixed"
+    },
+    "cpu-2": {
+      "algorithm_version": "sum-squares-v1",
+      "application_grafana_url": "http://localhost:3000/d/cloud-lab1-application?from=1793534804458&to=1793534839835&var-service=controller&var-service=compute",
+      "assignment": {
+        "compute": [
+          [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            30
+          ],
+          [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
+            23,
+            25,
+            27,
+            29,
+            31
+          ]
+        ]
+      },
+      "batch_results": [
+        {
+          "batch_id": 0,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:56.609+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:55.632+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 1,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:56.623+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:55.647+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 2,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:57.424+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:56.609+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 3,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:57.431+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:56.624+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 4,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:58.256+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:57.424+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 5,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:58.272+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:57.431+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 6,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:59.054+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:58.256+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 7,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:59.089+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:58.272+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 8,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:59.885+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:59.054+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 9,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:06:59.928+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:59.089+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 10,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:00.693+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:06:59.885+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 11,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:00.743+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:06:59.929+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 12,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:01.672+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:07:00.693+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 13,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:01.694+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:07:00.743+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 14,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:02.470+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:07:01.672+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 15,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:02.529+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:07:01.694+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 16,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:03.286+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:07:02.471+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 17,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:03.355+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:07:02.529+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 18,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:04.137+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:07:03.286+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 19,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:04.187+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:07:03.356+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 20,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:04.978+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:07:04.137+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 21,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:05.065+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:07:04.187+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 22,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:05.784+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:07:04.978+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 23,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:05.870+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:07:05.065+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 24,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:06.610+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:07:05.784+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 25,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:06.695+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:07:05.870+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 26,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:07.614+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:07:06.610+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 27,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:07.691+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:07:06.695+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 28,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:08.416+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:07:07.615+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 29,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:08.506+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:07:07.691+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 30,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:09.216+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:07:08.416+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 31,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:07:09.354+00:00",
+          "instance": "compute",
+          "slot": 1,
+          "started_at": "2026-11-01T12:07:08.506+00:00",
+          "state": "completed"
+        }
+      ],
+      "calculation_processes": 2,
+      "calculation_units_per_batch": 2500,
+      "counters": {
+        "checksum": 12007132800000,
+        "cpu_batches": 80000,
+        "errors": 0,
+        "fixed_batches": 32
+      },
+      "created_at": "2026-11-01T12:06:54.458+00:00",
+      "deadline_unix": 1793534994.4580922,
+      "deployment": {
+        "compute_instances": [
+          "compute"
+        ],
+        "effective": {
+          "compute": {
+            "boot_id": "850dd68a-1831-4936-b82e-e8568d007891",
+            "instance": "compute",
+            "limits": {
+              "cgroup_version": 1,
+              "cpus": 2.0,
+              "memory_bytes": 536870912
+            },
+            "role": "compute",
+            "tracing_enabled": true
+          },
+          "data": {
+            "boot_id": "e10811b6-1cc7-488f-af34-7c4774913634",
+            "instance": "data",
+            "limits": {
+              "cgroup_version": 1,
+              "cpus": 1.0,
+              "memory_bytes": 536870912
+            },
+            "role": "data",
+            "tracing_enabled": true
+          }
+        },
+        "error": null,
+        "errors": [],
+        "expected": {
+          "compute": {
+            "cpus": 2,
+            "memory_bytes": 536870912
+          },
+          "data": {
+            "cpus": 1,
+            "memory_bytes": 536870912
+          }
+        },
+        "generation": "867c0ddb-7c8f-4d72-a04c-165246fef5b6",
+        "images": {
+          "compute": "sha256:a23585e37e72fba0c2caf65cec3cd4bbe26d663d3b55b8c086b4d5e254536391",
+          "data": "sha256:9111e5779ce8fcc9c39b94d420fbefbf06a3a0380733d78caad57f1db20d1c46"
+        },
+        "instances": [
+          "compute",
+          "data"
+        ],
+        "memory_allocation_max_mib": 128,
+        "pending": false,
+        "prepared": true,
+        "preset": "cpu-2",
+        "tracing": true,
+        "updated_utc": "2026-11-01T12:06:42.2780053Z",
+        "verified": true
+      },
+      "elapsed_seconds": 14.579,
+      "error": null,
+      "finished_at": "2026-11-01T12:07:09.835+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793534804458&to=1793534839835&var-service=compute",
+      "id": "6f8967aa-330f-4e89-bbfc-0b18c9a928c6",
+      "instance_results": {
+        "compute": {
+          "batch_results": [
+            {
+              "batch_id": 0,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:56.609+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:55.632+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 1,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:56.623+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:55.647+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 2,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:57.424+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:56.609+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 3,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:57.431+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:56.624+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 4,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:58.256+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:57.424+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 5,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:58.272+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:57.431+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 6,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:59.054+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:58.256+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 7,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:59.089+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:58.272+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 8,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:59.885+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:59.054+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 9,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:06:59.928+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:59.089+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 10,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:00.693+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:06:59.885+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 11,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:00.743+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:06:59.929+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 12,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:01.672+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:07:00.693+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 13,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:01.694+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:07:00.743+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 14,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:02.470+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:07:01.672+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 15,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:02.529+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:07:01.694+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 16,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:03.286+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:07:02.471+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 17,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:03.355+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:07:02.529+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 18,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:04.137+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:07:03.286+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 19,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:04.187+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:07:03.356+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 20,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:04.978+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:07:04.137+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 21,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:05.065+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:07:04.187+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 22,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:05.784+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:07:04.978+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 23,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:05.870+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:07:05.065+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 24,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:06.610+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:07:05.784+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 25,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:06.695+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:07:05.870+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 26,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:07.614+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:07:06.610+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 27,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:07.691+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:07:06.695+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 28,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:08.416+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:07:07.615+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 29,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:08.506+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:07:07.691+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 30,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:09.216+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:07:08.416+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 31,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:07:09.354+00:00",
+              "instance": "compute",
+              "slot": 1,
+              "started_at": "2026-11-01T12:07:08.506+00:00",
+              "state": "completed"
+            }
+          ],
+          "counters": {
+            "checksum": 12007132800000,
+            "cpu_batches": 80000,
+            "errors": 0,
+            "fixed_batches": 32
+          },
+          "elapsed_seconds": 14.579,
+          "error": null,
+          "finished_at": "2026-11-01T12:07:09.505+00:00",
+          "rates": {
+            "cpu_batches_per_second": 5487.251
+          },
+          "started_at": "2026-11-01T12:06:54.775+00:00",
+          "state": "completed"
+        }
+      },
+      "name": "cpu-2",
+      "notes": "",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 5487.345
+      },
+      "settings": {
+        "batch_count": 32,
+        "duration_seconds": 180
+      },
+      "started_at": "2026-11-01T12:06:54.775+00:00",
+      "state": "completed",
+      "target_service": "compute",
+      "target_services": [
+        "compute"
+      ],
+      "trace_id": "2a1870e2c1d41425295bf5b0c6312aab",
+      "trace_url": "http://localhost:3000/explore?schemaVersion=1&panes=%7B%22trace%22%3A+%7B%22datasource%22%3A+%22tempo%22%2C+%22queries%22%3A+%5B%7B%22refId%22%3A+%22A%22%2C+%22queryType%22%3A+%22traceql%22%2C+%22query%22%3A+%222a1870e2c1d41425295bf5b0c6312aab%22%7D%5D%2C+%22range%22%3A+%7B%22from%22%3A+%221793534804458%22%2C+%22to%22%3A+%221793534839835%22%7D%7D%7D",
+      "workload": "cpu_fixed"
+    }
+  },
+  "deployments": {
+    "cpu-05": {
+      "compute_instances": [
+        "compute"
+      ],
+      "effective": {
+        "compute": {
+          "boot_id": "f596dccc-df30-4583-afa9-91fc5df3123b",
+          "instance": "compute",
+          "limits": {
+            "cgroup_version": 1,
+            "cpus": 0.5,
+            "memory_bytes": 536870912
+          },
+          "role": "compute",
+          "tracing_enabled": true
+        },
+        "data": {
+          "boot_id": "e10811b6-1cc7-488f-af34-7c4774913634",
+          "instance": "data",
+          "limits": {
+            "cgroup_version": 1,
+            "cpus": 1.0,
+            "memory_bytes": 536870912
+          },
+          "role": "data",
+          "tracing_enabled": true
+        }
+      },
+      "error": null,
+      "errors": [],
+      "expected": {
+        "compute": {
+          "cpus": 0.5,
+          "memory_bytes": 536870912
+        },
+        "data": {
+          "cpus": 1,
+          "memory_bytes": 536870912
+        }
+      },
+      "generation": "a4a4bf30-b205-4756-a604-f70b41a6ad50",
+      "images": {
+        "compute": "sha256:a23585e37e72fba0c2caf65cec3cd4bbe26d663d3b55b8c086b4d5e254536391",
+        "data": "sha256:9111e5779ce8fcc9c39b94d420fbefbf06a3a0380733d78caad57f1db20d1c46"
+      },
+      "instances": [
+        "compute",
+        "data"
+      ],
+      "memory_allocation_max_mib": 128,
+      "pending": false,
+      "prepared": true,
+      "preset": "cpu-05",
+      "tracing": true,
+      "updated_utc": "2026-11-01T12:04:30.7275279Z",
+      "verified": true
+    },
+    "cpu-1": {
+      "compute_instances": [
+        "compute"
+      ],
+      "effective": {
+        "compute": {
+          "boot_id": "b2d2b1fc-cbd8-4c62-8929-ec61d9894ce0",
+          "instance": "compute",
+          "limits": {
+            "cgroup_version": 1,
+            "cpus": 1.0,
+            "memory_bytes": 536870912
+          },
+          "role": "compute",
+          "tracing_enabled": true
+        },
+        "data": {
+          "boot_id": "e10811b6-1cc7-488f-af34-7c4774913634",
+          "instance": "data",
+          "limits": {
+            "cgroup_version": 1,
+            "cpus": 1.0,
+            "memory_bytes": 536870912
+          },
+          "role": "data",
+          "tracing_enabled": true
+        }
+      },
+      "error": null,
+      "errors": [],
+      "expected": {
+        "compute": {
+          "cpus": 1,
+          "memory_bytes": 536870912
+        },
+        "data": {
+          "cpus": 1,
+          "memory_bytes": 536870912
+        }
+      },
+      "generation": "a1b62376-157b-4a4d-9c20-24b69586bf38",
+      "images": {
+        "compute": "sha256:a23585e37e72fba0c2caf65cec3cd4bbe26d663d3b55b8c086b4d5e254536391",
+        "data": "sha256:9111e5779ce8fcc9c39b94d420fbefbf06a3a0380733d78caad57f1db20d1c46"
+      },
+      "instances": [
+        "compute",
+        "data"
+      ],
+      "memory_allocation_max_mib": 128,
+      "pending": false,
+      "prepared": true,
+      "preset": "cpu-1",
+      "tracing": true,
+      "updated_utc": "2026-11-01T12:05:52.6660116Z",
+      "verified": true
+    },
+    "cpu-2": {
+      "compute_instances": [
+        "compute"
+      ],
+      "effective": {
+        "compute": {
+          "boot_id": "850dd68a-1831-4936-b82e-e8568d007891",
+          "instance": "compute",
+          "limits": {
+            "cgroup_version": 1,
+            "cpus": 2.0,
+            "memory_bytes": 536870912
+          },
+          "role": "compute",
+          "tracing_enabled": true
+        },
+        "data": {
+          "boot_id": "e10811b6-1cc7-488f-af34-7c4774913634",
+          "instance": "data",
+          "limits": {
+            "cgroup_version": 1,
+            "cpus": 1.0,
+            "memory_bytes": 536870912
+          },
+          "role": "data",
+          "tracing_enabled": true
+        }
+      },
+      "error": null,
+      "errors": [],
+      "expected": {
+        "compute": {
+          "cpus": 2,
+          "memory_bytes": 536870912
+        },
+        "data": {
+          "cpus": 1,
+          "memory_bytes": 536870912
+        }
+      },
+      "generation": "867c0ddb-7c8f-4d72-a04c-165246fef5b6",
+      "images": {
+        "compute": "sha256:a23585e37e72fba0c2caf65cec3cd4bbe26d663d3b55b8c086b4d5e254536391",
+        "data": "sha256:9111e5779ce8fcc9c39b94d420fbefbf06a3a0380733d78caad57f1db20d1c46"
+      },
+      "instances": [
+        "compute",
+        "data"
+      ],
+      "memory_allocation_max_mib": 128,
+      "pending": false,
+      "prepared": true,
+      "preset": "cpu-2",
+      "tracing": true,
+      "updated_utc": "2026-11-01T12:06:42.2780053Z",
+      "verified": true
+    }
+  },
+  "measurements": {
+    "cpu-05": {
+      "peak_cpu_cores": {
+        "compute": 0.5013907614472173
+      },
+      "peak_working_set_bytes": {
+        "data": 63188992.0,
+        "compute": 161292288.0
+      },
+      "peak_calculation_processes": 2
+    },
+    "cpu-1": {
+      "peak_cpu_cores": {
+        "compute": 1.0003022198493874
+      },
+      "peak_working_set_bytes": {
+        "data": 73011200.0,
+        "compute": 151756800.0
+      },
+      "peak_calculation_processes": 2
+    },
+    "cpu-2": {
+      "peak_cpu_cores": {
+        "compute": 0.7176192100952382
+      },
+      "peak_working_set_bytes": {
+        "data": 63135744.0,
+        "compute": 147730432.0
+      },
+      "peak_calculation_processes": 2
+    }
+  }
+}

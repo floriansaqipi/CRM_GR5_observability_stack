@@ -1,0 +1,6 @@
+PASS: controller, provisioned dashboards, Prometheus, and 7 core/replica services.
+PASS: actual CPU, RAM, network receive and transmit series exist for compute.
+PASS: all four resource panel queries return a real numeric value.
+PASS: workload coordinator ready. MongoDB available: True.
+PASS: 9-service mode, Collector and Tempo ready.
+PASS: application dashboard and 3 healthy application scrapes.

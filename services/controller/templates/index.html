@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud Lab · Workload Laboratory</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#experiment">Skip to experiment controls</a>
+  <header>
+    <a class="brand" href="/" aria-label="Cloud Lab home"><span class="brand-mark" aria-hidden="true">◈</span><span>Cloud Lab<small>RESOURCE OBSERVATORY</small></span></a>
+    <nav aria-label="Main navigation"><a href="#experiment" class="nav-active">Laboratory</a><a href="#history">History</a><a href="http://localhost:3000/d/cloud-lab1-resources" target="_blank" rel="noopener">Grafana ↗</a></nav>
+    <span class="local-label"><i aria-hidden="true"></i>Local environment</span>
+  </header>
+  <main>
+    <div class="page-heading"><div><p class="eyebrow">OBSERVE / EXPERIMENT / UNDERSTAND</p><h1>Workload laboratory<span>.</span></h1><p>Run controlled work. Follow the effect across your containers.</p></div><span class="live-note">Metrics every 5 seconds</span></div>
+    <section class="overview" aria-label="Environment status">
+      <div><span class="status-label">WORKLOAD SERVICES</span><strong id="workers-status">Connecting to services</strong></div>
+      <div><span class="status-label">EXPERIMENT HISTORY</span><strong id="storage-status">Checking storage</strong><small id="unsaved-status"></small></div>
+      <div><span class="status-label">OBSERVABILITY</span><strong id="tracing-status">Checking tracing</strong><small>Resource + application metrics</small></div>
+    </section>
+    <div id="notice" role="status" hidden></div>
+    <section class="deployment" aria-label="Current deployment">
+      <div class="deployment-heading"><span class="eyebrow">DEPLOYMENT</span><span id="deployment-status" class="badge">Checking limits</span></div>
+      <div><strong id="deployment-summary"></strong><p id="deployment-limits"></p></div>
+      <span class="read-only">Read only · apply presets between runs</span>
+    </section>
+    <div class="workspace" id="experiment">
+      <section class="card configure">
+        <div class="section-title"><div><span class="eyebrow">01 / CONFIGURE</span><h2>Choose your experiment</h2></div><span class="section-icon" aria-hidden="true">⌘</span></div>
+        <form id="run-form">
+          <label for="workload">Workload</label>
+          <select id="workload" name="workload">
+            <option value="cpu">CPU calculation</option><option value="cpu_fixed">CPU comparison</option><option value="memory">Memory hold</option><option value="network">Network transfer</option><option value="database">Database read / write</option><option value="combined">Combined Data</option>
+          </select>
+          <p class="workload-help" id="workload-help"></p>
+          <div class="form-row">
+            <div><label id="profile-label" for="profile">Intensity</label><select id="profile"><option value="low">Low</option><option value="medium" selected>Medium</option><option value="high">High</option></select></div>
+            <div id="duration-control"><label for="duration">Duration <span class="unit">seconds</span></label><input id="duration" type="number" min="15" max="180" value="30" required /></div>
+          </div>
+          <p id="fixed-work-hint" class="hint" hidden>Finishes when every batch completes. Two calculation processes total; 180-second safety deadline.</p>
+          <details id="advanced"><summary>Advanced settings <span>Optional</span></summary><div id="advanced-fields"></div></details>
+          <details id="experiment-notes"><summary>Name &amp; notes <span>Optional</span></summary>
+            <label for="run-name">Experiment name</label><input id="run-name" maxlength="100" placeholder="e.g. CPU resource example" />
+            <label for="notes">Notes</label><textarea id="notes" maxlength="1000" rows="2" placeholder="What are you investigating?"></textarea>
+          </details>
+          <button id="start" class="primary" type="submit" disabled>Start experiment <span aria-hidden="true">→</span></button>
+          <p class="hint footnote">One experiment at a time · bounded work · safe cancellation</p>
+        </form>
+      </section>
+      <section class="card current">
+        <div class="section-title"><div><span class="eyebrow">02 / OBSERVE</span><h2>Current experiment</h2></div><span class="badge subtle" id="connection-status">Live status</span></div>
+        <div id="empty"><div class="empty-icon" aria-hidden="true">◉</div><h3>Ready to observe</h3><p>Start a workload to see progress and measured operations here.</p><span class="hint">Your resource graphs live in Grafana.</span></div>
+        <div id="current-run" hidden>
+          <div class="run-heading"><h3 id="current-name"></h3><span id="current-state" class="badge"></span></div>
+          <p id="current-description" class="muted"></p>
+          <div class="elapsed"><div><strong id="elapsed">0.0</strong><span>seconds elapsed</span></div><span id="planned-duration"></span></div>
+          <progress id="progress" max="100" value="0" aria-label="Elapsed duration"></progress>
+          <div id="metrics" class="metrics"></div>
+          <p id="current-error" class="error" hidden></p><p id="current-storage" class="hint"></p>
+          <div class="actions"><button id="stop" class="danger" type="button">Stop experiment</button><a id="run-grafana" class="outline" target="_blank" rel="noopener">Resource graphs ↗</a><a id="run-application" class="outline" target="_blank" rel="noopener">Application graphs ↗</a><a id="run-trace" class="outline" target="_blank" rel="noopener" hidden>Open trace ↗</a></div>
+          <p class="hint" id="trace-hint"></p><details><summary>Resolved settings</summary><div id="current-settings" class="settings-grid"></div></details>
+        </div>
+      </section>
+    </div>
+    <section class="card history" id="history">
+      <div class="section-title"><div><span class="eyebrow">03 / REVIEW</span><h2>Experiment history</h2><p class="hint">Every run keeps its settings, measurements, and outcome.</p></div><a id="export" class="outline" href="/api/runs/export.csv">Export CSV ↓</a></div>
+      <div class="filters"><input id="search" aria-label="Search experiment names" placeholder="Search experiments…" /><select id="filter-workload" aria-label="Filter by workload"><option value="">All workloads</option><option value="cpu">CPU</option><option value="cpu_fixed">CPU comparison</option><option value="memory">Memory</option><option value="network">Network</option><option value="database">Database</option><option value="combined">Combined Data</option></select><select id="filter-state" aria-label="Filter by outcome"><option value="">All outcomes</option><option value="completed">Completed</option><option value="cancelled">Cancelled</option><option value="failed">Failed</option><option value="interrupted">Interrupted</option><option value="starting">Starting</option><option value="running">Running</option><option value="stopping">Stopping</option></select><button id="clear-filters" class="outline" type="button">Clear filters</button></div>
+      <div class="table-wrap"><table><thead><tr><th>Experiment</th><th>Workload</th><th>Outcome</th><th>Started</th><th>Elapsed</th><th>History</th><th><span class="sr-only">Actions</span></th></tr></thead><tbody id="history-body"></tbody></table></div>
+      <p id="history-empty" class="hint">Loading experiment history…</p><div class="pagination"><span id="page-label">Page 1</span><button id="previous" class="outline" disabled>← Previous</button><button id="next" class="outline" disabled>Next →</button></div>
+    </section>
+    <footer><span>Cloud Lab / Resource management laboratory</span><span>Flask controls · Prometheus collects · Grafana visualizes</span></footer>
+  </main>
+  <dialog id="run-dialog" aria-labelledby="detail-name">
+    <div class="dialog-heading"><div><span class="eyebrow">EXPERIMENT RECORD</span><h2 id="detail-name">Experiment details</h2></div><button id="close-dialog" class="outline" type="button">Close</button></div>
+    <div id="detail-body"></div>
+    <div class="actions dialog-actions"><a id="detail-grafana" class="outline" target="_blank" rel="noopener">Resource graphs ↗</a><a id="detail-application" class="outline" target="_blank" rel="noopener">Application graphs ↗</a><a id="detail-trace" class="outline" target="_blank" rel="noopener" hidden>Open trace ↗</a></div>
+  </dialog>
+</body>
+</html>

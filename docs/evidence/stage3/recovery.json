@@ -1,0 +1,111 @@
+{
+  "recorded_utc": "2026-11-01T11:10:20.635934+00:00",
+  "checks": {
+    "tracing_enabled": true,
+    "controller_restart_marks_interrupted": true,
+    "controller_restart_preserves_trace_id": true,
+    "controller_trace_has_interrupted_outcome": true,
+    "controller_restart_releases_worker": true,
+    "data_restart_marks_interrupted": true,
+    "data_restart_preserves_trace_id": true,
+    "data_trace_has_interrupted_outcome": true,
+    "data_restart_releases_worker": true,
+    "stage1_prometheus_sample_preserved": true
+  },
+  "runs": {
+    "controller": {
+      "application_grafana_url": "http://localhost:3000/d/cloud-lab1-application?from=1793531394570&to=1793531421339&var-service=controller&var-service=data",
+      "counters": {
+        "allocated_mib": 64,
+        "cpu_batches": 0,
+        "database_cycles": 0,
+        "database_reads": 0,
+        "database_writes": 0,
+        "errors": 0,
+        "network_bytes": 0,
+        "network_requests": 0,
+        "touched_pages": 16384
+      },
+      "created_at": "2026-11-01T11:10:04.570+00:00",
+      "elapsed_seconds": 5.342,
+      "error": "Controller restarted during this experiment.",
+      "finished_at": "2026-11-01T11:10:11.339+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793531394570&to=1793531421339&var-service=data",
+      "id": "f6d08020-8a1e-4b65-b308-846bcb5d79ed",
+      "interruption_reason": "Controller restarted during this experiment.",
+      "name": "Stage 3 recovery: controller",
+      "notes": "",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 0.0,
+        "database_cycles_per_second": 0.0,
+        "network_requests_per_second": 0.0
+      },
+      "settings": {
+        "duration_seconds": 60,
+        "memory_mib": 64
+      },
+      "started_at": "2026-11-01T11:10:04.709+00:00",
+      "state": "interrupted",
+      "target_service": "data",
+      "trace_id": "75bdd1d71bcd86bdd55858786d1a18b4",
+      "trace_url": "http://localhost:3000/explore?schemaVersion=1&panes=%7B%22trace%22%3A+%7B%22datasource%22%3A+%22tempo%22%2C+%22queries%22%3A+%5B%7B%22refId%22%3A+%22A%22%2C+%22queryType%22%3A+%22traceql%22%2C+%22query%22%3A+%2275bdd1d71bcd86bdd55858786d1a18b4%22%7D%5D%2C+%22range%22%3A+%7B%22from%22%3A+%221793531394570%22%2C+%22to%22%3A+%221793531421339%22%7D%7D%7D",
+      "workload": "memory"
+    },
+    "data": {
+      "application_grafana_url": "http://localhost:3000/d/cloud-lab1-application?from=1793531404959&to=1793531427647&var-service=controller&var-service=data",
+      "counters": {
+        "allocated_mib": 64,
+        "cpu_batches": 0,
+        "database_cycles": 0,
+        "database_reads": 0,
+        "database_writes": 0,
+        "errors": 0,
+        "network_bytes": 0,
+        "network_requests": 0,
+        "touched_pages": 16384
+      },
+      "created_at": "2026-11-01T11:10:14.959+00:00",
+      "elapsed_seconds": 1.161,
+      "error": "Workload service stopped during this experiment.",
+      "finished_at": "2026-11-01T11:10:17.647+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793531404959&to=1793531427647&var-service=data",
+      "id": "3fcad173-63b8-44e5-bc32-9c9cde0ea44b",
+      "name": "Stage 3 recovery: data",
+      "notes": "",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 0.0,
+        "database_cycles_per_second": 0.0,
+        "network_requests_per_second": 0.0
+      },
+      "settings": {
+        "duration_seconds": 60,
+        "memory_mib": 64
+      },
+      "started_at": "2026-11-01T11:10:15.282+00:00",
+      "state": "interrupted",
+      "target_service": "data",
+      "trace_id": "0149439dec8585f43e2d4e39fe3809aa",
+      "trace_url": "http://localhost:3000/explore?schemaVersion=1&panes=%7B%22trace%22%3A+%7B%22datasource%22%3A+%22tempo%22%2C+%22queries%22%3A+%5B%7B%22refId%22%3A+%22A%22%2C+%22queryType%22%3A+%22traceql%22%2C+%22query%22%3A+%220149439dec8585f43e2d4e39fe3809aa%22%7D%5D%2C+%22range%22%3A+%7B%22from%22%3A+%221793531404959%22%2C+%22to%22%3A+%221793531427647%22%7D%7D%7D",
+      "workload": "memory"
+    }
+  },
+  "measurements": {
+    "stage1_historical_sample": [
+      {
+        "metric": {
+          "__name__": "up",
+          "instance": "cadvisor:8080",
+          "job": "cadvisor"
+        },
+        "value": [
+          1793494983.525,
+          "1"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "automated_tests": 31,
+  "live_acceptance": 140,
+  "historical_dashboard_checks": 22,
+  "lifecycle_checks": 20,
+  "browser_checks": 9,
+  "dependency_check": "No broken requirements found.",
+  "javascript_syntax": "passed",
+  "powershell_syntax": "passed",
+  "documentation_links": "passed"
+}

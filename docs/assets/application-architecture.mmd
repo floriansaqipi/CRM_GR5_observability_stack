@@ -1,0 +1,7 @@
+flowchart LR
+    Browser[Browser: configure, Start, Stop] --> Controller[Flask Controller: one active experiment]
+    Controller -->|CPU work| Compute[Compute]
+    Controller -->|Data work| Data[Data]
+    Data -->|Download payloads| Compute
+    Data -->|Write/read workload documents| MongoDB[(MongoDB)]
+    Controller -->|Save experiment summaries| MongoDB

@@ -1,0 +1,125 @@
+{
+  "services": [
+    "cadvisor",
+    "compute",
+    "controller",
+    "data",
+    "grafana",
+    "mongodb",
+    "otel-collector",
+    "prometheus",
+    "tempo"
+  ],
+  "catalog": {
+    "active": null,
+    "fields": {
+      "combined": [
+        "memory_mib",
+        "payload_kib",
+        "document_kib",
+        "rate_per_second"
+      ],
+      "cpu": [
+        "cpu_percent"
+      ],
+      "database": [
+        "document_kib",
+        "rate_per_second"
+      ],
+      "memory": [
+        "memory_mib"
+      ],
+      "network": [
+        "payload_kib",
+        "rate_per_second"
+      ]
+    },
+    "limits": {
+      "cpu_percent": [
+        10,
+        95
+      ],
+      "document_kib": [
+        1,
+        64
+      ],
+      "duration_seconds": [
+        15,
+        180
+      ],
+      "memory_mib": [
+        1,
+        128
+      ],
+      "payload_kib": [
+        1,
+        1024
+      ],
+      "rate_per_second": [
+        1,
+        20
+      ]
+    },
+    "observability": {
+      "tracing_enabled": true
+    },
+    "presets": {
+      "high": {
+        "cpu_percent": 90,
+        "document_kib": 64,
+        "memory_mib": 128,
+        "payload_kib": 1024,
+        "rate_per_second": 10
+      },
+      "low": {
+        "cpu_percent": 25,
+        "document_kib": 4,
+        "memory_mib": 32,
+        "payload_kib": 64,
+        "rate_per_second": 2
+      },
+      "medium": {
+        "cpu_percent": 50,
+        "document_kib": 16,
+        "memory_mib": 64,
+        "payload_kib": 256,
+        "rate_per_second": 5
+      }
+    },
+    "ready": true,
+    "storage_available": true,
+    "unsaved_count": 0,
+    "workers": {
+      "compute": true,
+      "data": true
+    },
+    "workloads": [
+      {
+        "available": true,
+        "id": "cpu"
+      },
+      {
+        "available": true,
+        "id": "memory"
+      },
+      {
+        "available": true,
+        "id": "network"
+      },
+      {
+        "available": true,
+        "id": "database"
+      },
+      {
+        "available": true,
+        "id": "combined"
+      }
+    ]
+  },
+  "active_run": null,
+  "temporary_documents": 0,
+  "retention": [
+    "block_retention: 24h0m0s",
+    "block_retention: 24h0m0s"
+  ]
+}

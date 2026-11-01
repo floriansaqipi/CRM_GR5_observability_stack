@@ -1,0 +1,205 @@
+ Container cloud-lab1-tempo-1 Stopping 
+ Container cloud-lab1-otel-collector-1 Stopping 
+ Container cloud-lab1-otel-collector-1 Stopped 
+ Container cloud-lab1-tempo-1 Stopped 
+ Container cloud-lab1-compute-2-1 Stopping 
+ Container cloud-lab1-compute-2-1 Stopped 
+ Container cloud-lab1-cadvisor-1 Running 
+ Container cloud-lab1-controller-1 Recreate 
+ Container cloud-lab1-mongodb-1 Running 
+ Container cloud-lab1-data-1 Recreate 
+ Container cloud-lab1-prometheus-1 Running 
+ Container cloud-lab1-grafana-1 Running 
+ Container cloud-lab1-compute-1 Recreate 
+ Container cloud-lab1-compute-1 Recreated 
+ Container cloud-lab1-data-1 Recreated 
+ Container cloud-lab1-controller-1 Recreated 
+ Container cloud-lab1-compute-1 Starting 
+ Container cloud-lab1-data-1 Starting 
+ Container cloud-lab1-controller-1 Starting 
+ Container cloud-lab1-compute-1 Started 
+ Container cloud-lab1-data-1 Started 
+ Container cloud-lab1-controller-1 Started 
+ Container cloud-lab1-grafana-1 Waiting 
+ Container cloud-lab1-prometheus-1 Waiting 
+ Container cloud-lab1-compute-1 Waiting 
+ Container cloud-lab1-data-1 Waiting 
+ Container cloud-lab1-controller-1 Waiting 
+ Container cloud-lab1-cadvisor-1 Waiting 
+ Container cloud-lab1-mongodb-1 Waiting 
+ Container cloud-lab1-mongodb-1 Healthy 
+ Container cloud-lab1-grafana-1 Healthy 
+ Container cloud-lab1-cadvisor-1 Healthy 
+ Container cloud-lab1-prometheus-1 Healthy 
+ Container cloud-lab1-compute-1 Healthy 
+ Container cloud-lab1-data-1 Healthy 
+ Container cloud-lab1-controller-1 Healthy 
+PASS: controller, provisioned dashboards, Prometheus, and 7 core/replica services.
+PASS: actual CPU, RAM, network receive and transmit series exist for compute.
+PASS: all four resource panel queries return a real numeric value.
+PASS: workload coordinator ready. MongoDB available: True.
+PASS: 7-service mode, tracing disabled.
+PASS: application dashboard and 3 healthy application scrapes.
+Deployment ready: baseline; tracing: False.
+Application: http://localhost:5000
+Resources:   http://localhost:3000/d/cloud-lab1-resources
+Application graphs: http://localhost:3000/d/cloud-lab1-application
+ Container cloud-lab1-compute-2-1 Stopping 
+ Container cloud-lab1-compute-2-1 Stopped 
+ Container cloud-lab1-grafana-1 Running 
+ Container cloud-lab1-cadvisor-1 Running 
+ Container cloud-lab1-prometheus-1 Running 
+ Container cloud-lab1-mongodb-1 Running 
+ Container cloud-lab1-compute-1 Recreate 
+ Container cloud-lab1-controller-1 Recreate 
+ Container cloud-lab1-data-1 Recreate 
+ Container cloud-lab1-data-1 Recreated 
+ Container cloud-lab1-controller-1 Recreated 
+ Container cloud-lab1-compute-1 Recreated 
+ Container cloud-lab1-compute-1 Starting 
+ Container cloud-lab1-otel-collector-1 Starting 
+ Container cloud-lab1-data-1 Starting 
+ Container cloud-lab1-controller-1 Starting 
+ Container cloud-lab1-tempo-1 Starting 
+ Container cloud-lab1-compute-1 Started 
+ Container cloud-lab1-data-1 Started 
+ Container cloud-lab1-otel-collector-1 Started 
+ Container cloud-lab1-tempo-1 Started 
+ Container cloud-lab1-controller-1 Started 
+ Container cloud-lab1-compute-1 Waiting 
+ Container cloud-lab1-grafana-1 Waiting 
+ Container cloud-lab1-otel-collector-1 Waiting 
+ Container cloud-lab1-tempo-1 Waiting 
+ Container cloud-lab1-prometheus-1 Waiting 
+ Container cloud-lab1-mongodb-1 Waiting 
+ Container cloud-lab1-data-1 Waiting 
+ Container cloud-lab1-cadvisor-1 Waiting 
+ Container cloud-lab1-controller-1 Waiting 
+ Container cloud-lab1-otel-collector-1 Healthy 
+ Container cloud-lab1-mongodb-1 Healthy 
+ Container cloud-lab1-cadvisor-1 Healthy 
+ Container cloud-lab1-prometheus-1 Healthy 
+ Container cloud-lab1-grafana-1 Healthy 
+ Container cloud-lab1-tempo-1 Healthy 
+ Container cloud-lab1-data-1 Healthy 
+ Container cloud-lab1-compute-1 Healthy 
+ Container cloud-lab1-controller-1 Healthy 
+PASS: controller, provisioned dashboards, Prometheus, and 7 core/replica services.
+PASS: actual CPU, RAM, network receive and transmit series exist for compute.
+PASS: all four resource panel queries return a real numeric value.
+PASS: workload coordinator ready. MongoDB available: True.
+PASS: 9-service mode, Collector and Tempo ready.
+PASS: application dashboard and 3 healthy application scrapes.
+Deployment ready: baseline; tracing: True.
+Application: http://localhost:5000
+Resources:   http://localhost:3000/d/cloud-lab1-resources
+Application graphs: http://localhost:3000/d/cloud-lab1-application
+ Container cloud-lab1-compute-2-1 Stopping 
+ Container cloud-lab1-controller-1 Stopping 
+ Container cloud-lab1-mongodb-1 Stopping 
+ Container cloud-lab1-prometheus-1 Stopping 
+ Container cloud-lab1-cadvisor-1 Stopping 
+ Container cloud-lab1-compute-1 Stopping 
+ Container cloud-lab1-otel-collector-1 Stopping 
+ Container cloud-lab1-tempo-1 Stopping 
+ Container cloud-lab1-grafana-1 Stopping 
+ Container cloud-lab1-data-1 Stopping 
+ Container cloud-lab1-compute-2-1 Stopped 
+ Container cloud-lab1-compute-2-1 Removing 
+ Container cloud-lab1-compute-2-1 Removed 
+ Container cloud-lab1-otel-collector-1 Stopped 
+ Container cloud-lab1-otel-collector-1 Removing 
+ Container cloud-lab1-otel-collector-1 Removed 
+ Container cloud-lab1-prometheus-1 Stopped 
+ Container cloud-lab1-prometheus-1 Removing 
+ Container cloud-lab1-prometheus-1 Removed 
+ Container cloud-lab1-mongodb-1 Stopped 
+ Container cloud-lab1-mongodb-1 Removing 
+ Container cloud-lab1-mongodb-1 Removed 
+ Container cloud-lab1-compute-1 Stopped 
+ Container cloud-lab1-compute-1 Removing 
+ Container cloud-lab1-compute-1 Removed 
+ Container cloud-lab1-data-1 Stopped 
+ Container cloud-lab1-data-1 Removing 
+ Container cloud-lab1-data-1 Removed 
+ Container cloud-lab1-grafana-1 Stopped 
+ Container cloud-lab1-grafana-1 Removing 
+ Container cloud-lab1-grafana-1 Removed 
+ Container cloud-lab1-controller-1 Stopped 
+ Container cloud-lab1-controller-1 Removing 
+ Container cloud-lab1-controller-1 Removed 
+ Container cloud-lab1-cadvisor-1 Stopped 
+ Container cloud-lab1-cadvisor-1 Removing 
+ Container cloud-lab1-cadvisor-1 Removed 
+ Container cloud-lab1-tempo-1 Stopped 
+ Container cloud-lab1-tempo-1 Removing 
+ Container cloud-lab1-tempo-1 Removed 
+ Network cloud-lab1_lab Removing 
+ Network cloud-lab1_lab Removed 
+Stopped the lab. Monitoring data is preserved.
+ Network cloud-lab1_lab Creating 
+ Network cloud-lab1_lab Created 
+ Container cloud-lab1-tempo-1 Creating 
+ Container cloud-lab1-controller-1 Creating 
+ Container cloud-lab1-compute-1 Creating 
+ Container cloud-lab1-otel-collector-1 Creating 
+ Container cloud-lab1-prometheus-1 Creating 
+ Container cloud-lab1-cadvisor-1 Creating 
+ Container cloud-lab1-mongodb-1 Creating 
+ Container cloud-lab1-data-1 Creating 
+ Container cloud-lab1-grafana-1 Creating 
+ Container cloud-lab1-otel-collector-1 Created 
+ Container cloud-lab1-grafana-1 Created 
+ Container cloud-lab1-compute-1 Created 
+ Container cloud-lab1-data-1 Created 
+ Container cloud-lab1-prometheus-1 Created 
+ Container cloud-lab1-tempo-1 Created 
+ Container cloud-lab1-cadvisor-1 Created 
+ Container cloud-lab1-controller-1 Created 
+ Container cloud-lab1-mongodb-1 Created 
+ Container cloud-lab1-prometheus-1 Starting 
+ Container cloud-lab1-data-1 Starting 
+ Container cloud-lab1-grafana-1 Starting 
+ Container cloud-lab1-mongodb-1 Starting 
+ Container cloud-lab1-cadvisor-1 Starting 
+ Container cloud-lab1-compute-1 Starting 
+ Container cloud-lab1-tempo-1 Starting 
+ Container cloud-lab1-otel-collector-1 Starting 
+ Container cloud-lab1-controller-1 Starting 
+ Container cloud-lab1-data-1 Started 
+ Container cloud-lab1-compute-1 Started 
+ Container cloud-lab1-cadvisor-1 Started 
+ Container cloud-lab1-otel-collector-1 Started 
+ Container cloud-lab1-tempo-1 Started 
+ Container cloud-lab1-mongodb-1 Started 
+ Container cloud-lab1-prometheus-1 Started 
+ Container cloud-lab1-grafana-1 Started 
+ Container cloud-lab1-controller-1 Started 
+ Container cloud-lab1-mongodb-1 Waiting 
+ Container cloud-lab1-compute-1 Waiting 
+ Container cloud-lab1-cadvisor-1 Waiting 
+ Container cloud-lab1-prometheus-1 Waiting 
+ Container cloud-lab1-otel-collector-1 Waiting 
+ Container cloud-lab1-data-1 Waiting 
+ Container cloud-lab1-tempo-1 Waiting 
+ Container cloud-lab1-controller-1 Waiting 
+ Container cloud-lab1-grafana-1 Waiting 
+ Container cloud-lab1-tempo-1 Healthy 
+ Container cloud-lab1-otel-collector-1 Healthy 
+ Container cloud-lab1-cadvisor-1 Healthy 
+ Container cloud-lab1-data-1 Healthy 
+ Container cloud-lab1-compute-1 Healthy 
+ Container cloud-lab1-prometheus-1 Healthy 
+ Container cloud-lab1-controller-1 Healthy 
+ Container cloud-lab1-mongodb-1 Healthy 
+ Container cloud-lab1-grafana-1 Healthy 
+PASS: controller, provisioned dashboards, Prometheus, and 7 core/replica services.
+PASS: actual CPU, RAM, network receive and transmit series exist for compute.
+PASS: all four resource panel queries return a real numeric value.
+PASS: workload coordinator ready. MongoDB available: True.
+PASS: 9-service mode, Collector and Tempo ready.
+PASS: application dashboard and 3 healthy application scrapes.
+Deployment ready: baseline; tracing: True.
+Application: http://localhost:5000
+Resources:   http://localhost:3000/d/cloud-lab1-resources
+Application graphs: http://localhost:3000/d/cloud-lab1-application

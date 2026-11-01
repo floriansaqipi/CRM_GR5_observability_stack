@@ -1,0 +1,198 @@
+{
+  "recorded_utc": "2026-11-01T14:22:44.863221+00:00",
+  "deployment": {
+    "compute_instances": [
+      "compute"
+    ],
+    "effective": {
+      "compute": {
+        "boot_id": "740c54b5-fbc0-4c41-818c-bd0ef6dc42e9",
+        "instance": "compute",
+        "limits": {
+          "cgroup_version": 1,
+          "cpus": 1.0,
+          "memory_bytes": 536870912
+        },
+        "role": "compute",
+        "tracing_enabled": true
+      },
+      "data": {
+        "boot_id": "57d6977a-ca1a-435d-9302-983f0ec12d8f",
+        "instance": "data",
+        "limits": {
+          "cgroup_version": 1,
+          "cpus": 1.0,
+          "memory_bytes": 536870912
+        },
+        "role": "data",
+        "tracing_enabled": true
+      }
+    },
+    "error": null,
+    "errors": [],
+    "expected": {
+      "compute": {
+        "cpus": 1,
+        "memory_bytes": 536870912
+      },
+      "data": {
+        "cpus": 1,
+        "memory_bytes": 536870912
+      }
+    },
+    "generation": "36d60ff0-5a4b-421b-bab3-2515a3ee11a4",
+    "images": {
+      "compute": "sha256:008d490a8506a58c318e27dde8f4dfc9b5929e1bb1aafd79798b9e71cfafe620",
+      "data": "sha256:f3ac8fc52d5c284bd26362927e79d14ed1f8f01d179693e4f27c162170cb6ee4"
+    },
+    "instances": [
+      "compute",
+      "data"
+    ],
+    "memory_allocation_max_mib": 128,
+    "pending": false,
+    "prepared": true,
+    "preset": "baseline",
+    "tracing": true,
+    "updated_utc": "2026-11-01T14:07:59.1222856Z",
+    "verified": true
+  },
+  "containers": {
+    "cadvisor": {
+      "image_id": "sha256:b8e7d1093144fd088f425ff003d75a4aa405de075db78dae3bc563730b1bd07a",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpu_ceiling": 0.5,
+      "memory_ceiling_bytes": 268435456,
+      "volumes": []
+    },
+    "compute": {
+      "image_id": "sha256:008d490a8506a58c318e27dde8f4dfc9b5929e1bb1aafd79798b9e71cfafe620",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpu_ceiling": 1.0,
+      "memory_ceiling_bytes": 536870912,
+      "volumes": []
+    },
+    "controller": {
+      "image_id": "sha256:d268fd4e5e0d0bcda36e6dc9576bf19f09826098695c7ef7d51a313d8b12132d",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpu_ceiling": 0.5,
+      "memory_ceiling_bytes": 268435456,
+      "volumes": []
+    },
+    "data": {
+      "image_id": "sha256:f3ac8fc52d5c284bd26362927e79d14ed1f8f01d179693e4f27c162170cb6ee4",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpu_ceiling": 1.0,
+      "memory_ceiling_bytes": 536870912,
+      "volumes": []
+    },
+    "grafana": {
+      "image_id": "sha256:488984b716c0862639f91a698adbe2862677a5a07bad42da5f03f3030883b205",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpu_ceiling": 0.5,
+      "memory_ceiling_bytes": 536870912,
+      "volumes": [
+        "cloud-lab1_grafana-data"
+      ]
+    },
+    "mongodb": {
+      "image_id": "sha256:b9924c330a8bbc5800fe9c69f04a84e221eca7b28fd049a0354147d9908fa142",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpu_ceiling": 1.0,
+      "memory_ceiling_bytes": 805306368,
+      "volumes": [
+        "cloud-lab1_mongodb-data",
+        "8a59d2f5a82887ad65b5b6f390e6dad4b99a9e66e3f185781564e1343f6026bf"
+      ]
+    },
+    "otel-collector": {
+      "image_id": "sha256:340c9ca6a36617084c6661bdc4f0fe92b7cda5a805d61673ec8db375fddc522b",
+      "status": "running",
+      "health": "not configured",
+      "oom_killed": false,
+      "cpu_ceiling": 0.5,
+      "memory_ceiling_bytes": 268435456,
+      "volumes": []
+    },
+    "prometheus": {
+      "image_id": "sha256:fa3302279710be2f21a8301ec17a8b4f2301fd829bd113839b3b6b02b6f191a2",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpu_ceiling": 1.0,
+      "memory_ceiling_bytes": 805306368,
+      "volumes": [
+        "cloud-lab1_prometheus-data"
+      ]
+    },
+    "tempo": {
+      "image_id": "sha256:64e2fbd56d9c2b3412a4b430a58ea59e91a670b1e75f920a0c702213ad145044",
+      "status": "running",
+      "health": "not configured",
+      "oom_killed": false,
+      "cpu_ceiling": 1.0,
+      "memory_ceiling_bytes": 805306368,
+      "volumes": [
+        "cloud-lab1_tempo-data"
+      ]
+    }
+  },
+  "workload_workers": {
+    "compute": {
+      "active": null,
+      "process_count": 0,
+      "configuration": {
+        "boot_id": "740c54b5-fbc0-4c41-818c-bd0ef6dc42e9",
+        "instance": "compute",
+        "limits": {
+          "cgroup_version": 1,
+          "cpus": 1.0,
+          "memory_bytes": 536870912
+        },
+        "role": "compute",
+        "tracing_enabled": true
+      }
+    },
+    "data": {
+      "active": null,
+      "process_count": 0,
+      "configuration": {
+        "boot_id": "57d6977a-ca1a-435d-9302-983f0ec12d8f",
+        "instance": "data",
+        "limits": {
+          "cgroup_version": 1,
+          "cpus": 1.0,
+          "memory_bytes": 536870912
+        },
+        "role": "data",
+        "tracing_enabled": true
+      }
+    }
+  },
+  "active_run": null,
+  "unsaved_results": 0,
+  "temporary_documents": 0,
+  "configured_memory_gib": 4.5,
+  "checks": {
+    "nine_running_services": true,
+    "no_oom_kills": true,
+    "frozen_image_ids_preserved": true,
+    "baseline_tracing_verified": true,
+    "idle_workers": true,
+    "no_active_or_unsaved_result": true,
+    "no_temporary_documents": true,
+    "all_frozen_service_sources_preserved": true
+  }
+}

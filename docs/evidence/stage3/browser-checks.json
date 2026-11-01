@@ -1,0 +1,9 @@
+{
+  "start_through_form": true,
+  "refresh_preserves_running_trace": true,
+  "completed_history_and_trace_id": true,
+  "application_dashboard_loads": true,
+  "trace_link_loads_connected_trace": true,
+  "compute_span_inspectable": true,
+  "browser_csv_contains_trace_id": true
+}

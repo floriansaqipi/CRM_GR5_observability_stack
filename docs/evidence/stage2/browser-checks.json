@@ -1,0 +1,11 @@
+{
+  "start_via_form": true,
+  "refresh_keeps_active_run": true,
+  "stop_via_button": true,
+  "history_search": true,
+  "details_show_saved_settings_and_counts": true,
+  "filtered_csv_download": true,
+  "connection_error_clears_after_recovery": true,
+  "pending_result_indicator_updates_after_database_recovery": true,
+  "advanced_override_runs_to_completion": true
+}

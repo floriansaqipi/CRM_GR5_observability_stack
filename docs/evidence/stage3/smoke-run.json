@@ -1,0 +1,42 @@
+{
+  "application_grafana_url": "http://localhost:3000/d/cloud-lab1-application?from=1793530754534&to=1793530790999&var-service=controller&var-service=data&var-service=compute",
+  "counters": {
+    "allocated_mib": 64,
+    "cpu_batches": 0,
+    "database_cycles": 75,
+    "database_reads": 75,
+    "database_writes": 75,
+    "errors": 0,
+    "network_bytes": 19660800,
+    "network_requests": 75,
+    "touched_pages": 16384
+  },
+  "created_at": "2026-11-01T10:59:24.534+00:00",
+  "elapsed_seconds": 15.007,
+  "error": null,
+  "finished_at": "2026-11-01T10:59:40.999+00:00",
+  "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793530754534&to=1793530790999&var-service=data&var-service=mongodb",
+  "id": "4b406662-071b-46c4-8c97-5623d4707bfd",
+  "name": "Stage 3 connected trace smoke",
+  "notes": "",
+  "persistence": "saved",
+  "profile": "medium",
+  "rates": {
+    "cpu_batches_per_second": 0.0,
+    "database_cycles_per_second": 4.998,
+    "network_requests_per_second": 4.998
+  },
+  "settings": {
+    "document_kib": 16,
+    "duration_seconds": 15,
+    "memory_mib": 64,
+    "payload_kib": 256,
+    "rate_per_second": 5
+  },
+  "started_at": "2026-11-01T10:59:25.039+00:00",
+  "state": "completed",
+  "target_service": "data",
+  "trace_id": "cb4340ba36741f5bcd5eda6b3b43b10d",
+  "trace_url": "http://localhost:3000/explore?schemaVersion=1&panes=%7B%22trace%22%3A+%7B%22datasource%22%3A+%22tempo%22%2C+%22queries%22%3A+%5B%7B%22refId%22%3A+%22A%22%2C+%22queryType%22%3A+%22traceql%22%2C+%22query%22%3A+%22cb4340ba36741f5bcd5eda6b3b43b10d%22%7D%5D%2C+%22range%22%3A+%7B%22from%22%3A+%221793530754534%22%2C+%22to%22%3A+%221793530790999%22%7D%7D%7D",
+  "workload": "combined"
+}

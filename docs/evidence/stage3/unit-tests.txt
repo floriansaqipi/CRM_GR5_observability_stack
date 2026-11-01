@@ -1,0 +1,25 @@
+ Container cloud-lab1-controller-run-9b6200185cbd Creating 
+ Container cloud-lab1-controller-run-9b6200185cbd Created 
+test_concurrent_start_has_exactly_one_global_winner (test_stage2.CoordinatorTests.test_concurrent_start_has_exactly_one_global_winner) ... ok
+test_csv_quotes_notes_and_exports_actual_values (test_stage2.CoordinatorTests.test_csv_quotes_notes_and_exports_actual_values) ... ok
+test_database_outage_keeps_independent_workloads_available (test_stage2.CoordinatorTests.test_database_outage_keeps_independent_workloads_available) ... ok
+test_failed_save_remains_pending_then_recovers (test_stage2.CoordinatorTests.test_failed_save_remains_pending_then_recovers) ... ok
+test_unsaved_cap_refuses_more_work_without_losing_records (test_stage2.CoordinatorTests.test_unsaved_cap_refuses_more_work_without_losing_records) ... ok
+test_presets_and_overrides_are_resolved_and_bounded (test_stage2.ValidationTests.test_presets_and_overrides_are_resolved_and_bounded) ... ok
+test_duplicate_start_overlap_and_cancellation_reap_one_child (test_stage2.WorkerTests.test_duplicate_start_overlap_and_cancellation_reap_one_child) ... ok
+test_immediate_stop_races_do_not_leave_active_processes (test_stage2.WorkerTests.test_immediate_stop_races_do_not_leave_active_processes) ... ok
+test_parent_deadline_kills_a_child_that_ignores_term (test_stage2.WorkerTests.test_parent_deadline_kills_a_child_that_ignores_term) ... ok
+test_service_shutdown_records_interrupted_and_reaps_child (test_stage2.WorkerTests.test_service_shutdown_records_interrupted_and_reaps_child) ... ok
+test_cumulative_progress_and_latency_are_not_double_counted (test_stage3.MetricsTests.test_cumulative_progress_and_latency_are_not_double_counted) ... ok
+test_exporter_stderr_does_not_become_a_workload_error (test_stage3.MetricsTests.test_exporter_stderr_does_not_become_a_workload_error) ... Trace exporter unavailable
+ok
+test_failed_io_and_duplicate_terminal_transition (test_stage3.MetricsTests.test_failed_io_and_duplicate_terminal_transition) ... ok
+test_http_templates_exclusions_errors_and_histograms (test_stage3.MetricsTests.test_http_templates_exclusions_errors_and_histograms) ... ok
+test_old_history_and_public_csv_compatibility (test_stage3.MetricsTests.test_old_history_and_public_csv_compatibility) ... ok
+test_explicit_thread_and_process_context (test_stage3.TracingTests.test_explicit_thread_and_process_context) ... ok
+test_selected_cycle_muted_propagation_and_failure_span (test_stage3.TracingTests.test_selected_cycle_muted_propagation_and_failure_span) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 27.800s
+
+OK

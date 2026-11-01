@@ -1,0 +1,503 @@
+{
+  "recorded_utc": "2026-11-01T01:08:10.861816+00:00",
+  "queries": {
+    "cpu_cores": "sum by (service, name) (rate(container_cpu_usage_seconds_total{project=\"cloud-lab1\",service=~\"compute\",name!=\"\",cpu=\"total\"}[30s]) and on (id) (container_last_seen{project=\"cloud-lab1\",service=~\"compute\",name!=\"\"} > time() - 15))",
+    "memory_mib": "max by (service, name) (container_memory_working_set_bytes{project=\"cloud-lab1\",service=~\"compute\",name!=\"\"} and on (id) (container_last_seen{project=\"cloud-lab1\",service=~\"compute\",name!=\"\"} > time() - 15)) / 1024 / 1024",
+    "receive_bps": "sum by (service, name) (rate(container_network_receive_bytes_total{project=\"cloud-lab1\",service=~\"compute\",name!=\"\",interface=\"eth0\"}[30s]) and on (id) (container_last_seen{project=\"cloud-lab1\",service=~\"compute\",name!=\"\"} > time() - 15))",
+    "transmit_bps": "sum by (service, name) (rate(container_network_transmit_bytes_total{project=\"cloud-lab1\",service=~\"compute\",name!=\"\",interface=\"eth0\"}[30s]) and on (id) (container_last_seen{project=\"cloud-lab1\",service=~\"compute\",name!=\"\"} > time() - 15))"
+  },
+  "checks": {
+    "cpu_rises": true,
+    "cpu_recovers": true,
+    "memory_rises": true,
+    "memory_recovers": true,
+    "network_rises": true,
+    "network_recovers": true
+  },
+  "workloads": {
+    "cpu": {
+      "batches": 25908,
+      "checksum": 516886755,
+      "elapsed_seconds": 30.001,
+      "kind": "cpu",
+      "status": "completed"
+    },
+    "memory": {
+      "allocated_mib": 64,
+      "elapsed_seconds": 30.038,
+      "kind": "memory",
+      "status": "completed",
+      "touched_pages": 16384
+    },
+    "network": {
+      "requests": 140,
+      "bytes": 36700160,
+      "elapsed_seconds": 30.161257199943066
+    }
+  },
+  "docker_stats": {
+    "baseline": {
+      "BlockIO": "0B / 0B",
+      "CPUPerc": "22.64%",
+      "Container": "cloud-lab1-compute-1",
+      "ID": "a12bfdd37b4a",
+      "MemPerc": "11.50%",
+      "MemUsage": "58.86MiB / 512MiB",
+      "Name": "cloud-lab1-compute-1",
+      "NetIO": "3.5kB / 1.34kB",
+      "PIDs": "6"
+    },
+    "cpu": {
+      "BlockIO": "0B / 0B",
+      "CPUPerc": "99.84%",
+      "Container": "cloud-lab1-compute-1",
+      "ID": "a12bfdd37b4a",
+      "MemPerc": "10.98%",
+      "MemUsage": "56.23MiB / 512MiB",
+      "Name": "cloud-lab1-compute-1",
+      "NetIO": "4.08kB / 1.65kB",
+      "PIDs": "7"
+    },
+    "cpu_cooldown": {
+      "BlockIO": "0B / 0B",
+      "CPUPerc": "0.03%",
+      "Container": "cloud-lab1-compute-1",
+      "ID": "a12bfdd37b4a",
+      "MemPerc": "9.08%",
+      "MemUsage": "46.51MiB / 512MiB",
+      "Name": "cloud-lab1-compute-1",
+      "NetIO": "4.28kB / 2.16kB",
+      "PIDs": "6"
+    },
+    "memory": {
+      "BlockIO": "0B / 0B",
+      "CPUPerc": "0.03%",
+      "Container": "cloud-lab1-compute-1",
+      "ID": "a12bfdd37b4a",
+      "MemPerc": "23.51%",
+      "MemUsage": "120.4MiB / 512MiB",
+      "Name": "cloud-lab1-compute-1",
+      "NetIO": "4.85kB / 2.45kB",
+      "PIDs": "7"
+    },
+    "memory_cooldown": {
+      "BlockIO": "0B / 0B",
+      "CPUPerc": "28.49%",
+      "Container": "cloud-lab1-compute-1",
+      "ID": "a12bfdd37b4a",
+      "MemPerc": "9.15%",
+      "MemUsage": "46.87MiB / 512MiB",
+      "Name": "cloud-lab1-compute-1",
+      "NetIO": "5.05kB / 2.96kB",
+      "PIDs": "6"
+    },
+    "network": {
+      "BlockIO": "0B / 0B",
+      "CPUPerc": "1.24%",
+      "Container": "cloud-lab1-compute-1",
+      "ID": "a12bfdd37b4a",
+      "MemPerc": "9.25%",
+      "MemUsage": "47.35MiB / 512MiB",
+      "Name": "cloud-lab1-compute-1",
+      "NetIO": "111kB / 20MB",
+      "PIDs": "6"
+    },
+    "final_cooldown": {
+      "BlockIO": "0B / 0B",
+      "CPUPerc": "0.02%",
+      "Container": "cloud-lab1-compute-1",
+      "ID": "a12bfdd37b4a",
+      "MemPerc": "9.15%",
+      "MemUsage": "46.85MiB / 512MiB",
+      "Name": "cloud-lab1-compute-1",
+      "NetIO": "200kB / 36.9MB",
+      "PIDs": "6"
+    }
+  },
+  "samples": [
+    {
+      "timestamp_utc": "2026-11-01T01:04:00.264608+00:00",
+      "phase": "baseline",
+      "cpu_cores": 0.06414919747433363,
+      "memory_mib": 43.9375,
+      "receive_bps": 66.41924133609679,
+      "transmit_bps": 50.75280442152279
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:04:05.320458+00:00",
+      "phase": "baseline",
+      "cpu_cores": 0.06390016921746325,
+      "memory_mib": 45.63671875,
+      "receive_bps": 51.81814763283571,
+      "transmit_bps": 45.6135073139548
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:04:10.335445+00:00",
+      "phase": "baseline",
+      "cpu_cores": 0.048992834973623285,
+      "memory_mib": 45.63671875,
+      "receive_bps": 66.95625766948778,
+      "transmit_bps": 51.37222222222223
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:04:15.352089+00:00",
+      "phase": "baseline",
+      "cpu_cores": 0.059857706822554375,
+      "memory_mib": 46.85546875,
+      "receive_bps": 50.98416457007548,
+      "transmit_bps": 44.87938434216368
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:04:21.605206+00:00",
+      "phase": "baseline",
+      "cpu_cores": 0.05262487209084574,
+      "memory_mib": 46.85546875,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:04:26.624987+00:00",
+      "phase": "baseline",
+      "cpu_cores": 0.05729990216061966,
+      "memory_mib": 55.7109375,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:04:31.658207+00:00",
+      "phase": "cpu",
+      "cpu_cores": 0.06228503719361003,
+      "memory_mib": 46.80859375,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:04:36.679013+00:00",
+      "phase": "cpu",
+      "cpu_cores": 0.1449845141036454,
+      "memory_mib": 56.37890625,
+      "receive_bps": 22.490863086870956,
+      "transmit_bps": 9.652328741448787
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:04:41.717032+00:00",
+      "phase": "cpu",
+      "cpu_cores": 0.1239665923757536,
+      "memory_mib": 56.37890625,
+      "receive_bps": 19.22593946209352,
+      "transmit_bps": 8.249845375316276
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:04:46.744774+00:00",
+      "phase": "cpu",
+      "cpu_cores": 0.5101153412032723,
+      "memory_mib": 56.2265625,
+      "receive_bps": 27.027027027027025,
+      "transmit_bps": 12.84042663353008
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:04:52.979748+00:00",
+      "phase": "cpu",
+      "cpu_cores": 0.6802829977650288,
+      "memory_mib": 56.2265625,
+      "receive_bps": 24.66109152064233,
+      "transmit_bps": 11.715035232704633
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:04:58.010680+00:00",
+      "phase": "cpu",
+      "cpu_cores": 0.8789866205410926,
+      "memory_mib": 56.59375,
+      "receive_bps": 5.3857069933639625,
+      "transmit_bps": 5.385094435936703
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:05:03.025648+00:00",
+      "phase": "cpu",
+      "cpu_cores": 0.999535672287073,
+      "memory_mib": 56.75390625,
+      "receive_bps": 4.669260700389105,
+      "transmit_bps": 4.669260700389105
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:05:08.060109+00:00",
+      "phase": "cpu_cooldown",
+      "cpu_cores": 0.9216505626938415,
+      "memory_mib": 46.56640625,
+      "receive_bps": 11.696942844483829,
+      "transmit_bps": 25.387682764731945
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:05:13.081619+00:00",
+      "phase": "cpu_cooldown",
+      "cpu_cores": 0.7021077967529752,
+      "memory_mib": 46.56640625,
+      "receive_bps": 11.753241321622752,
+      "transmit_bps": 25.50551880156648
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:05:18.100648+00:00",
+      "phase": "cpu_cooldown",
+      "cpu_cores": 0.4774937098445686,
+      "memory_mib": 46.50390625,
+      "receive_bps": 8.861736470091781,
+      "transmit_bps": 22.678935893378345
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:05:23.138821+00:00",
+      "phase": "cpu_cooldown",
+      "cpu_cores": 0.26416862244390354,
+      "memory_mib": 46.50390625,
+      "receive_bps": 10.117360130767517,
+      "transmit_bps": 25.90029534140724
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:05:29.389549+00:00",
+      "phase": "cpu_cooldown",
+      "cpu_cores": 0.056826154213701345,
+      "memory_mib": 46.48046875,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:05:34.415587+00:00",
+      "phase": "cpu_cooldown",
+      "cpu_cores": 0.07279285388388312,
+      "memory_mib": 46.75,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:05:39.431251+00:00",
+      "phase": "cpu_cooldown",
+      "cpu_cores": 0.06840315539226309,
+      "memory_mib": 46.515625,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:05:44.448318+00:00",
+      "phase": "memory",
+      "cpu_cores": 0.05259185396686091,
+      "memory_mib": 46.515625,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:05:49.468755+00:00",
+      "phase": "memory",
+      "cpu_cores": 0.050009173540300655,
+      "memory_mib": 46.4765625,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:05:54.502483+00:00",
+      "phase": "memory",
+      "cpu_cores": 0.05637730667190696,
+      "memory_mib": 120.4296875,
+      "receive_bps": 20.487373489240444,
+      "transmit_bps": 6.878254888474009
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:05:59.534312+00:00",
+      "phase": "memory",
+      "cpu_cores": 0.0426884692068277,
+      "memory_mib": 120.4296875,
+      "receive_bps": 21.151262455093878,
+      "transmit_bps": 7.099877990917101
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:06:05.749654+00:00",
+      "phase": "memory",
+      "cpu_cores": 0.061721407350819206,
+      "memory_mib": 120.34375,
+      "receive_bps": 24.06417112299465,
+      "transmit_bps": 12.307953484424072
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:06:10.763561+00:00",
+      "phase": "memory",
+      "cpu_cores": 0.05848222503962003,
+      "memory_mib": 120.34375,
+      "receive_bps": 9.508716323296355,
+      "transmit_bps": 9.508716323296355
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:06:15.791166+00:00",
+      "phase": "memory",
+      "cpu_cores": 0.06984235550313048,
+      "memory_mib": 120.984375,
+      "receive_bps": 6.805190091643226,
+      "transmit_bps": 6.805190091643227
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:06:20.809375+00:00",
+      "phase": "memory_cooldown",
+      "cpu_cores": 0.04894221177116895,
+      "memory_mib": 120.984375,
+      "receive_bps": 3.490519427122593,
+      "transmit_bps": 3.489916398273145
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:06:25.848779+00:00",
+      "phase": "memory_cooldown",
+      "cpu_cores": 0.057624641328970376,
+      "memory_mib": 46.49609375,
+      "receive_bps": 12.459098917694439,
+      "transmit_bps": 32.40624213440725
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:06:30.872577+00:00",
+      "phase": "memory_cooldown",
+      "cpu_cores": 0.0655277794699968,
+      "memory_mib": 47.06640625,
+      "receive_bps": 8.615813062965056,
+      "transmit_bps": 22.409816805186892
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:06:35.900807+00:00",
+      "phase": "memory_cooldown",
+      "cpu_cores": 0.05318809381356949,
+      "memory_mib": 47.06640625,
+      "receive_bps": 11.84635634797176,
+      "transmit_bps": 30.81249252123968
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:06:42.148588+00:00",
+      "phase": "memory_cooldown",
+      "cpu_cores": 0.06908218115040558,
+      "memory_mib": 46.8671875,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:06:47.185703+00:00",
+      "phase": "memory_cooldown",
+      "cpu_cores": 0.06129645324347099,
+      "memory_mib": 46.73046875,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:06:52.214718+00:00",
+      "phase": "memory_cooldown",
+      "cpu_cores": 0.051952116989970674,
+      "memory_mib": 46.73046875,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:06:57.231095+00:00",
+      "phase": "network",
+      "cpu_cores": 0.04516752549729021,
+      "memory_mib": 46.91015625,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:07:02.247610+00:00",
+      "phase": "network",
+      "cpu_cores": 0.05513221368590316,
+      "memory_mib": 46.91015625,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:07:07.281375+00:00",
+      "phase": "network",
+      "cpu_cores": 0.06862890276086057,
+      "memory_mib": 47.53515625,
+      "receive_bps": 1749.6636012992287,
+      "transmit_bps": 305297.1321220734
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:07:12.304839+00:00",
+      "phase": "network",
+      "cpu_cores": 0.06862890276086057,
+      "memory_mib": 47.53515625,
+      "receive_bps": 2011.5712545676004,
+      "transmit_bps": 370282.7639497903
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:07:18.553329+00:00",
+      "phase": "network",
+      "cpu_cores": 0.06276323344795588,
+      "memory_mib": 46.984375,
+      "receive_bps": 4531.775629059549,
+      "transmit_bps": 825923.2931663119
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:07:23.590216+00:00",
+      "phase": "network",
+      "cpu_cores": 0.06794066054328723,
+      "memory_mib": 57.515625,
+      "receive_bps": 5617.041235098691,
+      "transmit_bps": 1060866.8802462379
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:07:28.621302+00:00",
+      "phase": "network",
+      "cpu_cores": 0.05294430283427147,
+      "memory_mib": 57.515625,
+      "receive_bps": 5386.057503320053,
+      "transmit_bps": 1009791.610199414
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:07:33.638765+00:00",
+      "phase": "final_cooldown",
+      "cpu_cores": 0.053931415000000274,
+      "memory_mib": 46.94140625,
+      "receive_bps": 4130.2,
+      "transmit_bps": 777984.3
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:07:38.678843+00:00",
+      "phase": "final_cooldown",
+      "cpu_cores": 0.06380132580847457,
+      "memory_mib": 46.859375,
+      "receive_bps": 4442.622950819671,
+      "transmit_bps": 838668.8166263548
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:07:43.725194+00:00",
+      "phase": "final_cooldown",
+      "cpu_cores": 0.04496928467467799,
+      "memory_mib": 46.859375,
+      "receive_bps": 2776.90323330235,
+      "transmit_bps": 524656.7873080157
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:07:48.763126+00:00",
+      "phase": "final_cooldown",
+      "cpu_cores": 0.05794755813953483,
+      "memory_mib": 46.9921875,
+      "receive_bps": 2144.6013289036546,
+      "transmit_bps": 405242.27574750833
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:07:55.791280+00:00",
+      "phase": "final_cooldown",
+      "cpu_cores": 0.054579527508090496,
+      "memory_mib": 46.87109375,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:08:00.821460+00:00",
+      "phase": "final_cooldown",
+      "cpu_cores": 0.051169050906747636,
+      "memory_mib": 46.8828125,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    },
+    {
+      "timestamp_utc": "2026-11-01T01:08:05.844577+00:00",
+      "phase": "final_cooldown",
+      "cpu_cores": 0.05036604147364615,
+      "memory_mib": 47.19140625,
+      "receive_bps": 0.0,
+      "transmit_bps": 0.0
+    }
+  ]
+}

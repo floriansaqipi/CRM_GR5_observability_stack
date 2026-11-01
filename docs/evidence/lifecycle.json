@@ -1,0 +1,42 @@
+{
+  "recorded_utc": "2026-11-01T01:03:48.798877+00:00",
+  "checks": {
+    "overlap_rejected": true,
+    "health_during_work": true,
+    "shutdown_interrupts_request": true,
+    "clean_container_exit": true,
+    "historical_metrics_persist": true,
+    "grafana_login_and_dashboard_survive": true,
+    "application_returns_after_restart": true
+  },
+  "shutdown_seconds": 1.7239872000645846,
+  "persistence_query": "up{job=\"cadvisor\"}",
+  "persistence_sample_time": 1793494983.5251043,
+  "historical_result_before": [
+    {
+      "metric": {
+        "__name__": "up",
+        "instance": "cadvisor:8080",
+        "job": "cadvisor"
+      },
+      "value": [
+        1793494983.525,
+        "1"
+      ]
+    }
+  ],
+  "historical_result_after": [
+    {
+      "metric": {
+        "__name__": "up",
+        "instance": "cadvisor:8080",
+        "job": "cadvisor"
+      },
+      "value": [
+        1793494983.525,
+        "1"
+      ]
+    }
+  ],
+  "restart_method": "docker compose up --no-build --pull never (no image downloads or rebuilds)"
+}

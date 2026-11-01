@@ -1,0 +1,11 @@
+{
+  "baseline": {"compute_cpus": 1, "data_memory_mib": 512, "replicas": 1},
+  "cpu-05": {"compute_cpus": 0.5, "data_memory_mib": 512, "replicas": 1},
+  "cpu-1": {"compute_cpus": 1, "data_memory_mib": 512, "replicas": 1},
+  "cpu-2": {"compute_cpus": 2, "data_memory_mib": 512, "replicas": 1},
+  "memory-256": {"compute_cpus": 1, "data_memory_mib": 256, "replicas": 1},
+  "memory-512": {"compute_cpus": 1, "data_memory_mib": 512, "replicas": 1},
+  "memory-1024": {"compute_cpus": 1, "data_memory_mib": 1024, "replicas": 1},
+  "replica-1": {"compute_cpus": 1, "data_memory_mib": 512, "replicas": 1},
+  "replica-2": {"compute_cpus": 1, "data_memory_mib": 512, "replicas": 2}
+}

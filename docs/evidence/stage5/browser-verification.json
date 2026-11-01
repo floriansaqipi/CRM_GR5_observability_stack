@@ -1,0 +1,90 @@
+{
+  "checks": {
+    "six_workload_forms": true,
+    "fixed_duration_hidden": true,
+    "timed_durations_visible": true,
+    "narrow_no_page_overflow": true,
+    "laptop_no_page_overflow": true,
+    "laptop_two_columns": true,
+    "refresh_retained_active_run": true,
+    "stop_reached_cancelled_under_five_seconds": true,
+    "history_filters_returned_expected_run": true,
+    "filtered_browser_csv_downloaded": true,
+    "example_browser_csv_downloaded": true,
+    "details_use_readable_settings_and_limits": true,
+    "raw_record_initially_collapsed": true,
+    "older_history_readable": true,
+    "maintenance_blocks_start": true,
+    "connection_loss_blocks_start": true,
+    "automatic_connection_recovery": true,
+    "clear_filters_restores_history": true
+  },
+  "forms": [
+    {
+      "workload": "cpu",
+      "fields": [
+        "CPU busy time (%)"
+      ],
+      "duration_visible": true,
+      "start_available": true
+    },
+    {
+      "workload": "cpu_fixed",
+      "fields": [
+        "Number of fixed calculation batches"
+      ],
+      "duration_visible": false,
+      "start_available": true
+    },
+    {
+      "workload": "memory",
+      "fields": [
+        "Allocated memory (MiB)"
+      ],
+      "duration_visible": true,
+      "start_available": true
+    },
+    {
+      "workload": "network",
+      "fields": [
+        "Network payload (KiB)",
+        "Requests / cycles per second"
+      ],
+      "duration_visible": true,
+      "start_available": true
+    },
+    {
+      "workload": "database",
+      "fields": [
+        "Database payload (KiB)",
+        "Requests / cycles per second"
+      ],
+      "duration_visible": true,
+      "start_available": true
+    },
+    {
+      "workload": "combined",
+      "fields": [
+        "Allocated memory (MiB)",
+        "Network payload (KiB)",
+        "Database payload (KiB)",
+        "Requests / cycles per second"
+      ],
+      "duration_visible": true,
+      "start_available": true
+    }
+  ],
+  "stop_seconds": 1.958,
+  "viewports": {
+    "narrow": {
+      "columns": "339px",
+      "contentWidth": 375,
+      "pageWidth": 375
+    },
+    "laptop": {
+      "columns": "462.688px 726.312px",
+      "contentWidth": 1265,
+      "pageWidth": 1265
+    }
+  }
+}

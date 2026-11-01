@@ -1,0 +1,76 @@
+{
+  "recorded_utc": "2026-11-01T11:03:16.288910+00:00",
+  "checks": {
+    "tracing_mode_enabled": true,
+    "no_active_experiment": true,
+    "three_application_targets": true,
+    "known_http_count_delta_10": true,
+    "known_http_histogram_count_delta_10": true,
+    "metrics_and_health_excluded": true,
+    "start_returns_under_one_second": true,
+    "health_responsive": true,
+    "combined_completed_without_errors": true,
+    "network_request_counter_matches_run": true,
+    "database_write_counter_matches_run": true,
+    "database_read_counter_matches_run": true,
+    "database_cycle_counter_matches_run": true,
+    "network_bytes_match_run": true,
+    "io_histogram_covers_all_cycles": true,
+    "elapsed_resets_when_idle": true,
+    "workload_duration_is_separate": true,
+    "one_terminal_outcome_despite_repeated_reads": true,
+    "trace_spans_all_three_flask_services": true,
+    "trace_has_mongodb_client_calls": true,
+    "trace_has_one_connected_root": true,
+    "trace_is_readable_subset": true,
+    "no_poll_or_probe_spans": true,
+    "no_database_statement_or_payload_capture": false
+  },
+  "measurements": {
+    "start_response_seconds": 0.02816260000690818
+  },
+  "runs": {
+    "combined": {
+      "application_grafana_url": "http://localhost:3000/d/cloud-lab1-application?from=1793530949825&to=1793531001308&var-service=controller&var-service=data&var-service=compute",
+      "counters": {
+        "allocated_mib": 64,
+        "cpu_batches": 0,
+        "database_cycles": 150,
+        "database_reads": 150,
+        "database_writes": 150,
+        "errors": 0,
+        "network_bytes": 39321600,
+        "network_requests": 150,
+        "touched_pages": 16384
+      },
+      "created_at": "2026-11-01T11:02:39.825+00:00",
+      "elapsed_seconds": 30.01,
+      "error": null,
+      "finished_at": "2026-11-01T11:03:11.308+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793530949825&to=1793531001308&var-service=data&var-service=mongodb",
+      "id": "e4132ac1-9740-4993-af53-ca3e0838ab84",
+      "name": "Stage 3 connected Combined workload",
+      "notes": "",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 0.0,
+        "database_cycles_per_second": 4.998,
+        "network_requests_per_second": 4.998
+      },
+      "settings": {
+        "document_kib": 16,
+        "duration_seconds": 30,
+        "memory_mib": 64,
+        "payload_kib": 256,
+        "rate_per_second": 5
+      },
+      "started_at": "2026-11-01T11:02:40.130+00:00",
+      "state": "completed",
+      "target_service": "data",
+      "trace_id": "eca28e0e0b9b8ac15622f58431ad02bc",
+      "trace_url": "http://localhost:3000/explore?schemaVersion=1&panes=%7B%22trace%22%3A+%7B%22datasource%22%3A+%22tempo%22%2C+%22queries%22%3A+%5B%7B%22refId%22%3A+%22A%22%2C+%22queryType%22%3A+%22traceql%22%2C+%22query%22%3A+%22eca28e0e0b9b8ac15622f58431ad02bc%22%7D%5D%2C+%22range%22%3A+%7B%22from%22%3A+%221793530949825%22%2C+%22to%22%3A+%221793531001308%22%7D%7D%7D",
+      "workload": "combined"
+    }
+  }
+}

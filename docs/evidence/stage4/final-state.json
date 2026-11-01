@@ -1,0 +1,185 @@
+{
+  "recorded_utc": "2026-11-01T12:43:46.318561+00:00",
+  "deployment": {
+    "compute_instances": [
+      "compute"
+    ],
+    "effective": {
+      "compute": {
+        "boot_id": "bd3d493c-80c6-45b7-aee2-252e16aaa4fe",
+        "instance": "compute",
+        "limits": {
+          "cgroup_version": 1,
+          "cpus": 1.0,
+          "memory_bytes": 536870912
+        },
+        "role": "compute",
+        "tracing_enabled": true
+      },
+      "data": {
+        "boot_id": "72710da7-e08f-4306-91c9-dd44cfcb8db5",
+        "instance": "data",
+        "limits": {
+          "cgroup_version": 1,
+          "cpus": 1.0,
+          "memory_bytes": 536870912
+        },
+        "role": "data",
+        "tracing_enabled": true
+      }
+    },
+    "error": null,
+    "errors": [],
+    "expected": {
+      "compute": {
+        "cpus": 1,
+        "memory_bytes": 536870912
+      },
+      "data": {
+        "cpus": 1,
+        "memory_bytes": 536870912
+      }
+    },
+    "generation": "7afed5ce-336c-40f7-9fb5-051e82949207",
+    "images": {
+      "compute": "sha256:8592a8f8d0196dfd308204a81676896f4b45d0386dd9f36c3d5a0baf534ea3f7",
+      "data": "sha256:1af9cce54365052752fbb931b8961e613bc416b694417ed5968ce4c1fbb9e1a4"
+    },
+    "instances": [
+      "compute",
+      "data"
+    ],
+    "memory_allocation_max_mib": 128,
+    "pending": false,
+    "prepared": true,
+    "preset": "baseline",
+    "tracing": true,
+    "updated_utc": "2026-11-01T12:42:01.0749012Z",
+    "verified": true
+  },
+  "active_run": null,
+  "unsaved_count": 0,
+  "workers": {
+    "compute": {
+      "active": null,
+      "boot_id": "bd3d493c-80c6-45b7-aee2-252e16aaa4fe",
+      "configuration": {
+        "boot_id": "bd3d493c-80c6-45b7-aee2-252e16aaa4fe",
+        "instance": "compute",
+        "limits": {
+          "cgroup_version": 1,
+          "cpus": 1.0,
+          "memory_bytes": 536870912
+        },
+        "role": "compute",
+        "tracing_enabled": true
+      },
+      "last_run": null,
+      "process_count": 0,
+      "service": "compute"
+    },
+    "data": {
+      "active": null,
+      "boot_id": "72710da7-e08f-4306-91c9-dd44cfcb8db5",
+      "configuration": {
+        "boot_id": "72710da7-e08f-4306-91c9-dd44cfcb8db5",
+        "instance": "data",
+        "limits": {
+          "cgroup_version": 1,
+          "cpus": 1.0,
+          "memory_bytes": 536870912
+        },
+        "role": "data",
+        "tracing_enabled": true
+      },
+      "last_run": null,
+      "process_count": 0,
+      "service": "data"
+    }
+  },
+  "temporary_documents": 0,
+  "containers": [
+    {
+      "service": "cadvisor",
+      "image": "sha256:b8e7d1093144fd088f425ff003d75a4aa405de075db78dae3bc563730b1bd07a",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpus": 0.5,
+      "memory_bytes": 268435456
+    },
+    {
+      "service": "compute",
+      "image": "sha256:8592a8f8d0196dfd308204a81676896f4b45d0386dd9f36c3d5a0baf534ea3f7",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpus": 1.0,
+      "memory_bytes": 536870912
+    },
+    {
+      "service": "controller",
+      "image": "sha256:6559ad5aafb83453b1424b979992c501303dcad6d09bb567a563bb2a6847d160",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpus": 0.5,
+      "memory_bytes": 268435456
+    },
+    {
+      "service": "data",
+      "image": "sha256:1af9cce54365052752fbb931b8961e613bc416b694417ed5968ce4c1fbb9e1a4",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpus": 1.0,
+      "memory_bytes": 536870912
+    },
+    {
+      "service": "grafana",
+      "image": "sha256:488984b716c0862639f91a698adbe2862677a5a07bad42da5f03f3030883b205",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpus": 0.5,
+      "memory_bytes": 536870912
+    },
+    {
+      "service": "mongodb",
+      "image": "sha256:b9924c330a8bbc5800fe9c69f04a84e221eca7b28fd049a0354147d9908fa142",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpus": 1.0,
+      "memory_bytes": 805306368
+    },
+    {
+      "service": "otel-collector",
+      "image": "sha256:340c9ca6a36617084c6661bdc4f0fe92b7cda5a805d61673ec8db375fddc522b",
+      "status": "running",
+      "health": null,
+      "oom_killed": false,
+      "cpus": 0.5,
+      "memory_bytes": 268435456
+    },
+    {
+      "service": "prometheus",
+      "image": "sha256:fa3302279710be2f21a8301ec17a8b4f2301fd829bd113839b3b6b02b6f191a2",
+      "status": "running",
+      "health": "healthy",
+      "oom_killed": false,
+      "cpus": 1.0,
+      "memory_bytes": 805306368
+    },
+    {
+      "service": "tempo",
+      "image": "sha256:64e2fbd56d9c2b3412a4b430a58ea59e91a670b1e75f920a0c702213ad145044",
+      "status": "running",
+      "health": null,
+      "oom_killed": false,
+      "cpus": 1.0,
+      "memory_bytes": 805306368
+    }
+  ],
+  "configured_memory_gib": 4.5
+}

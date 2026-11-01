@@ -1,0 +1,116 @@
+{
+  "checks": {
+    "cpu-2_resource_panel_2_historical_query": true,
+    "cpu-2_resource_panel_3_historical_query": true,
+    "cpu-2_resource_panel_4_historical_query": true,
+    "cpu-2_resource_panel_5_historical_query": true,
+    "cpu-2_resource_panel_6_historical_query": true,
+    "cpu-2_resource_panel_7_historical_query": true,
+    "cpu-2_resource_panel_8_historical_query": true,
+    "cpu-2_resource_panel_9_historical_query": true,
+    "cpu-2_resource_panel_10_historical_query": true,
+    "cpu-2_resource_panel_11_historical_query": true,
+    "cpu-2_aggregate_calculation_throughput": true,
+    "replica-2_resource_panel_2_historical_query": true,
+    "replica-2_resource_panel_3_historical_query": true,
+    "replica-2_resource_panel_4_historical_query": true,
+    "replica-2_resource_panel_5_historical_query": true,
+    "replica-2_resource_panel_6_historical_query": true,
+    "replica-2_resource_panel_7_historical_query": true,
+    "replica-2_resource_panel_8_historical_query": true,
+    "replica-2_resource_panel_9_historical_query": true,
+    "replica-2_resource_panel_10_historical_query": true,
+    "replica-2_resource_panel_11_historical_query": true,
+    "replica-2_aggregate_calculation_throughput": true
+  },
+  "measurements": {
+    "cpu-2_resource_panel_2_historical_query": {
+      "series": 1,
+      "maximum": 1.6009989399187512
+    },
+    "cpu-2_resource_panel_3_historical_query": {
+      "series": 1,
+      "maximum": 143.0234375
+    },
+    "cpu-2_resource_panel_4_historical_query": {
+      "series": 1,
+      "maximum": 1671.2128420020047
+    },
+    "cpu-2_resource_panel_5_historical_query": {
+      "series": 1,
+      "maximum": 33004.73612990528
+    },
+    "cpu-2_resource_panel_6_historical_query": {
+      "series": 2,
+      "maximum": 100.28087833681883
+    },
+    "cpu-2_resource_panel_7_historical_query": {
+      "series": 3,
+      "maximum": 27.93426513671875
+    },
+    "cpu-2_resource_panel_8_historical_query": {
+      "series": 2,
+      "maximum": 100.00000000000001
+    },
+    "cpu-2_resource_panel_9_historical_query": {
+      "series": 2,
+      "maximum": 1.3404629597736502
+    },
+    "cpu-2_resource_panel_10_historical_query": {
+      "series": 1,
+      "maximum": 1.6009989399187512
+    },
+    "cpu-2_resource_panel_11_historical_query": {
+      "series": 1,
+      "maximum": 1.9285563088131137
+    },
+    "cpu-2_aggregate_calculation_throughput": {
+      "series": 1,
+      "maximum": 1865.8187339194312
+    },
+    "replica-2_resource_panel_2_historical_query": {
+      "series": 2,
+      "maximum": 1.00032592681034
+    },
+    "replica-2_resource_panel_3_historical_query": {
+      "series": 2,
+      "maximum": 144.15234375
+    },
+    "replica-2_resource_panel_4_historical_query": {
+      "series": 2,
+      "maximum": 1620.619664497642
+    },
+    "replica-2_resource_panel_5_historical_query": {
+      "series": 2,
+      "maximum": 34805.14596143514
+    },
+    "replica-2_resource_panel_6_historical_query": {
+      "series": 2,
+      "maximum": 100.03259268103399
+    },
+    "replica-2_resource_panel_7_historical_query": {
+      "series": 2,
+      "maximum": 28.154754638671875
+    },
+    "replica-2_resource_panel_8_historical_query": {
+      "series": 2,
+      "maximum": 100.0
+    },
+    "replica-2_resource_panel_9_historical_query": {
+      "series": 2,
+      "maximum": 1.37066472449406
+    },
+    "replica-2_resource_panel_10_historical_query": {
+      "series": 1,
+      "maximum": 1.677776315268524
+    },
+    "replica-2_resource_panel_11_historical_query": {
+      "series": 2,
+      "maximum": 1.0020912711275756
+    },
+    "replica-2_aggregate_calculation_throughput": {
+      "series": 1,
+      "maximum": 1540.1808779117755
+    }
+  }
+}

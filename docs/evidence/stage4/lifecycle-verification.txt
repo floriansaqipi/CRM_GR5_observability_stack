@@ -1,0 +1,33 @@
+PASS replica_metric_check_configuration
+PASS browser_csv_matches_saved_run
+PASS fixed_work_health_under_one_second
+PASS metric_check_completed
+PASS compute_cpu_batch_matches_exact_run
+PASS compute_logical_batch_matches_exact_run
+PASS compute-2_cpu_batch_matches_exact_run
+PASS compute-2_logical_batch_matches_exact_run
+PASS controller_counts_one_parent_outcome
+PASS seven_service_mode
+PASS existing_combined_workload_completed
+PASS combined_has_network_and_database_work
+PASS temporary_documents_cleaned
+PASS existing_connected_trace_retained
+FAIL normal_shutdown_stops_all_profiles
+Traceback (most recent call last):
+  File "C:\E_Documents\uni\master\Cloud\lab_1\scripts\verify-stage4-lifecycle.py", line 96, in <module>
+    main()
+    ~~~~^^
+  File "C:\E_Documents\uni\master\Cloud\lab_1\scripts\verify-stage4-lifecycle.py", line 83, in main
+    check('normal_shutdown_stops_all_profiles', not running_services())
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\E_Documents\uni\master\Cloud\lab_1\scripts\verify-stage4-lifecycle.py", line 22, in check
+    raise AssertionError(name)
+AssertionError: normal_shutdown_stops_all_profiles
+
+Resumed after fixing empty Docker-status output parsing; shutdown had stopped every container.
+PASS normal_shutdown_stops_all_profiles
+PASS normal_restart_restores_baseline_tracing
+PASS stage4_run_survives_stop_start
+PASS stage4_trace_survives_stop_start
+PASS stage4_metrics_survive_stop_start
+PASS final_no_active_or_unsaved_runs

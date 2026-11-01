@@ -1,0 +1,35 @@
+{
+  "start_utc": "2026-11-01T13:44:46.502191+00:00",
+  "end_utc": "2026-11-01T13:54:18.839672+00:00",
+  "elapsed_minutes": 9.538958028952282,
+  "run_ids": {
+    "cpu": "8636fafc-6533-44c2-a330-1cce68f0841a",
+    "memory": "5a804b0d-a5c2-481a-992b-4e1e96536c92",
+    "network": "ead14011-9209-49a2-a061-9cb74ea41375",
+    "combined": "2f24ccd5-bc82-483b-906c-14fe16c1f6a8"
+  },
+  "method": "All four examples were started through the revised browser interface. This measured operator/evidence window includes idle, work, cooldown and preparation. Trace, saved details and CSV were additionally exercised. It is not a timed spoken presentation.",
+  "guide_target_minutes": 10,
+  "main_scenarios": "CPU, Memory, Network, Combined Data",
+  "browser_checks": {
+    "six_workload_forms": true,
+    "fixed_duration_hidden": true,
+    "timed_durations_visible": true,
+    "narrow_no_page_overflow": true,
+    "laptop_no_page_overflow": true,
+    "laptop_two_columns": true,
+    "refresh_retained_active_run": true,
+    "stop_reached_cancelled_under_five_seconds": true,
+    "history_filters_returned_expected_run": true,
+    "filtered_browser_csv_downloaded": true,
+    "example_browser_csv_downloaded": true,
+    "details_use_readable_settings_and_limits": true,
+    "raw_record_initially_collapsed": true,
+    "older_history_readable": true,
+    "maintenance_blocks_start": true,
+    "connection_loss_blocks_start": true,
+    "automatic_connection_recovery": true,
+    "clear_filters_restores_history": true
+  },
+  "optional_comparisons": "CPU allocation and one/two Compute modules are documented using the verified Stage 4 presets; these are optional extensions rather than new formal repetitions."
+}

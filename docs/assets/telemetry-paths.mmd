@@ -1,0 +1,10 @@
+flowchart LR
+    subgraph Resources
+      C[Linux containers] --> A[cAdvisor] --> P[Prometheus] --> G[Grafana: Container Resources]
+    end
+    subgraph Application_metrics
+      F[Controller / Compute / Data: metrics] --> P2[Prometheus] --> G2[Grafana: Application Performance]
+    end
+    subgraph Traces
+      T[Applications and child processes] --> O[OpenTelemetry Collector] --> Tempo --> G3[Grafana: Trace exploration]
+    end

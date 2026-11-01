@@ -1,0 +1,373 @@
+{
+  "checks": {
+    "replica_metric_check_configuration": true,
+    "browser_csv_matches_saved_run": true,
+    "fixed_work_health_under_one_second": true,
+    "metric_check_completed": true,
+    "compute_cpu_batch_matches_exact_run": true,
+    "compute_logical_batch_matches_exact_run": true,
+    "compute-2_cpu_batch_matches_exact_run": true,
+    "compute-2_logical_batch_matches_exact_run": true,
+    "controller_counts_one_parent_outcome": true,
+    "seven_service_mode": true,
+    "existing_combined_workload_completed": true,
+    "combined_has_network_and_database_work": true,
+    "temporary_documents_cleaned": true,
+    "existing_connected_trace_retained": true,
+    "normal_shutdown_stops_all_profiles": false
+  },
+  "runs": {
+    "fixed": {
+      "algorithm_version": "sum-squares-v1",
+      "application_grafana_url": "http://localhost:3000/d/cloud-lab1-application?from=1793536703348&to=1793536726621&var-service=controller&var-service=compute&var-service=compute-2",
+      "assignment": {
+        "compute": [
+          [
+            0,
+            2
+          ]
+        ],
+        "compute-2": [
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "batch_results": [
+        {
+          "batch_id": 0,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:38:35.582+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:38:34.453+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 1,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:38:35.560+00:00",
+          "instance": "compute-2",
+          "slot": 0,
+          "started_at": "2026-11-01T12:38:34.742+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 2,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:38:36.402+00:00",
+          "instance": "compute",
+          "slot": 0,
+          "started_at": "2026-11-01T12:38:35.582+00:00",
+          "state": "completed"
+        },
+        {
+          "batch_id": 3,
+          "calculation_units": 2500,
+          "checksum": 375222900000,
+          "finished_at": "2026-11-01T12:38:36.368+00:00",
+          "instance": "compute-2",
+          "slot": 0,
+          "started_at": "2026-11-01T12:38:35.560+00:00",
+          "state": "completed"
+        }
+      ],
+      "calculation_processes": 2,
+      "calculation_units_per_batch": 2500,
+      "counters": {
+        "checksum": 1500891600000,
+        "cpu_batches": 10000,
+        "errors": 0,
+        "fixed_batches": 4
+      },
+      "created_at": "2026-11-01T12:38:33.348+00:00",
+      "deadline_unix": 1793536893.3489482,
+      "deployment": {
+        "compute_instances": [
+          "compute",
+          "compute-2"
+        ],
+        "effective": {
+          "compute": {
+            "boot_id": "21c01f5b-4e63-4fe6-b6e8-ae4a54c526f6",
+            "instance": "compute",
+            "limits": {
+              "cgroup_version": 1,
+              "cpus": 1.0,
+              "memory_bytes": 536870912
+            },
+            "role": "compute",
+            "tracing_enabled": true
+          },
+          "compute-2": {
+            "boot_id": "d3d8fb2d-70f0-4224-a518-6ce72f612956",
+            "instance": "compute-2",
+            "limits": {
+              "cgroup_version": 1,
+              "cpus": 1.0,
+              "memory_bytes": 536870912
+            },
+            "role": "compute",
+            "tracing_enabled": true
+          },
+          "data": {
+            "boot_id": "45effdd5-4443-4eaa-a393-60f3e67420d7",
+            "instance": "data",
+            "limits": {
+              "cgroup_version": 1,
+              "cpus": 1.0,
+              "memory_bytes": 536870912
+            },
+            "role": "data",
+            "tracing_enabled": true
+          }
+        },
+        "error": null,
+        "errors": [],
+        "expected": {
+          "compute": {
+            "cpus": 1,
+            "memory_bytes": 536870912
+          },
+          "compute-2": {
+            "cpus": 1,
+            "memory_bytes": 536870912
+          },
+          "data": {
+            "cpus": 1,
+            "memory_bytes": 536870912
+          }
+        },
+        "generation": "4e88c5b1-9a0e-4e03-93c8-3ce34bd5c89d",
+        "images": {
+          "compute": "sha256:8592a8f8d0196dfd308204a81676896f4b45d0386dd9f36c3d5a0baf534ea3f7",
+          "compute-2": "sha256:8592a8f8d0196dfd308204a81676896f4b45d0386dd9f36c3d5a0baf534ea3f7",
+          "data": "sha256:1af9cce54365052752fbb931b8961e613bc416b694417ed5968ce4c1fbb9e1a4"
+        },
+        "instances": [
+          "compute",
+          "data",
+          "compute-2"
+        ],
+        "memory_allocation_max_mib": 128,
+        "pending": false,
+        "prepared": true,
+        "preset": "replica-2",
+        "tracing": true,
+        "updated_utc": "2026-11-01T12:34:46.9505903Z",
+        "verified": true
+      },
+      "elapsed_seconds": 2.867,
+      "error": null,
+      "finished_at": "2026-11-01T12:38:36.621+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793536703348&to=1793536726621&var-service=compute&var-service=compute-2",
+      "id": "21119a24-a121-4881-a1d1-58fcce608fa3",
+      "instance_results": {
+        "compute": {
+          "batch_results": [
+            {
+              "batch_id": 0,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:38:35.582+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:38:34.453+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 2,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:38:36.402+00:00",
+              "instance": "compute",
+              "slot": 0,
+              "started_at": "2026-11-01T12:38:35.582+00:00",
+              "state": "completed"
+            }
+          ],
+          "counters": {
+            "checksum": 750445800000,
+            "cpu_batches": 5000,
+            "errors": 0,
+            "fixed_batches": 2
+          },
+          "elapsed_seconds": 2.867,
+          "error": null,
+          "finished_at": "2026-11-01T12:38:36.557+00:00",
+          "rates": {
+            "cpu_batches_per_second": 1743.683
+          },
+          "started_at": "2026-11-01T12:38:33.535+00:00",
+          "state": "completed"
+        },
+        "compute-2": {
+          "batch_results": [
+            {
+              "batch_id": 1,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:38:35.560+00:00",
+              "instance": "compute-2",
+              "slot": 0,
+              "started_at": "2026-11-01T12:38:34.742+00:00",
+              "state": "completed"
+            },
+            {
+              "batch_id": 3,
+              "calculation_units": 2500,
+              "checksum": 375222900000,
+              "finished_at": "2026-11-01T12:38:36.368+00:00",
+              "instance": "compute-2",
+              "slot": 0,
+              "started_at": "2026-11-01T12:38:35.560+00:00",
+              "state": "completed"
+            }
+          ],
+          "counters": {
+            "checksum": 750445800000,
+            "cpu_batches": 5000,
+            "errors": 0,
+            "fixed_batches": 2
+          },
+          "elapsed_seconds": 2.832,
+          "error": null,
+          "finished_at": "2026-11-01T12:38:36.523+00:00",
+          "rates": {
+            "cpu_batches_per_second": 1765.362
+          },
+          "started_at": "2026-11-01T12:38:33.536+00:00",
+          "state": "completed"
+        }
+      },
+      "name": "Stage 4 exact replica metric deltas",
+      "notes": "",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 3487.967
+      },
+      "settings": {
+        "batch_count": 4,
+        "duration_seconds": 180
+      },
+      "started_at": "2026-11-01T12:38:33.535+00:00",
+      "state": "completed",
+      "target_service": "compute",
+      "target_services": [
+        "compute",
+        "compute-2"
+      ],
+      "trace_id": "924700706b6cc9d7c13efe85043f832b",
+      "trace_url": "http://localhost:3000/explore?schemaVersion=1&panes=%7B%22trace%22%3A+%7B%22datasource%22%3A+%22tempo%22%2C+%22queries%22%3A+%5B%7B%22refId%22%3A+%22A%22%2C+%22queryType%22%3A+%22traceql%22%2C+%22query%22%3A+%22924700706b6cc9d7c13efe85043f832b%22%7D%5D%2C+%22range%22%3A+%7B%22from%22%3A+%221793536703348%22%2C+%22to%22%3A+%221793536726621%22%7D%7D%7D",
+      "workload": "cpu_fixed"
+    },
+    "combined": {
+      "application_grafana_url": "http://localhost:3000/d/cloud-lab1-application?from=1793536765104&to=1793536802673&var-service=controller&var-service=data&var-service=compute",
+      "batch_results": [],
+      "counters": {
+        "allocated_mib": 64,
+        "cpu_batches": 0,
+        "database_cycles": 75,
+        "database_reads": 75,
+        "database_writes": 75,
+        "errors": 0,
+        "network_bytes": 19660800,
+        "network_requests": 75,
+        "touched_pages": 16384
+      },
+      "created_at": "2026-11-01T12:39:35.104+00:00",
+      "deployment": {
+        "compute_instances": [
+          "compute"
+        ],
+        "effective": {
+          "compute": {
+            "boot_id": "3f2e0583-58f9-4e00-88e3-43750d6d2999",
+            "instance": "compute",
+            "limits": {
+              "cgroup_version": 1,
+              "cpus": 1.0,
+              "memory_bytes": 536870912
+            },
+            "role": "compute",
+            "tracing_enabled": true
+          },
+          "data": {
+            "boot_id": "861ee194-f8c6-443b-be37-e9bc2482d601",
+            "instance": "data",
+            "limits": {
+              "cgroup_version": 1,
+              "cpus": 1.0,
+              "memory_bytes": 536870912
+            },
+            "role": "data",
+            "tracing_enabled": true
+          }
+        },
+        "error": null,
+        "errors": [],
+        "expected": {
+          "compute": {
+            "cpus": 1,
+            "memory_bytes": 536870912
+          },
+          "data": {
+            "cpus": 1,
+            "memory_bytes": 536870912
+          }
+        },
+        "generation": "7db53d51-c625-49f2-b479-04bb28c4630d",
+        "images": {
+          "compute": "sha256:8592a8f8d0196dfd308204a81676896f4b45d0386dd9f36c3d5a0baf534ea3f7",
+          "data": "sha256:1af9cce54365052752fbb931b8961e613bc416b694417ed5968ce4c1fbb9e1a4"
+        },
+        "instances": [
+          "compute",
+          "data"
+        ],
+        "memory_allocation_max_mib": 128,
+        "pending": false,
+        "prepared": true,
+        "preset": "baseline",
+        "tracing": true,
+        "updated_utc": "2026-11-01T12:39:17.1472031Z",
+        "verified": true
+      },
+      "elapsed_seconds": 15.005,
+      "error": null,
+      "finished_at": "2026-11-01T12:39:52.673+00:00",
+      "grafana_url": "http://localhost:3000/d/cloud-lab1-resources?from=1793536765104&to=1793536802673&var-service=data&var-service=mongodb",
+      "id": "bf019646-4ec6-4c92-9046-20c326e960c7",
+      "name": "Stage 4 timed-workload regression",
+      "notes": "",
+      "persistence": "saved",
+      "profile": "medium",
+      "rates": {
+        "cpu_batches_per_second": 0.0,
+        "database_cycles_per_second": 4.998,
+        "network_requests_per_second": 4.998
+      },
+      "settings": {
+        "document_kib": 16,
+        "duration_seconds": 15,
+        "memory_mib": 64,
+        "payload_kib": 256,
+        "rate_per_second": 5
+      },
+      "started_at": "2026-11-01T12:39:35.551+00:00",
+      "state": "completed",
+      "target_service": "data",
+      "target_services": [
+        "data"
+      ],
+      "trace_id": "0e9a3c41bf66eeddc889117bbb1b0959",
+      "trace_url": "http://localhost:3000/explore?schemaVersion=1&panes=%7B%22trace%22%3A+%7B%22datasource%22%3A+%22tempo%22%2C+%22queries%22%3A+%5B%7B%22refId%22%3A+%22A%22%2C+%22queryType%22%3A+%22traceql%22%2C+%22query%22%3A+%220e9a3c41bf66eeddc889117bbb1b0959%22%7D%5D%2C+%22range%22%3A+%7B%22from%22%3A+%221793536765104%22%2C+%22to%22%3A+%221793536802673%22%7D%7D%7D",
+      "workload": "combined"
+    }
+  }
+}

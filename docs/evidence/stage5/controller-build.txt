@@ -1,0 +1,61 @@
+ Image cloud-lab1-controller:stage4 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 643B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 504B 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim-bookworm@sha256:281d39ff02e3b389401586134ff9e6572954687822a58055ec07a60ded4e0b7f
+#3 DONE 0.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 73B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 74.62kB 0.0s done
+#5 DONE 0.1s
+
+#6 [1/8] FROM docker.io/library/python:3.13-slim-bookworm@sha256:281d39ff02e3b389401586134ff9e6572954687822a58055ec07a60ded4e0b7f
+#6 resolve docker.io/library/python:3.13-slim-bookworm@sha256:281d39ff02e3b389401586134ff9e6572954687822a58055ec07a60ded4e0b7f
+#6 resolve docker.io/library/python:3.13-slim-bookworm@sha256:281d39ff02e3b389401586134ff9e6572954687822a58055ec07a60ded4e0b7f 0.1s done
+#6 DONE 0.1s
+
+#7 [2/8] WORKDIR /app
+#7 CACHED
+
+#8 [3/8] COPY requirements.txt .
+#8 CACHED
+
+#9 [4/8] RUN pip install --no-cache-dir -r requirements.txt && useradd --uid 10001 --create-home appuser
+#9 CACHED
+
+#10 [5/8] COPY shared ./shared
+#10 CACHED
+
+#11 [6/8] COPY controller ./
+#11 DONE 0.1s
+
+#12 [7/8] COPY tests ./tests
+#12 DONE 0.1s
+
+#13 [8/8] COPY gunicorn_conf.py .
+#13 DONE 0.1s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 0.3s done
+#14 exporting manifest sha256:2d1ecbf635b67531efdc8a5736c237342adef90b201d2e7bb3504833520e3d6d 0.0s done
+#14 exporting config sha256:a497f9c7b53964867d7a2ad416817d90ff7e3341cc0071bb23340c364c0101c3 0.0s done
+#14 exporting attestation manifest sha256:bcfe7de3caa1facfb0c8a9e219a33c7d33ad75e147b8393b3eab13e4bc153076 0.1s done
+#14 exporting manifest list sha256:7a87d2486fd55adf6776a4b017b60e1f68aef283ee8d71797ec21a0c73b4a4ff
+#14 exporting manifest list sha256:7a87d2486fd55adf6776a4b017b60e1f68aef283ee8d71797ec21a0c73b4a4ff 0.0s done
+#14 naming to docker.io/library/cloud-lab1-controller:stage4 done
+#14 unpacking to docker.io/library/cloud-lab1-controller:stage4 0.1s done
+#14 DONE 0.7s
+
+#15 resolving provenance for metadata file
+#15 DONE 0.0s
+ Image cloud-lab1-controller:stage4 Built 

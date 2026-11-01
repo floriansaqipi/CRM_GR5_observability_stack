@@ -1,0 +1,234 @@
+name: cloud-lab1
+
+services:
+  compute:
+    build:
+      context: ./services
+      args:
+        SERVICE: compute
+    image: cloud-lab1-compute:stage4
+    environment:
+      LAB_SERVICE: compute
+      LAB_TRACING_ENABLED: ${LAB_TRACING_ENABLED:-false}
+    init: true
+    cpus: 1.0
+    mem_limit: 512m
+    pids_limit: 64
+    networks: [lab]
+    restart: unless-stopped
+    stop_grace_period: 10s
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+
+  data:
+    build:
+      context: ./services
+      args:
+        SERVICE: data
+    image: cloud-lab1-data:stage4
+    init: true
+    cpus: 1.0
+    mem_limit: 512m
+    pids_limit: 64
+    environment:
+      LAB_SERVICE: data
+      LAB_TRACING_ENABLED: ${LAB_TRACING_ENABLED:-false}
+      MONGO_URI: mongodb://mongodb:27017/lab
+      COMPUTE_URL: http://compute:5000
+    networks: [lab]
+    restart: unless-stopped
+    stop_grace_period: 10s
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+
+  controller:
+    build:
+      context: ./services
+      args:
+        SERVICE: controller
+    image: cloud-lab1-controller:stage4
+    init: true
+    cpus: 0.5
+    mem_limit: 256m
+    pids_limit: 64
+    environment:
+      LAB_SERVICE: controller
+      LAB_DEPLOYMENT_FILE: /runtime/deployment.json
+      LAB_TRACING_ENABLED: ${LAB_TRACING_ENABLED:-false}
+      MONGO_URI: mongodb://mongodb:27017/lab
+    ports:
+      - "127.0.0.1:5000:5000"
+    volumes:
+      - ./.runtime:/runtime:ro
+    networks: [lab]
+    restart: unless-stopped
+    stop_grace_period: 10s
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+
+  compute-2:
+    image: cloud-lab1-compute:stage4
+    pull_policy: never
+    profiles: [replica]
+    init: true
+    cpus: 1.0
+    mem_limit: 512m
+    pids_limit: 64
+    environment:
+      LAB_SERVICE: compute-2
+      LAB_TRACING_ENABLED: ${LAB_TRACING_ENABLED:-false}
+    networks: [lab]
+    restart: unless-stopped
+    stop_grace_period: 10s
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:5000/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+
+  mongodb:
+    image: mongo:8.0@sha256:b9924c330a8bbc5800fe9c69f04a84e221eca7b28fd049a0354147d9908fa142
+    command: [mongod, --wiredTigerCacheSizeGB, '0.25', --bind_ip_all]
+    cpus: 1.0
+    mem_limit: 768m
+    volumes:
+      - mongodb-data:/data/db
+    networks: [lab]
+    restart: unless-stopped
+    stop_grace_period: 15s
+    healthcheck:
+      test: [CMD, mongosh, --quiet, --eval, 'quit(db.adminCommand({ping:1}).ok ? 0 : 1)']
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 15s
+
+  cadvisor:
+    image: ghcr.io/google/cadvisor:0.60.6@sha256:b8e7d1093144fd088f425ff003d75a4aa405de075db78dae3bc563730b1bd07a
+    privileged: true
+    # Host PID visibility allows network namespace statistics on Docker Desktop.
+    pid: host
+    cpus: 0.5
+    mem_limit: 256m
+    command:
+      - --docker_only=true
+      - --housekeeping_interval=5s
+      - --allow_dynamic_housekeeping=false
+      - --store_container_labels=true
+      - --disable_metrics=percpu
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker:/var/lib/docker:ro
+      - /dev/disk:/dev/disk:ro
+    networks: [lab]
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, http://127.0.0.1:8080/healthz]
+      interval: 5s
+      timeout: 3s
+      retries: 18
+      start_period: 15s
+
+  prometheus:
+    image: prom/prometheus:v3.15.1@sha256:fa3302279710be2f21a8301ec17a8b4f2301fd829bd113839b3b6b02b6f191a2
+    cpus: 1.0
+    mem_limit: 768m
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --storage.tsdb.retention.time=7d
+      - --storage.tsdb.retention.size=1GB
+    volumes:
+      - ./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./.runtime:/etc/lab-runtime:ro
+      - prometheus-data:/prometheus
+    ports:
+      - "127.0.0.1:9090:9090"
+    networks: [lab]
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, http://127.0.0.1:9090/-/ready]
+      interval: 5s
+      timeout: 3s
+      retries: 18
+
+  grafana:
+    image: grafana/grafana:13.3.0@sha256:488984b716c0862639f91a698adbe2862677a5a07bad42da5f03f3030883b205
+    cpus: 0.5
+    mem_limit: 512m
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:?Run scripts/start.ps1 to create .env}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?Run scripts/start.ps1 to create .env}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+      GF_ANALYTICS_CHECK_FOR_UPDATES: "false"
+      GF_ANALYTICS_CHECK_FOR_PLUGIN_UPDATES: "false"
+      GF_PLUGINS_PREINSTALL_DISABLED: "true"
+      GF_PLUGINS_PREINSTALL_AUTO_UPDATE: "false"
+      GF_DASHBOARDS_MIN_REFRESH_INTERVAL: 5s
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/container-resources.json
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    ports:
+      - "127.0.0.1:3000:3000"
+    networks: [lab]
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, http://127.0.0.1:3000/api/health]
+      interval: 5s
+      timeout: 3s
+      retries: 24
+      start_period: 20s
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.164.0@sha256:340c9ca6a36617084c6661bdc4f0fe92b7cda5a805d61673ec8db375fddc522b
+    profiles: [tracing]
+    command: [--config=/etc/otelcol/config.yaml]
+    cpus: 0.5
+    mem_limit: 256m
+    volumes:
+      - ./monitoring/tracing/collector.yaml:/etc/otelcol/config.yaml:ro
+    networks: [lab]
+    restart: unless-stopped
+    stop_grace_period: 5s
+
+  tempo:
+    image: grafana/tempo:3.1.1@sha256:64e2fbd56d9c2b3412a4b430a58ea59e91a670b1e75f920a0c702213ad145044
+    profiles: [tracing]
+    command: [-config.file=/etc/tempo/config.yaml, -target=all]
+    cpus: 1.0
+    mem_limit: 768m
+    volumes:
+      - ./monitoring/tracing/tempo.yaml:/etc/tempo/config.yaml:ro
+      - tempo-data:/var/tempo
+    networks: [lab]
+    restart: unless-stopped
+    stop_grace_period: 15s
+
+networks:
+  lab:
+    driver: bridge
+
+volumes:
+  prometheus-data:
+  grafana-data:
+  mongodb-data:
+  tempo-data:
+
