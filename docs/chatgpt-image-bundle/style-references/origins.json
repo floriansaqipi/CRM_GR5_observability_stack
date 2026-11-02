@@ -1,0 +1,25 @@
+{
+  "references": [
+    {
+      "file": "style-reference-01.png",
+      "user_attachment_filename": "codex-clipboard-1bdd7fea-c647-44d0-b393-27f4c8ae39bd.png",
+      "sha256": "01125135ef5cb089a4ad13b002848f3ff88d484bb986ebbea2920cf9e5d45f7a",
+      "bytes": 463836,
+      "use": "Style only; the other project is not factual content for Cloud Lab."
+    },
+    {
+      "file": "style-reference-02.png",
+      "user_attachment_filename": "codex-clipboard-c7e17349-7937-4aae-a969-e73bbe52b691.png",
+      "sha256": "c7bdd3af50a53823954b57d03346553643b7e3c029c47bd20443f0db61f5e409",
+      "bytes": 665852,
+      "use": "Style only; the other project is not factual content for Cloud Lab."
+    },
+    {
+      "file": "style-reference-03.png",
+      "user_attachment_filename": "codex-clipboard-ccb27ffd-2125-49a7-82c4-f89b24f3a017.png",
+      "sha256": "b53eee93511f738afb8fe4225b58ab675c4211421205ecb74484230690a5f210",
+      "bytes": 487414,
+      "use": "Style only; the other project is not factual content for Cloud Lab."
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+[
+  {
+    "number": 1, "caption": "Arkitektura e shërbimeve të aplikacionit", "section": "2.3. Infrastruktura dhe arkitektura", "page": 8,
+    "method": "redesign_diagram", "output": "Figura_01_Arkitektura.png", "primary": "docs/assets/application-architecture.png",
+    "inputs": ["docs/assets/application-architecture.png", "docs/assets/application-architecture.svg", "docs/assets/application-architecture.mmd", "compose.yaml", "services/controller/coordinator.py", "services/controller/fixed_coordination.py"],
+    "purpose": "Explain who controls the experiment and where application work and persistence happen, leaving telemetry detail to Figure 2.",
+    "requirements": ["Show Browser/Përdoruesi, Controller, Compute, Data and MongoDB with their actual responsibilities.", "Controller dispatches CPU work to Compute and data workloads to Data; Controller saves run summaries to MongoDB.", "Data requests payloads from primary Compute and writes/reads temporary workload documents in MongoDB. Label request and response direction clearly: payload travels Compute → Data.", "If Compute-2 is shown, use a dashed optional boundary labelled vetëm replica-2; its work is fixed CPU comparison. Do not make it a baseline dependency or a network download destination.", "Children are processes inside Compute/Data, not extra containers. Keep the normal nine-container/tracing deployment distinct from the optional replica."],
+    "crop": "Use the supplied diagram as factual input, not as the desired final styling. Keep the application graph uncluttered and labels short.",
+    "limitations": ["No metrics/trace storage arrows belong in this application-only figure.", "Do not imply that two Compute instances have equal aggregate allocation to one instance."],
+    "request": "Create the application architecture diagram in the attached white-background reference style, using the exact application flow above and concise Albanian labels."
+  },
+  {
+    "number": 2, "caption": "Rrjedhat e metrikave dhe gjurmëve", "section": "2.3. Infrastruktura dhe arkitektura", "page": 8,
+    "method": "redesign_diagram", "output": "Figura_02_Observabiliteti.png", "primary": "docs/assets/telemetry-paths.png",
+    "inputs": ["docs/assets/telemetry-paths.png", "docs/assets/telemetry-paths.svg", "docs/assets/telemetry-paths.mmd", "monitoring/prometheus/prometheus.yml", "monitoring/tracing/collector.yaml", "monitoring/tracing/tempo.yaml", "services/shared/metrics.py", "services/shared/tracing.py"],
+    "purpose": "Separate actual container resources, application counters/latency and distributed traces without inventing extra deployed services.",
+    "requirements": ["Use three labelled lanes: Metrikat e burimeve, Metrikat e aplikacionit, Gjurmët e shpërndara.", "Resource data: Linux containers → cAdvisor → Prometheus → Grafana Container Resources. Application data: Flask parent /metrics endpoints → the same Prometheus → Grafana Application Performance.", "Trace data: applications and disposable processes → Collector → Tempo → Grafana. Mark tracing as optional.", "Explain that Prometheus initiates five-second scrapes even if arrows show telemetry-data direction. Label the trace export OTLP/HTTP.", "Use one Prometheus and one Grafana, or explicitly mark repeated visual boxes as views of the same service. MongoDB client spans come from PyMongo; no MongoDB-server exporter arrow."],
+    "crop": "Prefer three clear lanes and a short legend; move detailed metric lists into the caption/context instead of tiny text inside boxes.",
+    "limitations": ["The Collector is not the application's Prometheus metrics backend.", "A successful scrape is collection health, not proof of database/workload health."],
+    "request": "Create the three-path observability diagram in Albanian, using the reference style while retaining the actual pull-based metrics and optional trace architecture."
+  },
+  {
+    "number": 3, "caption": "Konfigurimi i shërbimeve në Docker Compose", "section": "2.4. Docker Compose dhe vendosja", "page": 9,
+    "method": "capture_required", "output": "Figura_03_Docker_Compose.png", "primary": null,
+    "inputs": ["compose.yaml", "deployment/baseline.yaml", "deployment/replica-2.yaml"],
+    "purpose": "Show the real deployment declarations and resource ceilings, not a generated approximation of configuration.",
+    "requirements": ["Show readable real excerpts for Compute and Data, including cpus, mem_limit and networks.", "Identify the base/baseline file: Compute and Data each have one CPU and 512 MiB ceilings. Other presets override these values.", "Use the real syntax and existing service names. Do not include actual local .env contents or credential values."],
+    "capture_steps": ["Open compose.yaml from the actual repository or the package's source snapshot in your editor.", "Capture the relevant Compute/Data blocks with the filename visible; use two clearly labelled real crops if both do not fit.", "Retain the resource/network lines and export the genuine capture as the catalog filename. No containers or workload runs are needed for this source capture."],
+    "crop": "Remove unrelated editor panes and empty margins while retaining the filename, declarations and readable resource values.",
+    "limitations": ["This capture is missing from the archived figure set. An image generator must not fake an editor or YAML screenshot."],
+    "request": "Help prepare the genuine Compose screenshot using the supplied source and capture checklist. If no real capture is attached, return the precise capture instructions rather than inventing a screenshot."
+  },
+  {
+    "number": 4, "caption": "Nëntë kontejnerët e konfigurimit bazë me gjurmim", "section": "2.4. Docker Compose dhe vendosja", "page": 9,
+    "method": "capture_required", "output": "Figura_04_Kontejneret.png", "primary": null,
+    "inputs": ["compose.yaml", "deployment/baseline.yaml", "scripts/start.ps1", "scripts/verify.ps1", "docs/evidence/stage5/final-state.json"],
+    "purpose": "Show a genuine local nine-service baseline/tracing deployment in Docker Desktop.",
+    "requirements": ["Visible services: controller, compute, data, mongodb, cadvisor, prometheus, grafana, otel-collector, tempo.", "Compute-2 is disabled for this figure. Do not relabel a ten-service replica screenshot as nine-service baseline.", "Show Running states and health only where a healthcheck exists. Collector/Tempo readiness is also checked by scripts, not identical Docker health badges."],
+    "capture_steps": ["Only when you are ready to operate the local lab, confirm no experiment is active and finish or stop any active work.", "From the real repository run ./scripts/start.ps1 -Preset baseline -Tracing -NoBuild, then ./scripts/verify.ps1. If images have not been prepared, use the documented startup without -NoBuild. These commands are manual capture preparation, not actions performed by packaging.", "Open Docker Desktop's cloud-lab1 project and capture all nine service names and their states at readable size.", "Do not run reset-data or remove volumes. Save the actual capture under the catalog filename; do not fabricate a Docker UI."],
+    "crop": "Focus on the project/service list and states. Remove unrelated projects, account information and unused UI margins.",
+    "limitations": ["This genuine Docker Desktop capture is missing. final-state.json proves the archived baseline but is not itself a screenshot.", "The package does not establish the current live deployment or automatically switch presets."],
+    "request": "Help prepare the nine-container baseline screenshot using the checklist. If a genuine capture is absent, identify it as missing and provide instructions; do not draw a simulated Docker Desktop screen."
+  },
+  {
+    "number": 5, "caption": "Paneli për konfigurimin dhe ndjekjen e eksperimentit", "section": "3.3. MongoDB, historiku dhe ndërfaqja", "page": 12,
+    "method": "reuse_screenshot", "output": "Figura_05_Paneli.png", "primary": "docs/evidence/stage5/laboratory.jpg",
+    "inputs": ["docs/evidence/stage5/laboratory.jpg", "docs/evidence/stage5/combined/application.jpg", "docs/evidence/stage5/combined/run.json"],
+    "purpose": "Show the real control/configuration and reported progress/result areas of the implemented Flask interface.",
+    "requirements": ["Retain workload selection, intensity/duration or fixed-work distinction where visible, units and Start/Stop controls.", "Preserve the actual displayed run state and counters. A completed screenshot must not be repainted as a running experiment.", "Keep the interface's real dark theme; explanatory captions are Albanian even when UI labels remain English."],
+    "crop": "Crop to the controls and neighbouring progress/result card; preserve labels and sufficient context to identify the real application.",
+    "limitations": ["The original placeholder is shallow; readable crops or a larger aspect-preserving placement may be needed. Do not shrink the whole interface until text is illegible."],
+    "request": "Prepare a readable Word-ready crop of the actual workload control panel, preserving its displayed state and values."
+  },
+  {
+    "number": 6, "caption": "Parametrat dhe rezultatet e ruajtura të eksperimentit", "section": "3.3. MongoDB, historiku dhe ndërfaqja", "page": 12,
+    "method": "reuse_screenshot", "output": "Figura_06_Rezultati.png", "primary": "docs/evidence/stage5/details.jpg",
+    "inputs": ["docs/evidence/stage5/details.jpg", "docs/evidence/stage5/combined/run.json", "docs/evidence/stage5/experiment-history.csv"],
+    "purpose": "Show structured saved settings, deployment and actual results, keeping raw JSON as an advanced view.",
+    "requirements": ["Retain readable settings, deployment limits, timing/outcome or counters visible in the original.", "Use the associated record for interpretation; do not replace screenshot values using another run's data.", "Preserve saved/pending distinctions and the identity/context of the displayed record."],
+    "crop": "Focus on the actual run summary and resolved settings. Do not crop away the run identity and outcome simply to magnify a number.",
+    "limitations": ["The supplied viewport shows the summary and resolved settings for the Combined example; deployment tables and further results are below the fold. Do not paint those hidden sections into the screenshot. Request an additional genuine scrolled capture if needed.", "The screenshot is historical evidence, not proof that a live MongoDB query was just executed."],
+    "request": "Prepare the genuine saved-run detail image and explain its visible settings/results in Albanian without altering the UI or numeric text."
+  },
+  {
+    "number": 7, "caption": "Dashboard-i i burimeve të kontejnerëve", "section": "3.4. Monitorimi dhe Grafana", "page": 13,
+    "method": "reuse_screenshot", "output": "Figura_07_Burimet_Grafana.png", "primary": "docs/evidence/stage5/combined/grafana.jpg",
+    "inputs": ["docs/evidence/stage5/combined/grafana.jpg", "docs/evidence/stage5/combined/run.json", "docs/evidence/stage5/combined/measurements.json", "monitoring/grafana/dashboards/container-resources.json"],
+    "purpose": "Show real CPU, working-set memory and interface traffic in the resource dashboard for a known experiment window.",
+    "requirements": ["Retain dashboard/service selectors, time range, panel units and legends needed to interpret the graphs.", "CPU cores differ from quota-relative percentages; working set differs from allocated buffer size.", "CPU/network resource rates are 30-second averages. Do not invent graph peaks or claim instant response at every refresh."],
+    "crop": "Prefer complete relevant panels with selector/time context. Do not synthesize hidden panels or replace actual curves.",
+    "limitations": ["Some archived screenshots capture only part of a dashboard. Use the complete saved resource plot separately for full measured trajectories."],
+    "request": "Prepare the actual Grafana resource screenshot, preserving the selected services, interval, measured curves and units."
+  },
+  {
+    "number": 8, "caption": "Dashboard-i i performancës së aplikacionit", "section": "3.4. Monitorimi dhe Grafana", "page": 14,
+    "method": "reuse_screenshot", "output": "Figura_08_Performanca_Grafana.png", "primary": "docs/evidence/stage5/combined/application-performance.jpg",
+    "inputs": ["docs/evidence/stage5/combined/application-performance.jpg", "docs/evidence/stage5/combined/measurements.json", "docs/evidence/stage5/combined/run.json", "monitoring/grafana/dashboards/application-performance.json", "docs/metrics.md"],
+    "purpose": "Connect resource activity to actual application HTTP/workload counts, rates and duration measurements.",
+    "requirements": ["Preserve real service/route legends and units; polling requests differ from Start.", "Application rates and p95 use two-minute windows; p95 is a histogram estimate, not one exact request duration.", "Metrics are service/time-range aggregates, not exclusive run-ID-labelled time series."],
+    "crop": "Retain complete operation/throughput or HTTP panels present in the original, plus enough selector/time context to identify the view.",
+    "limitations": ["Unavailable observations must not be repainted as zero or filled with invented bars."],
+    "request": "Prepare the real application-performance dashboard image and a concise Albanian explanation of what its visible panels measure."
+  },
+  {
+    "number": 9, "caption": "Gjurma e lidhur e eksperimentit Combined", "section": "3.5. Gjurmimi i shpërndarë", "page": 15,
+    "method": "reuse_screenshot", "output": "Figura_09_Gjurma_Combined.png", "primary": "docs/evidence/stage5/combined/trace.jpg",
+    "inputs": ["docs/evidence/stage5/combined/trace.jpg", "docs/evidence/stage5/combined/trace.json", "docs/evidence/stage5/combined/run.json"],
+    "purpose": "Show the recorded connected experiment trace and the distinction between the brief Start request and background work.",
+    "requirements": ["Use trace 1cdbe47bc835d1cd81c501ee55095ca0 associated with run 2f24ccd5-bc82-483b-906c-14fe16c1f6a8.", "There are 142 recorded connected spans in the archived trace. Preserve actual timing, services and span names.", "Explain Controller → Data → Compute and MongoDB client calls, selected successful cycles and error visibility without claiming every cycle has a detailed span.", "MongoDB client spans are emitted by instrumented application code, not an extra server tracing agent."],
+    "crop": "Keep the trace identity and meaningful service/span tree. Do not redraw a fake Grafana timeline; use raw JSON only to explain or validate the screenshot.",
+    "limitations": ["The original live trace may have expired. The saved screenshot/JSON is the evidence; absence from a live Tempo instance does not invalidate it."],
+    "request": "Prepare the archived connected Combined trace screenshot, preserving its real identity/tree/timing, with the exact Albanian caption."
+  },
+  {
+    "number": 10, "caption": "Shpërndarja deterministe e batch-eve", "section": "3.6. Alokimi i burimeve dhe replikat", "page": 16,
+    "method": "capture_required", "output": "Figura_10_Shpërndarja_Batcheve.png", "primary": null,
+    "inputs": ["services/shared/fixed_work.py", "services/shared/fixed_runner.py", "docs/evidence/stage4/batch-result-example.json"],
+    "purpose": "Show the actual deterministic calculation and batch assignment code described in the report.",
+    "requirements": ["Capture calculate_unit and assign_batches from fixed_work.py, with the real filename.", "Preserve the formula over range(3000), batch_count routing and slots_per_instance distinction. Actual batch IDs start at zero: Medium is 0–31.", "Explain two calculation processes total: one Compute gets two slots; two Computes get one each. Do not label process slots as extra containers."],
+    "capture_steps": ["Open services/shared/fixed_work.py from the repository or bundled source in your editor.", "Capture the constants, calculate_unit and assign_batches at readable zoom; exclude unrelated files and private editor panes.", "Retain actual source lines rather than generating an editor lookalike. The caption describes the algorithm; surrounding report prose explains its inputs and results."],
+    "crop": "Keep the module name and the short relevant source block; no full-screen editor chrome is necessary.",
+    "limitations": ["This code capture is missing. The full actual source is supplied, but it must not be presented as an already captured screenshot.", "Do not insert an unrelated illustration in place of this code-source slot without separately revising the figure plan."],
+    "request": "Help capture the actual fixed_work.py calculation/assignment block. If no genuine capture is attached, provide the precise steps instead of fabricating a source screenshot."
+  },
+  {
+    "number": 11, "caption": "Përdorimi i CPU-së kundrejt kuotës", "section": "3.6. Alokimi i burimeve dhe replikat", "page": 16,
+    "method": "reuse_screenshot", "output": "Figura_11_CPU_Kuota.png", "primary": "docs/evidence/stage4/cpu-quota-panels.jpg",
+    "inputs": ["docs/evidence/stage4/cpu-quota-panels.jpg", "docs/evidence/stage4/acceptance.json", "monitoring/grafana/dashboards/container-resources.json", "docs/metrics.md"],
+    "purpose": "Explain measured CPU relative to its quota while keeping utilization and throttling separate.",
+    "requirements": ["Preserve the real selected compute service/time interval and readable CPU-relative-to-quota panel.", "Differentiate cores, quota-relative percentage, scheduling periods throttled and throttled seconds per second.", "Use acceptance.json for comparison values; a screenshot legend is not the source of the saved benchmark table."],
+    "crop": "The CPU quota and memory-limit panels are complete in the supplied image. The lower throttling panels are cut by the captured viewport: do not invent their missing portions. Request an additional genuine capture if complete throttling panels are required.",
+    "limitations": ["The historical screenshot contains multiple container-ID series around recreation. Keep it historical and interpret using the saved records/current verified queries; do not count those lines as extra enabled Compute replicas."],
+    "request": "Prepare an honest crop of the actual CPU-quota screenshot, retaining units and selectors and acknowledging clipped or historical series rather than painting replacements."
+  },
+  {
+    "number": 12, "caption": "Burimet e instancave Compute dhe Compute-2", "section": "3.6. Alokimi i burimeve dhe replikat", "page": 17,
+    "method": "reuse_screenshot", "output": "Figura_12_Replikat_Compute.png", "primary": "docs/evidence/stage4/replica-resources.jpg",
+    "inputs": ["docs/evidence/stage4/replica-resources.jpg", "docs/evidence/stage4/replica-throughput.jpg", "docs/evidence/stage4/acceptance.json", "docs/evidence/stage4/batch-result-example.json"],
+    "purpose": "Show the real two-instance observation and relate it to the saved fixed-work distribution.",
+    "requirements": ["Retain both compute and compute-2 selector identities and the complete aggregate CPU panel.", "Medium assigns 16 batches to each instance, 32 total, with one process per instance; source these counts from run results, not graph shape.", "Explain total allocation of two CPU cores and 1024 MiB versus one core/512 MiB in replica-1. Do not claim equal-resource scaling efficiency."],
+    "crop": "Keep the two-service selector and the complete Aggregate Compute CPU panel. Top throttling and bottom recent-CPU panels are partially clipped in the archived image; use only visible evidence and identify any additional capture needed.",
+    "limitations": ["The aggregate panel is a 30-second averaged observation and is not the recent-CPU peak or a direct proof of exact batch ownership."],
+    "request": "Prepare the genuine replica screenshot and explain its two identities and aggregate allocation, using the saved batch data for counts."
+  },
+  {
+    "number": 13, "caption": "Matjet e eksperimentit CPU", "section": "3.7. Eksperimentet dhe analiza e rezultateve", "page": 18,
+    "method": "reuse_measured_plot", "output": "Figura_13_Eksperimenti_CPU.png", "primary": "docs/evidence/stage5/cpu/resources.png", "scenario": "cpu",
+    "inputs": ["docs/evidence/stage5/cpu/resources.png", "docs/evidence/stage5/cpu/resources.svg", "docs/evidence/stage5/cpu/run.json", "docs/evidence/stage5/cpu/measurements.json", "docs/evidence/stage5/cpu/export.csv", "scripts/render-stage5.py", "scripts/plot-requirements.txt"],
+    "purpose": "Show the recorded CPU activity and cooldown with exact input/work counts available for interpretation.",
+    "requirements": ["Run 8636fafc-6533-44c2-a330-1cce68f0841a; Medium, 50% busy time, elapsed 30.000 s; 44953 elementary calculation cycles, 1498.415/s; zero reported errors.", "Compute's sampled 30-second-average peak is 0.558 cores. It includes service/telemetry overhead and is not a guaranteed exact 50% measured CPU.", "Keep the -30-second baseline, actual lifecycle/cooldown, units and run identity. Timed cycles are not 2500-unit fixed-work batches."],
+    "crop": "Retain the full measured plot and its axes/legend. For Albanian labels, replot only the supplied samples into a separate output; do not mutate archived source files.",
+    "limitations": ["One run; five-second samples and 30-second averaging can smooth/miss peaks. Do not generate chart curves with an image model."],
+    "request": "Return the existing measured CPU plot, or redraw it with Albanian labels using exactly its archived measurement matrix and run settings."
+  },
+  {
+    "number": 14, "caption": "Matjet e eksperimentit Memory", "section": "3.7. Eksperimentet dhe analiza e rezultateve", "page": 19,
+    "method": "reuse_measured_plot", "output": "Figura_14_Eksperimenti_Memory.png", "primary": "docs/evidence/stage5/memory/resources.png", "scenario": "memory",
+    "inputs": ["docs/evidence/stage5/memory/resources.png", "docs/evidence/stage5/memory/resources.svg", "docs/evidence/stage5/memory/run.json", "docs/evidence/stage5/memory/measurements.json", "docs/evidence/stage5/memory/export.csv", "scripts/render-stage5.py", "scripts/plot-requirements.txt"],
+    "purpose": "Show genuine Data working-set growth during allocation and release after child exit.",
+    "requirements": ["Run 5a804b0d-a5c2-481a-992b-4e1e96536c92; buffer 64 MiB, elapsed 30.003 s; 16384 pages of 4 KiB touched; zero reported errors.", "Working set is approximately 65.8 → 169.1 → 66.0 MiB: baseline median, sampled peak and final cooldown median.", "Distinguish the 64 MiB buffer from total container working set; interpreter/libraries/telemetry contribute overhead."],
+    "crop": "Retain the measured axes and baseline/work/cooldown. Replot Albanian text only from the supplied samples if requested.",
+    "limitations": ["Return near baseline supports buffer release but does not promise the identical byte value after cleanup. One observation is not a confidence interval."],
+    "request": "Return or faithfully replot the archived Memory figure, preserving the 64 MiB input and actual working-set observations."
+  },
+  {
+    "number": 15, "caption": "Matjet e eksperimentit Network", "section": "3.7. Eksperimentet dhe analiza e rezultateve", "page": 20,
+    "method": "reuse_measured_plot", "output": "Figura_15_Eksperimenti_Network.png", "primary": "docs/evidence/stage5/network/resources.png", "scenario": "network",
+    "inputs": ["docs/evidence/stage5/network/resources.png", "docs/evidence/stage5/network/resources.svg", "docs/evidence/stage5/network/run.json", "docs/evidence/stage5/network/measurements.json", "docs/evidence/stage5/network/export.csv", "scripts/render-stage5.py", "scripts/plot-requirements.txt"],
+    "purpose": "Explain real Data receive versus Compute transmit and measured payload counts/rates.",
+    "requirements": ["Run ead14011-9209-49a2-a061-9cb74ea41375; 256 KiB responses, requested 5/s, elapsed 30.000 s; 150 full responses, 39321600 payload bytes / 37.50 MiB, achieved 5.000/s; zero errors.", "Show Data receive and primary Compute transmit together; network workloads do not download from Compute-2.", "Data receive's sampled 30-second-average peak is approximately 1.202 MiB/s. Interface traffic includes overhead and does not exactly equal the payload counter/rate."],
+    "crop": "Keep the paired directions, units, run ID and full baseline/work/cooldown window. Redraw only with the archived sample matrices.",
+    "limitations": ["Requested payload throughput is 1.25 MiB/s; an averaged interface graph is not an exact validation of this input or a new measurement."],
+    "request": "Return or faithfully replot the archived Network figure with Albanian labels, clearly preserving receive/transmit directions and measured payload totals."
+  },
+  {
+    "number": 16, "caption": "Matjet e eksperimentit Combined", "section": "3.7. Eksperimentet dhe analiza e rezultateve", "page": 21,
+    "method": "reuse_measured_plot", "output": "Figura_16_Eksperimenti_Combined.png", "primary": "docs/evidence/stage5/combined/resources.png", "scenario": "combined",
+    "inputs": ["docs/evidence/stage5/combined/resources.png", "docs/evidence/stage5/combined/resources.svg", "docs/evidence/stage5/combined/run.json", "docs/evidence/stage5/combined/measurements.json", "docs/evidence/stage5/combined/export.csv", "docs/evidence/stage5/combined/trace.json", "scripts/render-stage5.py", "scripts/plot-requirements.txt"],
+    "purpose": "Connect simultaneous Data memory, Compute network traffic and MongoDB operations for one saved Combined experiment.",
+    "requirements": ["Run 2f24ccd5-bc82-483b-906c-14fe16c1f6a8; 64 MiB memory, 256 KiB network, 16 KiB database documents, requested 5 cycles/s, elapsed 30.005 s.", "150 network responses / 37.50 MiB payload; 150 database cycles comprising 150 writes and 150 reads; rates 4.999/s; zero reported errors, completed and saved.", "Data working set is approximately 66.3 → 170.0 → 66.4 MiB. Keep Data, Compute and MongoDB on the same experiment time window.", "The associated 142-span trace is Figure 9, not a different run. Temporary documents were cleaned; MongoDB cache need not return immediately to baseline."],
+    "crop": "Keep the full actual plotted evidence, units, legends and baseline/work/cooldown. Replot Albanian text only from saved measurements into a separate output.",
+    "limitations": ["4.999/s reflects actual elapsed time rather than an operational failure against a requested 5/s. Do not invent a repeated-study conclusion."],
+    "request": "Return or faithfully replot the archived Combined figure, preserving its exact run identity, resource measurements and separate operation counters."
+  }
+]
