@@ -4,9 +4,9 @@
 
 ## Delivered scope
 
-The revised stage prioritizes a usable laboratory and understandable handoff. It adds a polished dark Flask interface, clearer Grafana layouts, four illustrative measurements, a teammate-oriented repository guide and a classroom operator's guide. The official university Word report, PowerPoint and formal three-repetition study remain future work.
+This stage improves the laboratory interface and its technical documentation. It adds a polished dark Flask interface, clearer Grafana layouts, four illustrative measurements, a repository guide and a demo guide. The illustrated Albanian Word report was completed subsequently. Presentation slides and a formal repeated experiment study remain future work.
 
-The [repository guide](repository-guide.md), [classroom demo](classroom-demo.md), and [short results report](experiment-results.md) are the main human-facing deliverables. The [evidence index](evidence/stage5/README.md) explains the raw records and reproduction commands.
+The [repository guide](repository-guide.md), [demo guide](demo-guide.md), and [short results report](experiment-results.md) explain the system and its operation. The [evidence index](evidence/stage5/README.md) describes the raw records and reproduction commands.
 
 ## Interface and dashboards
 
@@ -37,7 +37,7 @@ Figures annotate baseline, the Controller lifecycle and cooldown, and include ru
 
 The repository guide explains every service, the three observation paths, a Combined run lifecycle, fixed-work assignment, important source modules, operations, persistence and common questions. Two diagrams have Mermaid sources plus local PNG/SVG renderings.
 
-The classroom guide provides advance/offline preparation, exact UI actions, service/panel selection, suggested explanations, observation delays, troubleshooting, export and shutdown. Its main schedule is approximately ten minutes; optional CPU/replica comparisons are separate extensions. Saved fallback views are explicitly labelled.
+The demo guide covers preparation, offline startup, UI actions, service/panel selection, suggested explanations, observation delays, troubleshooting, export and shutdown. Its main schedule is approximately ten minutes; optional CPU/replica comparisons are separate extensions. Saved fallback views are explicitly labelled.
 
 The four-scenario browser rehearsal/evidence window took **9.54 minutes**, including baseline, work, cooldown and operator preparation. Trace exploration, details and CSV interactions were additionally exercised. This was an operator rehearsal rather than a stopwatch measurement of a spoken presentation. Explanations can overlap the waiting intervals in the guide's ten-minute schedule.
 
@@ -54,4 +54,4 @@ All **127 final verification checks** passed, including historical dashboard que
 
 The [final state](evidence/stage5/final-state.json) confirms nine running services on verified baseline with tracing enabled, the same frozen image IDs, no OOM kills, idle/reaped workers, zero temporary documents and no active or unsaved result. The configured memory ceilings total 4.5 GiB. All eight final-state checks passed. Earlier data, credentials, volumes and Stage 1–4 evidence are preserved.
 
-The official university Word report, PowerPoint and formal repeated experiment study remain outstanding outside this revised stage, as recorded in the [master plan](master-plan.md).
+The illustrated [Albanian Word report](Raporti_Projektit_Monitorimi_i_Burimeve_Plote.docx) documents the implementation and recorded results. Presentation slides and a formal repeated experiment study remain outstanding, as recorded in the [master plan](master-plan.md).

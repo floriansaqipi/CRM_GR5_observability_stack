@@ -1,6 +1,6 @@
-# A teammate's guide to Cloud Lab
+# Cloud Lab Repository Guide
 
-This guide explains what the repository does, how the pieces fit together, and where to look in the code. You only need basic programming knowledge. For a live walkthrough, use the [classroom demo guide](classroom-demo.md); for commands and prerequisites, use the [setup guide](../README.md).
+This guide explains the system, how its components interact, and where the main implementation modules are located. It assumes basic programming knowledge and introduces the monitoring and tracing concepts used by the project. For a live walkthrough, use the [demo guide](demo-guide.md); for commands and prerequisites, use the [setup guide](../README.md).
 
 The original root context document is a historical planning brief. Use the current README, master plan and implementation records for the working system's settings and status.
 
@@ -25,9 +25,9 @@ An experiment setting is an input. A measurement is what actually happened. For 
 | 2 | Interactive controller, Data service, MongoDB history, asynchronous workloads and cancellation |
 | 3 | Direct application metrics and connected OpenTelemetry traces through Collector and Tempo |
 | 4 | Verified CPU/memory presets, fixed calculation work, optional second Compute instance and saved batch assignments/results |
-| 5, revised | Improved dark interface and dashboard layouts, four understandable examples, this guide and a classroom walkthrough |
+| 5, revised | Improved dark interface and dashboard layouts, four example experiments, the repository guide and a demo walkthrough |
 
-The [example results](experiment-results.md) are single observations. A formal repeated study, official university Word report, and PowerPoint presentation remain future work.
+The [example results](experiment-results.md) are single observations. The illustrated [Albanian project report](Raporti_Projektit_Monitorimi_i_Burimeve_Plote.docx) documents the implementation and results. A formal repeated study and presentation slides remain future work.
 
 ## Meet the services
 
@@ -141,7 +141,7 @@ The Dockerfile selects the service through a build argument and copies the share
 From the repository root in PowerShell 7, with Docker Desktop's Linux engine running:
 
 ```powershell
-# Build/start the known classroom configuration:
+# Build/start baseline with tracing enabled:
 ./scripts/start.ps1 -Preset baseline -Tracing
 ./scripts/verify.ps1
 # Once images exist, the same configuration can start offline:
@@ -169,7 +169,7 @@ Summary history, Prometheus data, Grafana state and Tempo traces use named volum
 | Deployment preset | A saved combination of resource ceilings, enabled instances and verification expectations |
 | Run | One experiment's settings, lifecycle, reported work and saved result |
 
-## Questions your teammates may ask
+## Common questions
 
 **Why is CPU shown in cores?** A value of 1 means one core's worth of CPU time. A separate quota-relative panel divides usage by the container ceiling. Neither measures total laptop CPU use.
 

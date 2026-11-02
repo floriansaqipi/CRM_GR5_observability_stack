@@ -1,14 +1,16 @@
-# Cloud Lab — authoritative technical handoff
+# Cloud Lab — Technical Context for Figure Preparation
+
+**Original figure-preparation snapshot:** this material was prepared for the 25-page report before image insertion. The current Word report contains the sixteen figures. Catalog page numbers and placeholder dimensions describe the original layout; reconcile them with the latest report before preparing a refreshed bundle. Use `docs/repository-guide.md` and `docs/master-plan.md` for current project status.
 
 ## Purpose, current status and source hierarchy
 
 The university assignment is **Lab 1: Resource Monitoring Dashboard for Cloud Applications**: monitor CPU, RAM and network use of VMs or containers in real time, using Prometheus, Grafana and Flask. This project implements the container option as a local Docker Desktop laboratory on Windows. It is not a public-cloud deployment, a Kubernetes installation, an IoT system or a GPU workload application.
 
-Stages 1–5 are implemented. The revised Stage 5 produced the dark control interface, two improved Grafana dashboards, four single-run examples and practical repository/classroom guides. Subsequently, the Albanian university report was written chapter by chapter and completed with an abstract, numbered references and citations. The report is **25 pages**, has **16 image placeholders**, and still needs cover identities/logo and the actual image insertion. A formal repeated experiment study and PowerPoint presentation remain future work.
+Stages 1–5 are implemented. Stage 5 produced the dark control interface, two improved Grafana dashboards, four single-run examples, a repository guide and a demo guide. The Albanian project report includes an abstract, chapters I–V, numbered references and citations. Its original 25-page layout contained sixteen image placeholders; the current report has the figures inserted. Cover identity/logo fields remain for completion. A formal repeated experiment study and presentation slides remain future work.
 
 The package is a snapshot, not a live connection. Its manifest identifies the Git revision, working-tree state, build time and file hashes. Archived evidence was recorded on **1 November 2026**; it must not be presented as a new run. The current live deployment is deliberately not queried or changed by packaging.
 
-Use current source/configuration to determine implementation, archived results for measured outcomes, and the current Word file for figure numbers and placement. Some stage records and the original master plan still say that university documentation is future work; those sentences describe their earlier milestone, not the report's current status. The three water-quality images influence appearance only. Earlier messages and the original water-quality Word template are not needed to understand this package.
+Use current source/configuration to determine implementation, archived results for measured outcomes, and the current Word file for figure numbers and placement. Historical proposals record intended work before implementation and do not override completed stage records or the illustrated report. The three water-quality images influence appearance only. The package is self-contained and does not require earlier conversations or the original Word template.
 
 ## Implemented stages
 

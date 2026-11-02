@@ -1,8 +1,8 @@
-# Classroom demo: operate Cloud Lab in about 10 minutes
+# Cloud Lab Demo Guide
 
-Use this as an operator's cue sheet. The application creates real work; Grafana shows the resulting measurements. Prepare startup before the timed walkthrough. The [repository guide](repository-guide.md) explains the implementation, and the [example results](experiment-results.md) provide saved observations to discuss.
+This guide describes an approximately ten-minute demonstration of the laboratory, with optional resource-allocation and replica comparisons. The application creates real work, and Grafana displays the resulting measurements. Complete startup before the timed walkthrough. The [repository guide](repository-guide.md) explains the implementation, and the [example results](experiment-results.md) provide saved observations.
 
-## Before class
+## Preparation
 
 - Connect the laptop to power and leave room for Docker Desktop. Avoid running other heavy tasks during the demonstration.
 - Open Docker Desktop and confirm its Linux engine is running.
@@ -13,7 +13,7 @@ Use this as an operator's cue sheet. The application creates real work; Grafana 
 ./scripts/verify.ps1
 ```
 
-- For the classroom, use already prepared images:
+- For a demo with images already prepared:
 
 ```powershell
 ./scripts/start.ps1 -Preset baseline -Tracing -NoBuild
@@ -31,7 +31,7 @@ Use this as an operator's cue sheet. The application creates real work; Grafana 
 | Application Performance | `http://localhost:3000/d/cloud-lab1-application` — requests, operations, elapsed work and outcomes |
 | Trace | Open from a new Combined run's **Open trace** link |
 
-You can use the native browser zoom to make text readable for the room. Keep the Grafana refresh at five seconds. Use the run's graph links to select the services/time range rather than searching for old runs in a rolling window.
+Adjust browser zoom for readable labels. Keep the Grafana refresh at five seconds. Use the run's graph links to select the services and time range.
 
 ## Ten-minute running order
 
@@ -51,7 +51,7 @@ The basic configuration is identical for the four main examples: **baseline depl
 
 ## 1. CPU calculation
 
-**Click:** Laboratory → Workload **CPU calculation** → Medium → Duration **30**. Optionally expand **Name & notes** and enter `Classroom: CPU`. Click **Start experiment**.
+**Click:** Laboratory → Workload **CPU calculation** → Medium → Duration **30**. Optionally expand **Name & notes** and enter `Demo: CPU`. Click **Start experiment**.
 
 **Look:** The current experiment changes from Starting to Running. Calculation batches increase. Open **Resource graphs**, select **compute** if necessary, and look at **CPU usage · cores** under **CONTAINER ACTIVITY**.
 
@@ -113,7 +113,7 @@ Trace colours identify services and are separate from error status. Use the **Er
 
 ## 5. Close with history and export
 
-In **Experiment history**, search for `Classroom:` or the name you used. Open **Details**. Show the resolved settings, saved deployment table, timing, actual operation counts and error/outcome fields. CPU comparison records additionally show per-instance and batch results.
+In **Experiment history**, search for `Demo:` or the name used for the run. Open **Details**. Show the resolved settings, saved deployment table, timing, actual operation counts and error/outcome fields. CPU comparison records additionally show per-instance and batch results.
 
 Click **Export CSV**. Explain that the active history filters also apply to export. Demonstrate **Clear filters** afterward. Saved history and the monitoring volumes survive normal stop/start.
 

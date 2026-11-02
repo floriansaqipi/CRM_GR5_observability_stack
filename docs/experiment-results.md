@@ -78,4 +78,4 @@ These are synthetic examples on one laptop with one execution per scenario. Five
 
 [All run records, configuration, checks and image IDs](evidence/stage5/experiments.json) · [four-run CSV](evidence/stage5/experiment-history.csv) · [query responses and evidence index](evidence/stage5/README.md). Each scenario folder also contains its exact Prometheus queries/responses and standalone SVG plot.
 
-Use the [classroom guide](classroom-demo.md) to repeat the examples manually, or the evidence collector described in the evidence index. The formal repeated study and university submission documents remain future work.
+Use the [demo guide](demo-guide.md) to repeat the examples manually, or the evidence collector described in the evidence index. The illustrated [Albanian project report](Raporti_Projektit_Monitorimi_i_Burimeve_Plote.docx) documents the implementation and results. A formal repeated study and presentation slides remain future work.

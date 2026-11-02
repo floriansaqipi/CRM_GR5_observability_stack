@@ -1,15 +1,15 @@
-# Cloud Resource Management — Lab 1 Project Context & Handoff
+# Cloud Resource Management — Historical Design Brief
 
-> **Purpose:** This document transfers the context, ideas, requirements, and decisions from an earlier ChatGPT planning conversation to another coding assistant (e.g., Codex or Astra). It is a **project brief and working plan**, not a statement that the system has already been implemented.
+> **Archive status:** This document records the initial requirements, alternatives and proposed design before implementation. It is historical planning material. Use the [repository guide](docs/repository-guide.md), [master plan](docs/master-plan.md) and [demo guide](docs/demo-guide.md) for the implemented system and its operation.
 >
-> **Project status as of 2026-11-01:** Planning/discovery only. **No project files, services, dashboards, experimental results, or deployment have been created or verified yet.**
+> **Status at the time of this brief:** Planning/discovery only. Stages 1–5 and the illustrated Word report were completed subsequently. Proposed features and estimates below describe the original design, not additional implemented capabilities.
 
 ## 1. Academic context
 
 - **Degree:** Master's in computer / software engineering.
 - **Course:** *Resource Management in Cloud Computing*.
 - **Assignment:** Lab 1, a group project.
-- **Professor's original assignment description (verbatim):**
+- **Original assignment description (verbatim):**
 
   > **Lab 1: Resource Monitoring Dashboard for Cloud Applications**  
   > **Description:** Build a dashboard to monitor CPU, RAM, and network usage of VMs or containers in real-time.  
@@ -19,17 +19,17 @@
 - **Evaluation/deliverables reported by the student:**
   1. A practical working solution, with a clearly stated problem and explanation of how it was solved.
   2. An MS Word document describing the work (including the problem, implementation, results, and structure).
-  3. A classroom presentation based on the document.
+  3. A demonstration and presentation based on the document.
   4. Ability to answer questions and discuss the implementation.
 
 ### Explicit assignment scope vs. assumptions
 
-**Required by the professor's written text:**
+**Required by the written assignment:**
 - Monitor actual **CPU, RAM, and network** usage.
 - Monitor **VMs or containers**.
 - Show measurements on a dashboard, updating in **near-real-time**.
 - Address **monitoring and visualization**.
-- Use the named tools: **Prometheus, Grafana, Flask** (the professor did not specify the precise responsibilities of each).
+- Use the named tools: **Prometheus, Grafana, Flask** (the assignment did not specify the precise responsibilities of each).
 
 **NOT explicitly required:**
 - Hosting on AWS/Azure/GCP.
@@ -51,9 +51,9 @@ Rather than showing arbitrary CPU/RAM graphs, build a **functional local applica
 - Observe how **CPU, RAM, and network** usage changes on real containers.
 - Observe **HTTP latency, throughput, errors, custom job metrics**, and optionally distributed traces.
 - Compare repeatable experiments and explain results in the master's report/presentation.
-- Demonstrate a noticeable change live in class (e.g., CPU load, memory growth, MongoDB calls, network traffic, resource throttling).
+- Demonstrate a noticeable change during a live demo (e.g., CPU load, memory growth, MongoDB calls, network traffic, resource throttling).
 
-**Primary design principle:** Meet the professor's simple monitoring requirement first, then add features that make resource-management experiments scientifically meaningful. Avoid an elaborate stack that interferes with reliability or the classroom demo.
+**Primary design principle:** Meet the core monitoring requirements first, then add features that support meaningful resource-management experiments. Keep the stack reliable and suitable for a live demo.
 
 ## 3. Local hardware and deployment assumptions
 
@@ -72,7 +72,7 @@ Two distinct concerns:
 2. **Observability:** Container resource metrics via cAdvisor/Prometheus, application metrics, and optional OpenTelemetry traces via Collector/Tempo, all visualized in Grafana.
 
 ```text
-                          STUDENT / DEMO OPERATOR
+                            USER / DEMO OPERATOR
                                      |
                                      v
                          Flask workload-control UI
@@ -154,7 +154,7 @@ These are **starting examples**, not guaranteed CPU percentages, actual throughp
 A small custom web application with:
 - Service selector: Compute service / Data service.
 - Workload intensity: Low / Medium / High (possibly manual tuning later).
-- Run duration (e.g., 15–180 seconds for classroom demo).
+- Run duration (e.g., 15–180 seconds for a demo).
 - Start/Stop controls and current run status.
 - Workload profile / selected resource-limit preset.
 - Link/shortcut to Grafana dashboards.
@@ -191,7 +191,7 @@ Suggested experimental matrix:
 - Compare simple metrics to sensible units/denominators: CPU percent relative to quota vs host, memory bytes vs limit, network bytes/sec, not raw cumulative byte counters.
 - Do not accidentally create a denial-of-service against the laptop. Use limited concurrency, deadlines, memory caps, and safe cancellation.
 
-**Illustrative classroom demo:**
+**Illustrative demo:**
 1. Start low-intensity baseline and show stable Grafana CPU/RAM/network graphs.
 2. Increase CPU workload; verify CPU rises.
 3. Compare the same workload at 0.5 vs 2.0 vCPU and show job completion time / throttling differences.
@@ -203,10 +203,10 @@ Suggested experimental matrix:
 | Technology | Responsibility | Priority |
 |---|---|---|
 | Docker + Docker Compose | Local infrastructure / resource limits | Core |
-| Flask (Python) | Control panel, workload services, API | Core — professor named it |
+| Flask (Python) | Control panel, workload services, API | Core — named in the assignment |
 | cAdvisor | Real per-container CPU/RAM/network metrics endpoint | Core supporting tool |
-| Prometheus | Scrape and store time-series metrics | Core — professor named it |
-| Grafana | Dashboards and resource visualization | Core — professor named it |
+| Prometheus | Scrape and store time-series metrics | Core — named in the assignment |
+| Grafana | Dashboards and resource visualization | Core — named in the assignment |
 | MongoDB | Realistic database/IO workload for service B | Extension |
 | OpenTelemetry Python SDK + instrumentations | HTTP metrics/traces, outgoing calls, PyMongo spans | Extension |
 | OpenTelemetry Collector | Receive OTLP, route telemetry | Extension |
@@ -228,7 +228,7 @@ The crucial answer: **The base OTel SDK alone does not automatically collect eve
 | Instrumented HTTP client (e.g., Requests) | Outgoing HTTP client spans, often client timing metrics depending on instrumentor/version | Need to instrument whichever HTTP client is actually used |
 | PyMongo instrumentation | MongoDB client operation spans | Do not assume DB latency **metrics** come by default; some need custom histograms |
 | System metrics instrumentation | CPU, memory, disk, network measurements | Must explicitly enable/configure; in Docker, scopes and cgroup visibility can vary |
-| cAdvisor | Actual container resource metrics | Independent of OTel, ideal for professor's CPU/RAM/network requirement |
+| cAdvisor | Actual container resource metrics | Independent of OTel; supports the CPU/RAM/network requirements |
 | Custom SDK instrumentation | Job count, active jobs, job duration, selected span attributes/events | Must be explicitly coded |
 
 **Examples of metric names:** Standardized HTTP metrics may include `http.server.request.duration`; older instrumentation/semantic convention settings may use `http.server.duration`. System metrics in some Python instrumentation versions include `system.cpu.time`, `system.cpu.utilization`, `system.memory.usage`, `system.network.io`, etc. **Check the exact versions and actual emitted names when implementing; do not hardcode these as universal default outputs.**
@@ -291,7 +291,7 @@ The student wanted a plan; the proposed sequence was:
 
 > How do different workload intensities and container CPU/memory resource allocations affect utilization, network traffic, application throughput, response latency, and reliability in a containerized environment?
 
-Possible report sections (suggested, not professor-mandated):
+Possible report sections (initial proposal):
 1. Problem statement and objectives.
 2. Background: containers, monitoring, Prometheus/Grafana/Flask, and optionally OTel.
 3. Requirements and system architecture.
@@ -326,7 +326,7 @@ The presentation should explain what was built, why each service exists, live mo
 - Final set of report experiments and acceptance criteria.
 
 ### Do NOT invent or assume
-- That the professor requires Azure, AWS, Kubernetes, autoscaling, or real cloud infrastructure.
+- That the assignment requires Azure, AWS, Kubernetes, autoscaling, or public cloud infrastructure.
 - That everything in this plan is already implemented.
 - That OpenTelemetry instruments arbitrary code or cgroups automatically.
 - That a simulated workload's target RPS is its actual achieved RPS.
@@ -339,7 +339,7 @@ When continuing with this brief:
 
 1. Treat this as **context for an upcoming implementation**, not a command to silently create everything without discussion.
 2. Help choose a **minimal viable architecture first** and explain tradeoffs when needed.
-3. Start with the professor's mandatory components and verify every data path end to end.
+3. Start with the required project components and verify every data path end to end.
 4. Prefer **reproducible Docker Compose**, small Python services, simple UI, readable configuration, sensible naming, and minimal operational overhead.
 5. Preserve **separation of concerns**: control plane vs workload services vs collection/storage/visualization.
 6. Use **real measured metrics** and reproducible experiments, not synthetic numbers shown as monitoring results.
@@ -354,7 +354,7 @@ When continuing with this brief:
 
 A good next step with Codex/Astra is:
 
-> "Using this project brief, propose the final MVP architecture, repository structure, Docker Compose services and resource budgets for my 16 GB laptop. Prioritize the professor's CPU/RAM/network monitoring requirements, and show how we can incrementally add two workload applications, MongoDB, custom metrics, OTel Collector, and Tempo. Then help implement Phase 1 as a fully runnable local environment with verification steps."
+> "Using this project brief, propose the MVP architecture, repository structure, Docker Compose services and resource budgets for a 16 GB laptop. Prioritize the CPU/RAM/network monitoring requirements, and show how two workload applications, MongoDB, custom metrics, OTel Collector and Tempo can be added incrementally. Then implement Phase 1 as a runnable local environment with verification steps."
 
 ---
 

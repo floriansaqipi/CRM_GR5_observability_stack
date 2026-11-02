@@ -74,7 +74,7 @@ def main():
         check('browser_'+name,passed)
     for kind in experiment['runs']:
         check(kind+'_report_plot_exists',(OUT/kind/'resources.png').stat().st_size>1000)
-    for filename in ('README.md','docs/repository-guide.md','docs/classroom-demo.md','docs/experiment-results.md','docs/stage-5.md'):
+    for filename in ('README.md','docs/repository-guide.md','docs/demo-guide.md','docs/experiment-results.md','docs/stage-5.md'):
         path = ROOT/filename
         missing = [target for target in re.findall(r'\]\(([^)]+)\)',path.read_text(encoding='utf-8'))
                    if '://' not in target and not target.startswith('#') and not (path.parent/target.split('#')[0]).exists()]

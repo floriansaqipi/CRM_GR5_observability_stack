@@ -1,6 +1,6 @@
 # Stage 5 evidence index
 
-This folder contains real observations recorded on 1 November 2026. Read the [short results report](../../experiment-results.md), [repository guide](../../repository-guide.md), and [classroom demo guide](../../classroom-demo.md) first.
+This folder contains real observations recorded on 1 November 2026. Read the [short results report](../../experiment-results.md), [repository guide](../../repository-guide.md), and [demo guide](../../demo-guide.md) first. Saved measurements and verification records retain their original identifiers and values; document paths within older verification records reflect the names used at collection time.
 
 ## Four examples
 

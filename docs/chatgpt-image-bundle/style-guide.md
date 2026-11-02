@@ -26,6 +26,6 @@ Prefer short labels: `Përdoruesi`, `Paneli i kontrollit`, `Llogaritjet CPU`, `N
 - Preserve native screenshot pixels. Do not repaint text, states or numeric panels to make a screenshot look more polished.
 - Keep complete measured axes, legends and relevant time/service selectors. For a replot, retain the original samples and provide the plotting source.
 - Use the catalog filename. Keep the Word caption separate from the pixels.
-- The usable Word width is 6.5 inches (about 16.51 cm). Existing frame heights are placeholders, not permission to stretch an image. The placement guide gives an aspect-preserving fit. If labels are too small, recommend a larger image and repagination rather than removing evidence or distorting it. The existing report is 25 pages before image insertion.
+- The usable Word width is 6.5 inches (about 16.51 cm). Catalog frame heights refer to the original placeholders and must not be used to stretch an image. The placement guide gives an aspect-preserving fit. If labels are too small, recommend a larger image and repagination. The original report snapshot had 25 pages before image insertion; verify pagination against the latest illustrated report.
 
 The university logo and cover identities are not among these sixteen technical figures. Do not invent them.

@@ -7,10 +7,10 @@ A university lab using **Flask, Prometheus, Grafana, and Docker Compose**. The w
 | Document | Use it for |
 |---|---|
 | [Repository guide](docs/repository-guide.md) | Understand the services, execution flow, source structure and implemented work |
-| [Classroom demo guide](docs/classroom-demo.md) | Prepare and operate the approximately ten-minute live walkthrough, with optional comparisons and recovery steps |
+| [Demo guide](docs/demo-guide.md) | Prepare and operate the approximately ten-minute live walkthrough, with optional comparisons and recovery steps |
 | [Four example results](docs/experiment-results.md) | Inspect actual measurements, annotated plots, run IDs, CSV exports and the connected trace |
-| [Albanian project report — Word](docs/Raporti_Projektit_Monitorimi_i_Burimeve_Plote.docx) | Read the 29-page report with the abstract, chapters I–V, references and all sixteen project figures |
-| [Report sources and verification](docs/raporti/README.md) | Review chapter sources, citation mappings, document checks and the remaining cover/image fields |
+| [Albanian project report — Word](docs/Raporti_Projektit_Monitorimi_i_Burimeve_Plote.docx) | Read the illustrated report with the abstract, chapters I–V, references and all sixteen project figures |
+| [Report sources and verification](docs/raporti/README.md) | Review chapter sources, citation mappings, historical document checks and editing guidance |
 | [ChatGPT figure-context bundle](docs/chatgpt-image-bundle/README.md) | Prepare a portable Project handoff with the Word report, sixteen figure prompts, source/evidence library and style references |
 
 Revised Stage 5 focuses on visual improvements, example results and practical guides. The Albanian Word report now includes all sixteen project figures; its cover identity and logo fields remain to be filled in. The formal repeated study and PowerPoint presentation remain future work.
@@ -66,7 +66,7 @@ Finish or stop the current experiment, then apply one preset:
 ./scripts/apply-preset.ps1 -Preset memory-1024
 ./scripts/apply-preset.ps1 -Preset replica-1
 ./scripts/apply-preset.ps1 -Preset replica-2
-# Restore the classroom baseline:
+# Restore baseline with tracing enabled:
 ./scripts/start.ps1 -Preset baseline -Tracing -NoBuild
 ```
 
@@ -182,7 +182,7 @@ Collector/Tempo outages do not stop workloads. Export queues and timeouts are bo
 ```powershell
 ./scripts/stop.ps1
 ./scripts/start.ps1
-# Or restore the nine-service classroom configuration:
+# Or restore the nine-service baseline configuration:
 ./scripts/start.ps1 -Tracing
 ```
 

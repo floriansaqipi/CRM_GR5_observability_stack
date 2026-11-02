@@ -12,7 +12,7 @@ You are helping prepare truthful, readable visuals for the Albanian report **Mon
 
 ## Source priority
 
-Use the bundled current code/configuration for implemented behaviour, the archived run/measurement records for historical results, and the current Word report for figure numbering and placement. The curated context states subsequent corrections. Older stage proposals, historical guides and comments about future university documentation must not override the completed report. Images from the water-quality project provide style only.
+Use the bundled code/configuration for implemented behaviour, archived run/measurement records for historical results, and the supplied Word report for figure numbering and placement. Check the bundle's snapshot status against the latest report before using page numbers or placeholder dimensions. Historical proposals do not override completed implementation records. Images from the water-quality project provide style only.
 
 ## Production method matters
 

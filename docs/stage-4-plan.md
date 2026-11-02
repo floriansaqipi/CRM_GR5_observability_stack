@@ -1,6 +1,6 @@
 # Stage 4 — Resource Allocation and Replica Experiments
 
-**Status: proposed implementation plan.** Stages 1–3 are implemented and verified. This stage adds repeatable comparisons to the existing workload laboratory.
+**Status: historical implementation proposal.** This plan was prepared after Stages 1–3 and describes the intended Stage 4 work. Stage 4 is now implemented and verified; use [stage-4.md](stage-4.md) for the delivered behaviour and results.
 
 ## 1. Finished result and confirmed decisions
 

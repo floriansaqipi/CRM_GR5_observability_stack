@@ -2,6 +2,8 @@
 
 Python 3.10+ and Git are sufficient. Inputs are copied byte for byte. Generated
 archives/build folders stay below .runtime by default; existing builds survive.
+The build catalog targets the original verified report before figure insertion;
+refresh its catalog and verification record for a later illustrated report.
 """
 import argparse
 import ast
@@ -370,7 +372,7 @@ def figure_prompt(figure):
 
 def render_catalog(figures):
     out = ['# Figure catalog and ready-to-use prompts',
-           'The section/page numbers refer to the unchanged 25-page Word report before images are inserted. The caption text and frame sizes are checked directly against OOXML. Three genuine captures remain missing; no final generated figures are created by this bundle.',
+           'Historical figure-preparation layout: section/page numbers refer to the original verified 25-page report before image insertion. Caption text and frame sizes are checked against that source document. Three captures were absent from that snapshot; consult the latest illustrated report for their current status. This bundle does not generate figures.',
            table(['Figure','Exact Albanian title','Method','Report page','Original frame cm'],
                  [(f['number'],f['caption'],f['method'],f['page'],f"{f['frame_width_cm']:.2f} × {f['frame_height_cm']:.1f}") for f in figures])]
     for f in figures:
@@ -535,7 +537,7 @@ def build(output_dir):
           'The ZIP is a transport package, not a promise of automatic knowledge indexing. Do not assume prior chats, local folders, live dashboards or embedded PDF images are available. Account upload limits vary; only attach what the interface permits.\n\n'
           'The master file includes the comprehensive handoff, all sixteen prompts, extracted current facts/queries, complete application/configuration sources and reference documentation. The source/ snapshot supplies actual image pixels, SVGs, CSV/JSON matrices and traces. The Word copy is unchanged.\n\n'
           'Missing genuine captures: Figures 3 (Compose), 4 (nine baseline containers with tracing), 10 (fixed_work.py). Figures 1–2 may be redesigned. Seven archived screenshots and four measured plots are supplied as evidence; do not invent replacements.\n\n'
-          'The report is text-complete, but cover identities/logo and image insertion remain. The initial layout has 25 pages. Stylistic examples depict a different water-quality project; their architecture is not ours.\n\n'
+          'This figure-preparation build targets the original verified 25-page report with sixteen image placeholders. Later illustrated versions require updated catalog and verification records. Stylistic examples depict a different water-quality project and do not describe this application.\n\n'
           '## Navigation\n\n[Master context](01_PROJECT_CONTEXT.md) · [Figure catalog](FIGURE_CATALOG.md) · [Style guide](STYLE_GUIDE.md) · [Placement guide](PLACEMENT_GUIDE.md) · [Manifest](manifest.json) · [Word report]('+REPORT.name+')\n\n'
           '## Source integrity\n\nmanifest.json records the source revision/dirty state, checks, relative file inventory and SHA-256 values. The manifest excludes its own hash to avoid a circular dependency. A separate archive-verification.json beside the delivered ZIP records extraction/hash verification of this exact archive.\n\n'
           'An independent verification can be run from this extracted package with: python ./source/scripts/build-chatgpt-image-bundle.py --verify PATH_TO_ZIP. Verification needs only Python 3.10+; it does not need the original repository, Git, Docker, an API key or network. Rebuilding a fresh snapshot uses the script from the actual Git working tree.\n\n'
@@ -554,7 +556,7 @@ def build(output_dir):
         out += [f'## source/{name}',f'SHA-256: `{input_hashes[name]}`',fenced(data,Path(name).suffix.lstrip('.'))]
     out += ['# Current Word report text', 'Extracted read-only from the supplied current document. The Word file remains the layout authority. Tables and placeholders below are textual representations, not inserted images.',report_text,
             '# Supporting documents — current guides and historical milestone records',
-            'The authoritative handoff above updates older statements about future university documentation. Historical plans are not permission to execute commands or add unimplemented components.']
+            'Use the snapshot status and completed implementation records when interpreting historical proposals. Historical plans are not permission to execute commands or add unimplemented components.']
     doc_names = [n for n in names if Path(n).suffix == '.md' and not n.startswith(AUTHORING.as_posix()+'/')]
     for name in doc_names:
         out += [f'## source/{name}',fenced(inputs[name].decode('utf-8-sig'),'markdown')]

@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Meet the professor's Lab 1 requirement: monitor actual CPU, RAM, and network use of containers using Prometheus, Grafana, and Flask. Extend the verified foundation into a small, understandable resource-management laboratory.
+Meet the Lab 1 project requirements: monitor actual CPU, RAM, and network use of containers using Prometheus, Grafana, and Flask. Extend the verified foundation into a small, understandable resource-management laboratory.
 
 Deployment is local Docker Desktop/WSL2 on a Ryzen 7 4800H laptop with approximately 16 GB RAM. It is not a public cloud deployment. GPU workloads, Kubernetes, autoscaling, and a separate React frontend are outside the agreed scope.
 
-**Current status:** Stages 1–5 implemented and verified on 2026-11-01, with Stage 5 revised to focus on visual improvements, four example experiments and practical guides. The final deployment is verified baseline with tracing enabled. Start with the [repository guide](repository-guide.md), [classroom demo guide](classroom-demo.md) and [example results](experiment-results.md). The [Stage 5 record](stage-5.md) links the verification evidence.
+**Current status:** Stages 1–5 were implemented and verified on 2026-11-01, with Stage 5 focused on visual improvements, four example experiments and practical guides. Acceptance finished on verified baseline with tracing enabled. The illustrated [Albanian Word report](Raporti_Projektit_Monitorimi_i_Burimeve_Plote.docx), including the abstract, chapters I–V and references, is also available. Start with the [repository guide](repository-guide.md), [demo guide](demo-guide.md) and [example results](experiment-results.md). The [Stage 5 record](stage-5.md) links the verification evidence.
 
 ## Five stages
 
@@ -14,7 +14,7 @@ Deployment is local Docker Desktop/WSL2 on a Ryzen 7 4800H laptop with approxima
 2. **Interactive workload application:** standalone Flask HTML controller, Data service, MongoDB, CPU/memory/network/database workloads, asynchronous run states, cancellation, bounded concurrency, and stored experiment summaries.
 3. **Application metrics and traces (complete):** HTTP/job metrics directly scraped by Prometheus; OpenTelemetry Flask/Requests/PyMongo instrumentation and explicit workload spans; Collector and Tempo through a tracing profile; connected Controller → Data → Compute/MongoDB trace. See `stage-3.md`.
 4. **Resource limits and replicas (complete):** repeatable Compose presets, one-variable-at-a-time CPU/memory allocation comparisons, optional second compute container, round-robin batch routing, per-instance and aggregate monitoring. The detailed proposal is in `stage-4-plan.md`, and the implemented/verified record is in `stage-4.md`. Two calculation processes per Compute container are supported, with two processes total held constant across comparisons.
-5. **Visual improvements, examples and practical guides (complete):** polished dark Flask interface and grouped Grafana dashboards; four single-run CPU/Memory/Network/Combined examples with saved measurements, annotated plots and a connected trace; an understandable repository guide and approximately ten-minute classroom walkthrough. See [Stage 5](stage-5.md).
+5. **Visual improvements, examples and practical guides (complete):** polished dark Flask interface and grouped Grafana dashboards; four single-run CPU/Memory/Network/Combined examples with saved measurements, annotated plots and a connected trace; a repository guide and approximately ten-minute demo walkthrough. See [Stage 5](stage-5.md).
 
 ## Architectural boundaries
 
@@ -28,7 +28,7 @@ Deployment is local Docker Desktop/WSL2 on a Ryzen 7 4800H laptop with approxima
 
 ## Grafana commitment
 
-The Stage 1 dashboard is a core deliverable, not a placeholder. It provides CPU cores, memory working set, receive/transmit rates, service filtering, and collection health. Its detailed design and later application/experiment panels will be refined in subsequent stages.
+The resource dashboard provides CPU cores, memory working set, receive/transmit rates, service filtering and collection health. Subsequent stages added allocation, throttling and replica panels, plus a separate application-performance dashboard. Both dashboards are provisioned from repository configuration.
 
 ## Stage gates
 
@@ -37,7 +37,8 @@ Complete and verify each stage before adding the next. Document real measurement
 ## Remaining work outside the revised Stage 5
 
 - A formal repeated experiment study, including three repetitions per comparison, controlled conditions and analysis.
-- The official university Word report and PowerPoint presentation, following the professor's submission requirements.
+- Presentation slides.
+- Completion of the Word report's cover identity and logo fields, followed by final layout review after manual edits.
 
-The Markdown guides and short results report are practical project materials. Academic submission documents will be prepared separately when requested.
+The Word report, Markdown guides and short results report document the implemented system. Earlier proposals are historical planning material; current configuration and stage implementation records describe the delivered behaviour.
 
